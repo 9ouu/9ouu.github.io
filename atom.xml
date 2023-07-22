@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>9ouu blog</title>
+  
+  <subtitle>不知名站点</subtitle>
+  <link href="https://9ouu.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://9ouu.github.io/"/>
+  <updated>2023-07-22T16:18:59.879Z</updated>
+  <id>https://9ouu.github.io/</id>
+  
+  <author>
+    <name>9ouu</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://9ouu.github.io/blog/4a17b156/"/>
+    <id>https://9ouu.github.io/blog/4a17b156/</id>
+    <published>2023-07-22T07:27:27.884Z</published>
+    <updated>2023-07-22T16:18:59.879Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>自建Vaultwarden (Bitwarden)</title>
+    <link href="https://9ouu.github.io/blog/cc8cc975/"/>
+    <id>https://9ouu.github.io/blog/cc8cc975/</id>
+    <published>2023-07-21T05:11:40.000Z</published>
+    <updated>2023-07-22T16:18:59.879Z</updated>
+    
+    <content type="html"><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">  <script id="hbeData" type="hbeData" data-hmacdigest="dd53d59fd96acdef6935e22ef1505c0305c0b1c58050709374484d0d58adee7f">09ec29e9ca8e36babbf4ba047eea1bb55c53d5c3c0c73cf95cf79826891e2b4a7a038a4359888016692f45a7d4a73ff6b7560edeec51d1db70e3cf59631842dbe3fd8e0fb1bd66c273de2da8089252691408f88a029666d200a7a20cd75062000c1ca69823085062fbc76d0b628fdb3215d1437255328dec62f07b0329b88c0aa27148acb5dc986dccd61ee9dd7e8a82accbfc0db0bba869c145f7b499cb175287eb14f3587161a47b4b04732478352c407c35b45e03ff71c28f9865e7ace29a3d823ac235740c68d3cbe2cedc3837b3f0f547d9aaeda8f77c411446acf7e516a0b29b3b098900fea2d066117ae7351b14070faaadbeff97d1342262448555fcb646c6acb0a3261ec3287abb0f7a9610c78e03dba51552ebabc7f0e11fba9610408f676ac6bc7373bb7a7927eef076e48ae9e4b8e449f3cf3d4eabf23f5df89500395ab104a1590366278c9396c27be601cd9d4263d407f9c6067c779bae1c8f926466fc35a044ad4a8f15668de7be63eff09da2f1502bfd26d740bf8d3d064c96e6d5bef61e46026e4f32b9d4fd62db961d7c5266c684c03a925df32bd92ce4b7f544e1def3e5441745a96e0b421acbab2b8fa40b8ca2a550bea07a9a6a9b4f03a5d1ff331698b224831d9eb180407492fc837207ab9535eec794d465b9483da62cea95528ba6accf03c531e40ab97200e0f20561005f2e9410ca3d795204cf1252af53c61ad81a9f382335e44575cb71cc1c67ce3108010a183e1a8c42d1dfc01b4028cc756cc9107e24c2323524c532736344aed419fbb36c2c91b4b70e39a924d4082c764c45faab0092de995d38e77aa7997b2aacb70d9eb6c8d0ddec3b161c062490726906efb71d568272da41b0366cb25cc131d1e10b60c9d1f4731fd0c07c1d255f3d57d7d5c7f8030bec2e2150e18917ace887ea118f49e2315858c1879825f992ffe800e2f79b531e1cf93e19fc5cbabaac881de1004b7fa3313519aec38ea295203be317eda09d2674f102c2df3f3d0690eebf1facdba2c22503b992f4900af29afe6ef86c6d3789e5f47030d3a43eeb0162b693e3d1cefa4f09ab5ecf505dbeec7e58490e73e423b23dcd613dd0ec549026d1bc529f47c5702b7b9580e5c1a4b0effdf421c1d0324f5e51f4c86f6c3276a080896baabd4b26c4c8ff22aeddf7601aca13a7196344b7a4dc9f2d94ccb5df42caa985d28c22bdb26df65a93e3bc8904729e93c269f880a43c77e7c047675747c8f1245933f34a7b1a58ac8a37ae17c3426556caf7db4a7cdbfe2eb7a44c5626c3a0d8eb40638de11729af29af68a0c4b34e274b0487ef974e2dc840394f4b558ac60ad6f3f81b412974753e76e28260d1860e079982863bc5d6eb9387e23aa2d487f209bee437e2e2f71bda4bafc1d5f000c786b60aeff88ddbf210d739de365262dc76cc7ed97072291e79c35fd9bbeb7f4e85d532b50529ed2250cdc97ef04c1f975a6b21caf595da3aa20eb0489cf3ab1a0347bdbe9c13df8bdcf5a563f90cef5765d2c899cd5369bb11ebef9fbe2c418029fad3c419139afcc12faa2d2c0fd3a25f7ca8e5633eb0a139b5620cbf28b76f388369f98fdd335933d3da914ad54fe5ecc7bfb7107dae58ec9ac286cc7075e7327a4511b87f2d6be3f27758e39b988314c16820cbb3003280a00a03040a8d970d18c8a30366d528c3eec6d450364c0b69382732fb3431a5f5b527cac37a92327e436c4f03c86e4b76d01df147fb566de78b7245b9ebb4b920e2bd065dd0a41b1077c424026691785c8f0b440eb560973f1336240a62f7b035be30bff9251a1d91f273c9a637b3e3fe5eb5b120e1da40e0616d20fffbe011f63229bf9c2cecbfb6bc8d20cd33a71a45f9b39d3453bfd527f9b052531c34988bfdc5f0cdaa65d4043c75cc65c11ca076620745dd488869f91347aed7bc08012979a0fb03b9b330a020bb2548b6593a8c3b81383814bd923f6088fcbaecf86398bb6e3da5df7980d1470be279f10a81256ea377aed6175213e3353ad4455328655685a11dcf90257a223e5bb216a5ce1dd1a7060c11d00f099fb6d223cab1d1f04fe2297aa1e16d6146f83f0bc9553e309f3d08b87c761b33e186cc000d564fe327275dc069ed851751c91cd46f260a3df349e75f64e63465e36a50071b40a51a480d91b9300771965f86be7c9a14320d91790415ec9ecf4e7be0deb06d88fa107e92f366dae73291a668cf14eeccd6d2b569f6e5af7cb225e82de06a11dddf83f2939b41fe0c9ee62429eae59d4c9c5c2d73f3c59fe639026543e3c36c970f6c1f89169a846dab4543ad3aac08b1a6e6058842f6cbb69d6e40fc6e003889766b6051ba47104c06ff33f8bb10f20ed54b4f46734e98053b6c17ef430fad8663f41e7578cd811c352d1d04b050e26d602c2c84a43716c4f1c1b1237aff8f039c9a0ab92756217afc9b2ad2419a881849069572b1f6ef31b9819906de2a65abc70e2d99fe97d94c11a8c473aa3ce07902e375904465b6260fa5f756191b0fd512b8ba811c221fed612e0ae4ec331ffba7e43d653c38c5bc74f44135f568c77a4d9f5d3ea6f46a4ececde301cb2e09715b7ee0dbfa69b11f85a5b0815d52bffd08ece56e135673025f98e911a5dce2d0b3a8955f9dcc6a34a4b510ba7c3a4862096c8d05d7f330a30fed70f9d25cf63468660b623b805240b093766ea4071d449621b0f3e739e580e0b78cf26cdceb21cb99c9e3adec79b8c20dbd079c392cbd075d11af5ca58afb5030f48f082894746426bd9b0c6eb859954b2561bad50dc2f5a8977caf81c69edf8c86f9ca50ab13edce08b826f943243f1fbd265a7d2694b231aa950212a7f3a665aaff7f02c6ccfaed41eacd5482225d94346d35b6eef859d8fd5f7e3eabe35e585abe09edbdf7f320c65462b8028563be1d7864aa8789089b908854853e16ee5cf217d8442bd7faa62d030d7ea3fe2c69512f8c46c08ac0a6c09c50baea9c5ef5917af92c8748fd8e0462c3aad88f858a61e925e30b0dce145c2601ba950146f6555815084e67b042eabc0ac8838385bd74d3b729c6c85fc8e2c11af48b182d0a2ddd861d23928e9663a9fb576e6059d8dbe2be630205268d447be17f10abd709ed3b05a8b14215d4fb47a43df5192856154e2c3c279bb1c9396554012486027f7865332de54dee3d80e94441de91b209bf300c0dbbcb674ae8d98abbe86b4a45a4ab1e66f02c76098b3d070f17778a636c8e692ae21d090861434bb6b40a8e1fc87ffc4ec3c6054feefb4f5a87ef156e778ff5369fcb85fe23fe30e8d7a97fae30a02f6359351e5785714c2b7d581f8308881f1a285569dbbe0d72695ecb38d77cb126928dce659d32997a957cf369e99c7a1ecec2af0d58ed534f94500843557a8264a830dbd9089cda9abedcaa57d0b1b90ab4c3eb1ecd3127de24af60ff7c79f48004a86f4c857c91f547efdb655cec7135a35eee7ed11f58f1655beece09c39d0cd50157087f7d9abaa19d0d6eac0000d9d434e10d43f4d33df0046f0035c662e0cf9f040dc2d32248816fede7e808b37f75d206242e600fb27db82d86558f05264b3b22a6e53c4ec3434843a719b057999122c0aa1565e29541f93f50e42e50a3f7c3daef7a2cc9fd6d782a29e632f416f5763ad807965d9abfa462e33a1728c43f9b183b4b91ec3167359c709e7e0352738760ae0ececb0e34246405c810bf65013b8f3aa3b2d160c26e2b8bfd10b14168b2b7f6b55b5818277085057a53939d894b974b384137fa3247d7ce8d66c9edb9a589468c2096704da3336a50ce83ac4ff82ef9c19354269e51f8d2f271aa38d411eeb264358859b0e10702be9cc5e407d389083f336620b33c666148ef256eb7e3edd5879717f0f3f83f9f635d638fbaa570a194a76d5597a3c5ae7769289868d72a8843d9e3df2d104564477ae35685c4769d19bbe58ca4250f08f19e53d72de0f5daa23c3f07a9b811ec58e34ed7736bcc22cfb166a9dddf84aca5efe02a40fce58416a2283f80f4e94e39af37d8912730ef390f9f73b41d02b35c297fba59ada49f0083d02a38fd2c233f171c8e739d1c2fe95943d760645107f2262320493f925082282733569c749a0b54724637bd08bce32a35f06b26adc77c4276ead3ffc9383cafb063421f044db159c444543124faa568c6918df3112c50ecdd40b8ffc24c68ac3c39e4ad4d5c83a771e0a52037164571d5bf3c568dd88063d0e2d9253c7577116c995c8f1d478aeff763f400ac70575ef907784e60c42b28febe66a1ead57a01ea8dd2dc61f872eeac7da21c4a0603eedd99201d52a9787253cb5bdf7f2a33d0fb181be08d87869fdfe74f7182b19baf8151a8e8add74f3d5be18dd97dab1320f56a039962ead05b499d9feb46b81fc654161a1f44f3e2a69e49386df84e7d4c4a29a4dd1383c7774b704eb09ad4dad1ece718b92d73603464753f76b9bb7d645bbc3908cb0aa60b508dbcd3a4adcbf0e57b592afe938bb57c41c266da549bbf0cbb4881f91f94a1ca5cfd7c33bd38d68bd8022590292e24ce19c6ce8908ec72b82a8842000138ba532ca7e0ca9bb22a3b709b584a93fe7aee28ab9a0ca54d61a37350ae58b37de01aec740d45d97cb151110b77d41988be8eb43e0f1294ca9de4c8896cd6a67946b48ebae0f1905c682a1329147a2ccbcbe20e49c88dc66b397c403ed8b81243ce63dc5dcf599a39ca24a5f252fab22838e05bd0</script>  <div class="hbe hbe-content">    <div class="hbe hbe-input hbe-input-default">      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">        <span class="hbe hbe-input-label-content hbe-input-label-content-default">加密了，要真想看就去github折腾。</span>      </label>    </div>  </div></div><script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+    
+    
+    <summary type="html">Here&#39;s something encrypted, password is required to continue reading.</summary>
+    
+    
+    
+    <category term="群晖nas" scheme="https://9ouu.github.io/categories/%E7%BE%A4%E6%99%96nas/"/>
+    
+    
+    <category term="Vaultwarden" scheme="https://9ouu.github.io/tags/Vaultwarden/"/>
+    
+    <category term="Bitwarden" scheme="https://9ouu.github.io/tags/Bitwarden/"/>
+    
+  </entry>
+  
+</feed>
