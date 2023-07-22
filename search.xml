@@ -40,5 +40,12 @@
 <p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%87%AA%E5%BB%BAVaultwarden%20%28Bitwarden%29/6.png" alt="image-6"></p>
 <p>配合无公网 IP 搭建 Cloudflare 免费隧道穿透：[[群晖无公网IP搭建Cloudflare免费隧道穿透]]</p>
 ]]></content>
+      <categories>
+        <category>群晖nas</category>
+      </categories>
+      <tags>
+        <tag>Vaultwarden</tag>
+        <tag>Bitwarden</tag>
+      </tags>
   </entry>
 </search>
