@@ -91,7 +91,7 @@
 <p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%87%AA%E5%BB%BAVaultwarden%20%28Bitwarden%29/5.png" alt="image-5"></p>
 <p>然后访问外网地址，创建账号密码登录。搞定</p>
 <p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%87%AA%E5%BB%BAVaultwarden%20%28Bitwarden%29/6.png" alt="image-6"></p>
-<p>配合无公网 IP 搭建 Cloudflare 免费隧道穿透：群晖系列：无公网IP搭建Cloudflare免费隧道穿透</p>
+<p>配合无公网 IP 搭建 Cloudflare 免费隧道穿透：<a href="https://9ouu.github.io/blog/45195/">群晖系列：无公网IP搭建Cloudflare免费隧道穿透</a></p>
 ]]></content>
       <categories>
         <category>群晖nas</category>
