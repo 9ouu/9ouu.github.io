@@ -1,234 +1,128 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search>
-  <entry>
-    <title>Hello World</title>
-    <url>/blog/16107/</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="cb0088f2a4bb14cbd42b487c922d85ecd5c7744c8f7aa08935e96d40036b662a">09ec29e9ca8e36babbf4ba047eea1bb5f12da02a7778f6f5845785e019d41c32f69e6a77f1803e9709d526c7a88c8c70d35e754bc78ee67b440d169e52b26e77724dba9f71a50a594a67defe857147c38ccdbc239483eba56d2fb53420fc7a3e7a6faf6c097336689efafba1dac39635c4fb00936cc6075aca0d0e81729209e6e8ffe7cb2943f4cf485382ca67bf8eadfc64bf7a33a5c4eb06489727af131b59ce94379079d2e0225da3a4e59ca57f6eaed0b2dcb1b01ec969da79fb3cbeaddce941b7b48d85650419900e6a7ee9622561b28c9e8ab42ab332085eb0822c5eddfb9dc6acdb8e286619fa4ae154da31d449ee6df1f98000cee0e694f590984d62f57a6fc7a777d6d99c2de4532eab2090fc84180ee56ff8a0c90d831fe1c186421eb60d3afe5f78424a95d0766cf0cd0e2fbf151eb8c48ef843508c4976b7b0fad39e5ba6d0dd3b6d90cf201957999dabe006ee13e07ffeb8eb013e76afae990e6591e6ab768a0a504028a0bea71ca1695ea47e77f1e8d72cc81e67d021451eb98b7baec605e1a401c1ec46d065ef237411d63fc76cc3e677834da6e61defe126b199ade92aa18a4d6348a50a8a6d4c4935901360fdc86cf4c15131a3f08835d6b20c1ec60a83ac8b68722574682d88e9a31f1fcadd30ff75af86b1ebad7222f2e16d836a9c05fce36bef6af5b4ff87ec198e5e694c5797dab25f5eb170817802c44f5bffb9f173296ee408f73b10a871c457c2c40e610b6d6b5b0a88f74f863aa77ddc818ce150dff5f5c87d70fc80090e3b5c065c1c0ce61ee0a5ea3232c946fcac96b1cc9b4237aaa54da1fbf05448c39c4033058c4f1685ca2296136ce3a83f548e4bb4ac532297cc752b6a4ef1e4509d92f9b4afc3aed8acb6109c70400976206dc5f19a29a0c975b8eecb19640a6e5bac5ab76c56c64d0ab690ef64f1d4134eba0d142d2ecaa751a61305adad4eb3b377f22fd03fdc73d944b64065a9b7cb89bc224980042868087e8ffab3af60fd9410498f9d5236f214040bdb617d44237d95bab7da230f4e5144935a2393bb924aac74a4a995771a5cd419cee082df0b96d090f49fbc78611f40b8ac7dee85224e9a9746da6973079a651bd13e7de6868664d32af4c045edd13487a3f032f9d66f572e53169f5bc2c38b2a74e4b1c78c5c9adff09eeac8e8a734771caf485c6226ac92e48c487c2e532f59e13f7fa6db0a659befaf20b9c125c7677eaae287db7198bb8b47cee64f3371d86436de5a1459d0303296d19cbf1f51f741a5bb4cb247fc79653e4623c71e7b024e31ec275bea1da3380634c1f2e4bacab8e25060125e4a1e50233ce13f6627dcb48706eb44b3ea688a687f01c35a988bfacca123cacc62d0e916f9e4b9b416cdea002d5446cf6b5dfb6642278f1334ee03a0a24815996e1b405ff6d63c9353b954e02f639a56d5af2ea847217a18f43d0870699fc81937e5a4b756335400522bb7ae5060502241c83c259c717353b5eb3960569266757dea65b58de7e5250566dd43bd99b419b22a6f822743876237d84b7dcb0c029ee0d90ec8a168fcaaba9fe44ed3a100f6bd4287880bc50f46a98d3210ee0fb89ae5e8fa8526ece3d38da1611853db7f031507a0ffb244e7c7de9e293773e28057c06f8b466daeb63a7ad510f05d553885ae012ed1dd5c94ca2dd91e2434a0dba3863ce165d8a299b37ef1eb4c29642672cb67b691061d9712ab9846f9ae0cda6822065197846d7ad8b03f2606f5eeff8fa587e933addb110c038052719c6788d7e279f42d32bca2b738042df1e2ff374718f9c0f7ad576ffa7f321e31b80b4e4a42abfe5efe15c0899f2340808932174d50b298aaf3c1c0ce4c5cdbf1f54292f59468d39cc2fc77482b0b8f68779ed872b2b4ea9a5892d0b0324097323ac1886f517f78184d382c58a6d58b86b419495eedd5a5a056eeee94679fdc4432f02fddbade9cf78140b485fcf6a8542130897555b39d42e420fcc038551a5f81ef1be5615a77b79a2f20583ef40086c4d1be2c813bb50094e432a0427bd05f013295bcf49750a277955c4dcde2b39c4257ad29b573b2fe0b1fc3afdf58700360a273bb23f1f899791183dd37907b12eaa2011d944dfd57ce3785f9ce66ac3e7cb4240b0b28cd7c0fc3087adcf06b4cc5e72807ddab5c4c86f4b428c1a151304ae40ef40cfe677f405e4a21661e2a63886b6d50da37af17cda9d06c23983b1ad7aba909da009a5927770647ed30e6137bba06b496ce5ac428c6f53d08f09bbcb503aadafaa30dcdfbe2541366e5b5598cc51c0d0cbe4e257b82f31085ad4cda782259fe5735f27eb33c080a8bb24d53bdb900be3cdc3b5994d97505649b7d0c992d70108456cf8e65fb6425b7c014a19df2bc07cd0aea6b9c210daaab331599adb5e60f74b1570dcf37edb316028c4a9d28a9f306fb914d9f4a7049c2ab440d18f737bd26e061c6f31bbdba34389bf638093470f3f9ea3b2229b71f7c3450a82841afe4e8100993b74dd1d8b379c14c122f5842ff1bf158e77a5c8b420110481a37c276406320d6c53521081dc4ee2c626c04f78e7f4230a580bc190ecd61747ba18f81576fe4ae811bad811cb613895f7d3032a670d57d349d94157b059c0aa66c470670bee2c93fb2121a43d306bafa53f5da6582b1f13855a2d499f179b1798e4555c3b5a6365a0c4b4ad46e75024d705188b560794102ce636ea5a7d3317a168ba72abb3f9d16d4a92d8fcb1aab2e06730355dfcfffa891a8917146905f6ebd9bd0a11010d430ab426d1996a293fd1571da88f88be9e03fb273a5384a95925fbd0139380f7061fa3587fbe57e87d72167c531883eab98274c2be2cfb7b54a085f56f1871d0ab09c3c787c563249de667e484e09145fed9d2eeac930a9c3737bcaa03ac057682fbd7a7a7d761ef57cfb5309dee4d911d4ddd07951de93c3e92539fc9f8d3524086f94cc00bc6ac2b7e364802809c3d31483a09d061985815a1727e6b89c77006636622ef30b331782ebaeb19659db710e62e4e33d8307834cf097b766372efff426e43e7162c7b98ea054de944426a2b981b1e76eec961411f65656428695cd574b6cd386665efe649095c72b437685606c962ad33ab44ea954</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">加密了，要真想看就去github折腾。</span>
-      </label>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-  </entry>
-  <entry>
-    <title>群晖系列：自建Joplin-server</title>
-    <url>/blog/45195/</url>
-    <content><![CDATA[<h2 id="一、Joplin介绍"><a href="#一、Joplin介绍" class="headerlink" title="一、Joplin介绍"></a>一、Joplin介绍</h2><ul>
-<li><p><a href="https://joplinapp.org/">Joplin</a> 是一个开源的笔记工具，拥有 Windows&#x2F;macOS&#x2F;Linux&#x2F;iOS&#x2F;Android&#x2F;等版本的客户端，支持多端同步（重要），而且是免费的。</p>
-</li>
-<li><p>Joplin目前有很多种同步方式，可以选择一些网盘作为同步端，也可以用WebDAV服务，可以自建Joplin Server，也可以用官方收费版的Joplin Cloud。</p>
-</li>
-<li><p>一般个人有NAS的话，Joplin可以考虑使用WebDAV或者Joplin Server方式。这里是搭建Joplin Server，网上有很多WebDAV的教程就不在这记录了</p>
-</li>
-</ul>
-<h2 id="二、安装配置Joplin-Serve"><a href="#二、安装配置Joplin-Serve" class="headerlink" title="二、安装配置Joplin Serve"></a>二、安装配置Joplin Serve</h2><h3 id="1、安装docker"><a href="#1、安装docker" class="headerlink" title="1、安装docker"></a>1、安装docker</h3><p>在群晖的套件中心安装docker</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BA%20Joplin-server/1.png" alt="image"></p>
-<h3 id="2、安装容器"><a href="#2、安装容器" class="headerlink" title="2、安装容器"></a>2、安装容器</h3><p>首先配置一下docker源，默认会使用国外的镜像文件，下载可能会比较慢。如图所示，在启动注册表镜像的位置添加源</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">镜像源地址：</span><br><span class="line">https://docker.mirrors.ustc.edu.cn</span><br><span class="line">http://hub-mirror.c.163.com</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BA%20Joplin-server/2.png" alt="image"></p>
-<p>分别搜索Joplin，PostgreSQL进行下载，默认选择latest会下载最新版本。</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BA%20Joplin-server/3.png" alt="image"></p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BA%20Joplin-server/4.png" alt="image"></p>
-<h4 id="配置PostgreSQL"><a href="#配置PostgreSQL" class="headerlink" title="配置PostgreSQL"></a>配置PostgreSQL</h4><p>下载后，准备启动先启动PostgreSQL进行配置，这里默认选择下一步</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BA%20Joplin-server/5.png" alt="image"></p>
-<p>点击高级设置</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BA%20Joplin-server/6.png" alt="image"></p>
-<p>新增加如下配置,这里配置的PostgreSQL密码需要记住！后面会用到。</p>
-<table>
-<thead>
-<tr>
-<th>变量</th>
-<th>值</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>POSTGRES_DB</td>
-<td>joplin</td>
-</tr>
-<tr>
-<td>POSTGRES_PASSWORD</td>
-<td>自己设置密码</td>
-</tr>
-<tr>
-<td>POSTGRES_USER</td>
-<td>pgadmin</td>
-</tr>
-</tbody></table>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BA%20Joplin-server/7.png" alt="image"></p>
-<p>配置端口映射，根据实际情况映射，我这里本地端口选择5433，因为5433被某个应用占用了，容器端口默认5432不需要修改。如果这个PostgreSQL只是给Joplin Server使用，这里应该可以不配置端口，因为我们后面用链接容器的方式连接到这个数据库，本地端口已经不重要了。</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BA%20Joplin-server/8.png" alt="image"></p>
-<p>配置本地存储，映射到PostgreSQL的数据目录&#x2F;var&#x2F;lib&#x2F;postgresql&#x2F;data，这样重启后存储数据不会丢失。</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BA%20Joplin-server/9.png" alt="image"></p>
-<p>勾选向导完成后运行此容器，然后点击完成，就可以放一边不用管它了。</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BA%20Joplin-server/10.png" alt="image"></p>
-<h4 id="配置Joplin-server"><a href="#配置Joplin-server" class="headerlink" title="配置Joplin server"></a>配置Joplin server</h4><p>网络选择默认，然后下一步点高级设置。根据下表进行配置。</p>
-<table>
-<thead>
-<tr>
-<th>变量</th>
-<th>值</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>APP_BASE_URL</td>
-<td><a href="http://nas_ip:22300/">http://nas_ip:22300</a></td>
-<td>根据自己nas的ip和自定义端口或域名进行配置</td>
-</tr>
-<tr>
-<td>POSTGRES_PASSWORD</td>
-<td>22300</td>
-<td>默认22300，可以自定义配置映射端口</td>
-</tr>
-<tr>
-<td>DB_CLIENT</td>
-<td>pg</td>
-<td>配置成PostgreSQL模式</td>
-</tr>
-<tr>
-<td>POSTGRES_HOST</td>
-<td>local_postgresql</td>
-<td>链接到PostgreSQL容器</td>
-</tr>
-<tr>
-<td>POSTGRES_DATABASE</td>
-<td>joplin</td>
-<td>数据库名</td>
-</tr>
-<tr>
-<td>POSTGRES_USER</td>
-<td>pgadmin</td>
-<td>数据库用户名</td>
-</tr>
-<tr>
-<td>POSTGRES_PORT</td>
-<td>5432</td>
-<td>默认是5432（直连容器端口，不是本地端口）</td>
-</tr>
-<tr>
-<td>POSTGRES_PASSWORD</td>
-<td>xxx</td>
-<td>PostgreSQL密码</td>
-</tr>
-</tbody></table>
-<p>配置链接，方便直接链接到PostgreSQL容器，这里使用别名：local_postgresql，到时候可以用作Joplin Server的POSTGRES_HOST配置：</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BA%20Joplin-server/11.png" alt="image"></p>
-<p>点击保存后新增端口22300</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BA%20Joplin-server/12.png" alt="image"></p>
-<p>配置存储空间</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BA%20Joplin-server/13.png" alt="image"></p>
-<p>勾选向导完成后运行此容器，然后点击完成。</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BA%20Joplin-server/14.png" alt="image"></p>
-<p>点击容器可以看到PostgreSQL跟Joplin server正常运行着。</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BA%20Joplin-server/15.png" alt="image"></p>
-<p>打开浏览器访问<a href="http://ip:port,可以看到访问正常。">http://ip:port,可以看到访问正常。</a></p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BA%20Joplin-server/16.png" alt="image"></p>
-<p>输入默认账号密码进入后台，然后可以到图片所指的地方对用户名密码进行更改。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">用户名：admin@localhost</span><br><span class="line">密码：admin</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BA%20Joplin-server/17.png" alt="image"></p>
-<h2 id="三、连接Joplin-Server"><a href="#三、连接Joplin-Server" class="headerlink" title="三、连接Joplin Server"></a>三、连接Joplin Server</h2><p>配置好链接，账号密码，就可以进行同步了。</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BA%20Joplin-server/18.png" alt="image"></p>
-<p>配合无公网 IP 搭建 Cloudflare 免费隧道穿透：<a href="https://9ouu.github.io/blog/45195/">群晖系列：无公网IP搭建Cloudflare免费隧道穿透</a></p>
-]]></content>
+<search> 
+  
+  
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/blog/16107/"/>
+      <url>/blog/16107/</url>
+      
+        <content type="html"><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">  <script id="hbeData" type="hbeData" data-hmacdigest="cb0088f2a4bb14cbd42b487c922d85ecd5c7744c8f7aa08935e96d40036b662a">09ec29e9ca8e36babbf4ba047eea1bb5f12da02a7778f6f5845785e019d41c32f69e6a77f1803e9709d526c7a88c8c70d35e754bc78ee67b440d169e52b26e77724dba9f71a50a594a67defe857147c38ccdbc239483eba56d2fb53420fc7a3e7a6faf6c097336689efafba1dac39635c4fb00936cc6075aca0d0e81729209e6e8ffe7cb2943f4cf485382ca67bf8eadfc64bf7a33a5c4eb06489727af131b59ce94379079d2e0225da3a4e59ca57f6eaed0b2dcb1b01ec969da79fb3cbeaddce941b7b48d85650419900e6a7ee9622561b28c9e8ab42ab332085eb0822c5eddfb9dc6acdb8e286619fa4ae154da31d449ee6df1f98000cee0e694f590984d62f57a6fc7a777d6d99c2de4532eab2090fc84180ee56ff8a0c90d831fe1c186421eb60d3afe5f78424a95d0766cf0cd0e2fbf151eb8c48ef843508c4976b7b0fad39e5ba6d0dd3b6d90cf201957999dabe006ee13e07ffeb8eb013e76afae990e6591e6ab768a0a504028a0bea71ca1695ea47e77f1e8d72cc81e67d021451eb98b7baec605e1a401c1ec46d065ef237411d63fc76cc3e677834da6e61defe126b199ade92aa18a4d6348a50a8a6d4c4935901360fdc86cf4c15131a3f08835d6b20c1ec60a83ac8b68722574682d88e9a31f1fcadd30ff75af86b1ebad7222f2e16d836a9c05fce36bef6af5b4ff87ec198e5e694c5797dab25f5eb170817802c44f5bffb9f173296ee408f73b10a871c457c2c40e610b6d6b5b0a88f74f863aa77ddc818ce150dff5f5c87d70fc80090e3b5c065c1c0ce61ee0a5ea3232c946fcac96b1cc9b4237aaa54da1fbf05448c39c4033058c4f1685ca2296136ce3a83f548e4bb4ac532297cc752b6a4ef1e4509d92f9b4afc3aed8acb6109c70400976206dc5f19a29a0c975b8eecb19640a6e5bac5ab76c56c64d0ab690ef64f1d4134eba0d142d2ecaa751a61305adad4eb3b377f22fd03fdc73d944b64065a9b7cb89bc224980042868087e8ffab3af60fd9410498f9d5236f214040bdb617d44237d95bab7da230f4e5144935a2393bb924aac74a4a995771a5cd419cee082df0b96d090f49fbc78611f40b8ac7dee85224e9a9746da6973079a651bd13e7de6868664d32af4c045edd13487a3f032f9d66f572e53169f5bc2c38b2a74e4b1c78c5c9adff09eeac8e8a734771caf485c6226ac92e48c487c2e532f59e13f7fa6db0a659befaf20b9c125c7677eaae287db7198bb8b47cee64f3371d86436de5a1459d0303296d19cbf1f51f741a5bb4cb247fc79653e4623c71e7b024e31ec275bea1da3380634c1f2e4bacab8e25060125e4a1e50233ce13f6627dcb48706eb44b3ea688a687f01c35a988bfacca123cacc62d0e916f9e4b9b416cdea002d5446cf6b5dfb6642278f1334ee03a0a24815996e1b405ff6d63c9353b954e02f639a56d5af2ea847217a18f43d0870699fc81937e5a4b756335400522bb7ae5060502241c83c259c717353b5eb3960569266757dea65b58de7e5250566dd43bd99b419b22a6f822743876237d84b7dcb0c029ee0d90ec8a168fcaaba9fe44ed3a100f6bd4287880bc50f46a98d3210ee0fb89ae5e8fa8526ece3d38da1611853db7f031507a0ffb244e7c7de9e293773e28057c06f8b466daeb63a7ad510f05d553885ae012ed1dd5c94ca2dd91e2434a0dba3863ce165d8a299b37ef1eb4c29642672cb67b691061d9712ab9846f9ae0cda6822065197846d7ad8b03f2606f5eeff8fa587e933addb110c038052719c6788d7e279f42d32bca2b738042df1e2ff374718f9c0f7ad576ffa7f321e31b80b4e4a42abfe5efe15c0899f2340808932174d50b298aaf3c1c0ce4c5cdbf1f54292f59468d39cc2fc77482b0b8f68779ed872b2b4ea9a5892d0b0324097323ac1886f517f78184d382c58a6d58b86b419495eedd5a5a056eeee94679fdc4432f02fddbade9cf78140b485fcf6a8542130897555b39d42e420fcc038551a5f81ef1be5615a77b79a2f20583ef40086c4d1be2c813bb50094e432a0427bd05f013295bcf49750a277955c4dcde2b39c4257ad29b573b2fe0b1fc3afdf58700360a273bb23f1f899791183dd37907b12eaa2011d944dfd57ce3785f9ce66ac3e7cb4240b0b28cd7c0fc3087adcf06b4cc5e72807ddab5c4c86f4b428c1a151304ae40ef40cfe677f405e4a21661e2a63886b6d50da37af17cda9d06c23983b1ad7aba909da009a5927770647ed30e6137bba06b496ce5ac428c6f53d08f09bbcb503aadafaa30dcdfbe2541366e5b5598cc51c0d0cbe4e257b82f31085ad4cda782259fe5735f27eb33c080a8bb24d53bdb900be3cdc3b5994d97505649b7d0c992d70108456cf8e65fb6425b7c014a19df2bc07cd0aea6b9c210daaab331599adb5e60f74b1570dcf37edb316028c4a9d28a9f306fb914d9f4a7049c2ab440d18f737bd26e061c6f31bbdba34389bf638093470f3f9ea3b2229b71f7c3450a82841afe4e8100993b74dd1d8b379c14c122f5842ff1bf158e77a5c8b420110481a37c276406320d6c53521081dc4ee2c626c04f78e7f4230a580bc190ecd61747ba18f81576fe4ae811bad811cb613895f7d3032a670d57d349d94157b059c0aa66c470670bee2c93fb2121a43d306bafa53f5da6582b1f13855a2d499f179b1798e4555c3b5a6365a0c4b4ad46e75024d705188b560794102ce636ea5a7d3317a168ba72abb3f9d16d4a92d8fcb1aab2e06730355dfcfffa891a8917146905f6ebd9bd0a11010d430ab426d1996a293fd1571da88f88be9e03fb273a5384a95925fbd0139380f7061fa3587fbe57e87d72167c531883eab98274c2be2cfb7b54a085f56f1871d0ab09c3c787c563249de667e484e09145fed9d2eeac930a9c3737bcaa03ac057682fbd7a7a7d761ef57cfb5309dee4d911d4ddd07951de93c3e92539fc9f8d3524086f94cc00bc6ac2b7e364802809c3d31483a09d061985815a1727e6b89c77006636622ef30b331782ebaeb19659db710e62e4e33d8307834cf097b766372efff426e43e7162c7b98ea054de944426a2b981b1e76eec961411f65656428695cd574b6cd386665efe649095c72b437685606c962ad33ab44ea954</script>  <div class="hbe hbe-content">    <div class="hbe hbe-input hbe-input-default">      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">        <span class="hbe hbe-input-label-content hbe-input-label-content-default">加密了，要真想看就去github折腾。</span>      </label>    </div>  </div></div><script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>群晖系列：自建Vaultwarden (Bitwarden)</title>
+      <link href="/blog/8140/"/>
+      <url>/blog/8140/</url>
+      
+        <content type="html"><![CDATA[<p>当Bitwarden在快速发展的过程中，自建版本发生了开发分支。2022年5月左右，docker image由原来的bitwardenrs&#x2F;server官宣转为<a href="https://hub.docker.com/r/vaultwarden/server">vaultwarden&#x2F;server</a>。名称也由Bitwarden变为了Vaultwarden。Vaultwarden兼容所有Bitwarden的app，也就是说不论是浏览器的插件、桌面的应用程序，还是安卓、iOS的app，都能够通过Vaultwarden来自建密码管理平台，从而最大限度的保护自己的密码池。</p><h1 id="一、Vaultwarden-是什么"><a href="#一、Vaultwarden-是什么" class="headerlink" title="一、Vaultwarden 是什么"></a>一、Vaultwarden 是什么</h1><p>Vaultwarden 是一个用于本地搭建 Bitwarden 服务器的第三方 Docker 项目。仅在部署的时候使用 Vaultwarden 镜像，桌面端、移动端、浏览器扩展等客户端均使用官方 Bitwarden 客户端。</p><p>Vaultwarden 很轻量，对于不希望使用官方的占用大量资源的自托管部署而言，它是理想的选择。</p><h1 id="二、Vaultwarden-与-Bitwarden-的区别"><a href="#二、Vaultwarden-与-Bitwarden-的区别" class="headerlink" title="二、Vaultwarden 与 Bitwarden 的区别"></a>二、Vaultwarden 与 Bitwarden 的区别</h1><p>除不支持官方企业版的部分功能（如目录同步、SSO、群组、自定义角色以及基于企业组织层面的 Duo Security 两步登录）外，其他大部分功能均免费支持。并跟随官方版本保持及时更新。</p><p>Vaultwarden 比官方版更轻量。官方版使用 .Net 开发，使用 MSSQL 数据库，要求至少 2GB 内存；Vaultwarden 使用 Rust 编写，改用 SQLite 数据库（现在也支持 MySQL 和 PostgreSQL），运行时只需要 10M 内存，可以说对硬件基本没有要求。</p><h1 id="三、搭建Vaultwarden"><a href="#三、搭建Vaultwarden" class="headerlink" title="三、搭建Vaultwarden"></a>三、搭建Vaultwarden</h1><p>在docker搜索vaultwarden，并下载</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%87%AA%E5%BB%BAVaultwarden%20%28Bitwarden%29/1.png" alt="image-1"></p><p>  配置好容器存储路径，其他的默认就好了</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%87%AA%E5%BB%BAVaultwarden%20%28Bitwarden%29/2.png" alt="image-2"></p><p>然后运行后点详细，记住这里的端口号</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%87%AA%E5%BB%BAVaultwarden%20%28Bitwarden%29/3.png" alt="image-3"></p><p>套件中心安装花生壳</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%87%AA%E5%BB%BAVaultwarden%20%28Bitwarden%29/4.png" alt="image-4"></p><p>然后配置花生壳，设置内网nas的ip还有Vaultwarden的端口号</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%87%AA%E5%BB%BAVaultwarden%20%28Bitwarden%29/5.png" alt="image-5"></p><p>然后访问外网地址，创建账号密码登录。搞定</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%87%AA%E5%BB%BAVaultwarden%20%28Bitwarden%29/6.png" alt="image-6"></p><p>配合无公网 IP 搭建 Cloudflare 免费隧道穿透：<a href="https://9ouu.github.io/blog/45195/">群晖系列：无公网IP搭建Cloudflare免费隧道穿透</a></p>]]></content>
+      
+      
       <categories>
-        <category>群晖nas</category>
+          
+          <category> 群晖nas </category>
+          
       </categories>
-      <tags>
-        <tag>Joplin</tag>
-        <tag>笔记软件</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>群晖系列：无公网IP搭建Cloudflare免费隧道穿透</title>
-    <url>/blog/45195/</url>
-    <content><![CDATA[<h2 id="一、域名注册"><a href="#一、域名注册" class="headerlink" title="一、域名注册"></a>一、域名注册</h2><p>首先我们先注册一个域名，Freenom可以注册免费域名，但是好像最近不太稳定，官网点这里：<a href="https://link.zhihu.com/?target=https://www.freenom.com/">A Name for Everyone</a></p>
-<p>而且国内出了新政，2022年3月起所有域名都要实名认证，不然有可能会频繁掉线，所以这里我推荐大家上阿里云实名注册一个域名：<a href="https://www.aliyun.com/">https://www.aliyun.com/</a></p>
-<h2 id="二、cloudflare托管域名"><a href="#二、cloudflare托管域名" class="headerlink" title="二、cloudflare托管域名"></a>二、cloudflare托管域名</h2><p>点击这里添加域名</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E6%97%A0%E5%85%AC%E7%BD%91IP%E6%90%AD%E5%BB%BACloudflare%E5%85%8D%E8%B4%B9%E9%9A%A7%E9%81%93%E7%A9%BF%E9%80%8F/1.png" alt="image">)</p>
-<p>然后选择这个免费的，点击继续</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E6%97%A0%E5%85%AC%E7%BD%91IP%E6%90%AD%E5%BB%BACloudflare%E5%85%8D%E8%B4%B9%E9%9A%A7%E9%81%93%E7%A9%BF%E9%80%8F/2.png" alt="image"></p>
-<p>然后复制这里的 dns，按要求修改就行啦</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E6%97%A0%E5%85%AC%E7%BD%91IP%E6%90%AD%E5%BB%BACloudflare%E5%85%8D%E8%B4%B9%E9%9A%A7%E9%81%93%E7%A9%BF%E9%80%8F/3.png" alt="image"></p>
-<h2 id="三、配置Zero-Trust"><a href="#三、配置Zero-Trust" class="headerlink" title="三、配置Zero Trust"></a>三、配置Zero Trust</h2><p>登录到cloudflare，找到Zero Trust</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E6%97%A0%E5%85%AC%E7%BD%91IP%E6%90%AD%E5%BB%BACloudflare%E5%85%8D%E8%B4%B9%E9%9A%A7%E9%81%93%E7%A9%BF%E9%80%8F/4.png" alt="image"></p>
-<p>这里写个项目名字</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E6%97%A0%E5%85%AC%E7%BD%91IP%E6%90%AD%E5%BB%BACloudflare%E5%85%8D%E8%B4%B9%E9%9A%A7%E9%81%93%E7%A9%BF%E9%80%8F/5.png" alt="image"></p>
-<p>选择免费的项目</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E6%97%A0%E5%85%AC%E7%BD%91IP%E6%90%AD%E5%BB%BACloudflare%E5%85%8D%E8%B4%B9%E9%9A%A7%E9%81%93%E7%A9%BF%E9%80%8F/6.png" alt="image"></p>
-<p>这里需要绑定银行卡，绑定完之后进行解绑就行了。</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E6%97%A0%E5%85%AC%E7%BD%91IP%E6%90%AD%E5%BB%BACloudflare%E5%85%8D%E8%B4%B9%E9%9A%A7%E9%81%93%E7%A9%BF%E9%80%8F/7.png" alt="image"></p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E6%97%A0%E5%85%AC%E7%BD%91IP%E6%90%AD%E5%BB%BACloudflare%E5%85%8D%E8%B4%B9%E9%9A%A7%E9%81%93%E7%A9%BF%E9%80%8F/8.png" alt="image"></p>
-<p>!<img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E6%97%A0%E5%85%AC%E7%BD%91IP%E6%90%AD%E5%BB%BACloudflare%E5%85%8D%E8%B4%B9%E9%9A%A7%E9%81%93%E7%A9%BF%E9%80%8F/9.png" alt="image"></p>
-<p>然后进来点击create a tunnel 创建一个tunnel</p>
-<p>!<img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E6%97%A0%E5%85%AC%E7%BD%91IP%E6%90%AD%E5%BB%BACloudflare%E5%85%8D%E8%B4%B9%E9%9A%A7%E9%81%93%E7%A9%BF%E9%80%8F/10.png" alt="image"></p>
-<p>这里随便写一个</p>
-<p>!<img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E6%97%A0%E5%85%AC%E7%BD%91IP%E6%90%AD%E5%BB%BACloudflare%E5%85%8D%E8%B4%B9%E9%9A%A7%E9%81%93%E7%A9%BF%E9%80%8F/11.png" alt="image"></p>
-<p>选择docker，然后复制下面的命令</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker run cloudflare/cloudflared:latest tunnel --no-autoupdate run --token eyJhIjoixxxxxx</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E6%97%A0%E5%85%AC%E7%BD%91IP%E6%90%AD%E5%BB%BACloudflare%E5%85%8D%E8%B4%B9%E9%9A%A7%E9%81%93%E7%A9%BF%E9%80%8F/12.png" alt="image"></p>
-<h2 id="四、配置docker"><a href="#四、配置docker" class="headerlink" title="四、配置docker"></a>四、配置docker</h2><p>在群晖docker找到cloudflare后进行下载。</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E6%97%A0%E5%85%AC%E7%BD%91IP%E6%90%AD%E5%BB%BACloudflare%E5%85%8D%E8%B4%B9%E9%9A%A7%E9%81%93%E7%A9%BF%E9%80%8F/13.png" alt="image"></p>
-<p>然后开始配置cloudflare，选择高级设置。</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E6%97%A0%E5%85%AC%E7%BD%91IP%E6%90%AD%E5%BB%BACloudflare%E5%85%8D%E8%B4%B9%E9%9A%A7%E9%81%93%E7%A9%BF%E9%80%8F/14.png" alt="image"></p>
-<p>在执行命令的位置贴上复制下来的命令，如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">tunnel --no-autoupdate run --token eyJhIjoixxxxxx</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E6%97%A0%E5%85%AC%E7%BD%91IP%E6%90%AD%E5%BB%BACloudflare%E5%85%8D%E8%B4%B9%E9%9A%A7%E9%81%93%E7%A9%BF%E9%80%8F/15.png" alt="image"></p>
-<p>然后点保存，端口不用配置，配置文件夹。新增加一个cloudflare，装载路径为&#x2F;etc&#x2F;cloudflared，然后点下一步完成就好了。</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E6%97%A0%E5%85%AC%E7%BD%91IP%E6%90%AD%E5%BB%BACloudflare%E5%85%8D%E8%B4%B9%E9%9A%A7%E9%81%93%E7%A9%BF%E9%80%8F/16.png" alt="image"></p>
-<p>然后启动docker，可以看到cloudflare已经是正常使用了，直接访问域名可以访问到内网地址。</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E6%97%A0%E5%85%AC%E7%BD%91IP%E6%90%AD%E5%BB%BACloudflare%E5%85%8D%E8%B4%B9%E9%9A%A7%E9%81%93%E7%A9%BF%E9%80%8F/17.png" alt="image"></p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E6%97%A0%E5%85%AC%E7%BD%91IP%E6%90%AD%E5%BB%BACloudflare%E5%85%8D%E8%B4%B9%E9%9A%A7%E9%81%93%E7%A9%BF%E9%80%8F/18.png" alt="image"></p>
-<h2 id="五、多隧道创建"><a href="#五、多隧道创建" class="headerlink" title="五、多隧道创建"></a>五、多隧道创建</h2><p>如果我想穿透不止一个端口那怎么办，其实特别简单，只需要再加一条隧道穿透规则，修改我们已有域名前面的子域名即可，操作如下 打开我们的隧道穿透Cloudflare Zero Trust</p>
-<p>选择Access下的Tunnels 点击Configure今日我们已经创建好的穿透隧道，然后点击创建就好了</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E6%97%A0%E5%85%AC%E7%BD%91IP%E6%90%AD%E5%BB%BACloudflare%E5%85%8D%E8%B4%B9%E9%9A%A7%E9%81%93%E7%A9%BF%E9%80%8F/19.png" alt="image"></p>
-<p>参考链接：<a href="https://zhuanlan.zhihu.com/p/591320825zhihu.com/p/591320825">https://zhuanlan.zhihu.com/p/591320825zhihu.com/p/591320825</a></p>
-]]></content>
+      
+      
+        <tags>
+            
+            <tag> Vaultwarden </tag>
+            
+            <tag> Bitwarden </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>群晖系列：无公网IP搭建Cloudflare免费隧道穿透</title>
+      <link href="/blog/45195/"/>
+      <url>/blog/45195/</url>
+      
+        <content type="html"><![CDATA[<h2 id="一、域名注册"><a href="#一、域名注册" class="headerlink" title="一、域名注册"></a>一、域名注册</h2><p>首先我们先注册一个域名，Freenom可以注册免费域名，但是好像最近不太稳定，官网点这里：<a href="https://link.zhihu.com/?target=https://www.freenom.com/">A Name for Everyone</a></p><p>而且国内出了新政，2022年3月起所有域名都要实名认证，不然有可能会频繁掉线，所以这里我推荐大家上阿里云实名注册一个域名：<a href="https://www.aliyun.com/">https://www.aliyun.com/</a></p><h2 id="二、cloudflare托管域名"><a href="#二、cloudflare托管域名" class="headerlink" title="二、cloudflare托管域名"></a>二、cloudflare托管域名</h2><p>点击这里添加域名</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E6%97%A0%E5%85%AC%E7%BD%91IP%E6%90%AD%E5%BB%BACloudflare%E5%85%8D%E8%B4%B9%E9%9A%A7%E9%81%93%E7%A9%BF%E9%80%8F/1.png" alt="image">)</p><p>然后选择这个免费的，点击继续</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E6%97%A0%E5%85%AC%E7%BD%91IP%E6%90%AD%E5%BB%BACloudflare%E5%85%8D%E8%B4%B9%E9%9A%A7%E9%81%93%E7%A9%BF%E9%80%8F/2.png" alt="image"></p><p>然后复制这里的 dns，按要求修改就行啦</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E6%97%A0%E5%85%AC%E7%BD%91IP%E6%90%AD%E5%BB%BACloudflare%E5%85%8D%E8%B4%B9%E9%9A%A7%E9%81%93%E7%A9%BF%E9%80%8F/3.png" alt="image"></p><h2 id="三、配置Zero-Trust"><a href="#三、配置Zero-Trust" class="headerlink" title="三、配置Zero Trust"></a>三、配置Zero Trust</h2><p>登录到cloudflare，找到Zero Trust</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E6%97%A0%E5%85%AC%E7%BD%91IP%E6%90%AD%E5%BB%BACloudflare%E5%85%8D%E8%B4%B9%E9%9A%A7%E9%81%93%E7%A9%BF%E9%80%8F/4.png" alt="image"></p><p>这里写个项目名字</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E6%97%A0%E5%85%AC%E7%BD%91IP%E6%90%AD%E5%BB%BACloudflare%E5%85%8D%E8%B4%B9%E9%9A%A7%E9%81%93%E7%A9%BF%E9%80%8F/5.png" alt="image"></p><p>选择免费的项目</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E6%97%A0%E5%85%AC%E7%BD%91IP%E6%90%AD%E5%BB%BACloudflare%E5%85%8D%E8%B4%B9%E9%9A%A7%E9%81%93%E7%A9%BF%E9%80%8F/6.png" alt="image"></p><p>这里需要绑定银行卡，绑定完之后进行解绑就行了。</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E6%97%A0%E5%85%AC%E7%BD%91IP%E6%90%AD%E5%BB%BACloudflare%E5%85%8D%E8%B4%B9%E9%9A%A7%E9%81%93%E7%A9%BF%E9%80%8F/7.png" alt="image"></p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E6%97%A0%E5%85%AC%E7%BD%91IP%E6%90%AD%E5%BB%BACloudflare%E5%85%8D%E8%B4%B9%E9%9A%A7%E9%81%93%E7%A9%BF%E9%80%8F/8.png" alt="image"></p><p>!<img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E6%97%A0%E5%85%AC%E7%BD%91IP%E6%90%AD%E5%BB%BACloudflare%E5%85%8D%E8%B4%B9%E9%9A%A7%E9%81%93%E7%A9%BF%E9%80%8F/9.png" alt="image"></p><p>然后进来点击create a tunnel 创建一个tunnel</p><p>!<img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E6%97%A0%E5%85%AC%E7%BD%91IP%E6%90%AD%E5%BB%BACloudflare%E5%85%8D%E8%B4%B9%E9%9A%A7%E9%81%93%E7%A9%BF%E9%80%8F/10.png" alt="image"></p><p>这里随便写一个</p><p>!<img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E6%97%A0%E5%85%AC%E7%BD%91IP%E6%90%AD%E5%BB%BACloudflare%E5%85%8D%E8%B4%B9%E9%9A%A7%E9%81%93%E7%A9%BF%E9%80%8F/11.png" alt="image"></p><p>选择docker，然后复制下面的命令</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run cloudflare/cloudflared:latest tunnel --no-autoupdate run --token eyJhIjoixxxxxx</span><br></pre></td></tr></table></figure><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E6%97%A0%E5%85%AC%E7%BD%91IP%E6%90%AD%E5%BB%BACloudflare%E5%85%8D%E8%B4%B9%E9%9A%A7%E9%81%93%E7%A9%BF%E9%80%8F/12.png" alt="image"></p><h2 id="四、配置docker"><a href="#四、配置docker" class="headerlink" title="四、配置docker"></a>四、配置docker</h2><p>在群晖docker找到cloudflare后进行下载。</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E6%97%A0%E5%85%AC%E7%BD%91IP%E6%90%AD%E5%BB%BACloudflare%E5%85%8D%E8%B4%B9%E9%9A%A7%E9%81%93%E7%A9%BF%E9%80%8F/13.png" alt="image"></p><p>然后开始配置cloudflare，选择高级设置。</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E6%97%A0%E5%85%AC%E7%BD%91IP%E6%90%AD%E5%BB%BACloudflare%E5%85%8D%E8%B4%B9%E9%9A%A7%E9%81%93%E7%A9%BF%E9%80%8F/14.png" alt="image"></p><p>在执行命令的位置贴上复制下来的命令，如下：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tunnel --no-autoupdate run --token eyJhIjoixxxxxx</span><br></pre></td></tr></table></figure><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E6%97%A0%E5%85%AC%E7%BD%91IP%E6%90%AD%E5%BB%BACloudflare%E5%85%8D%E8%B4%B9%E9%9A%A7%E9%81%93%E7%A9%BF%E9%80%8F/15.png" alt="image"></p><p>然后点保存，端口不用配置，配置文件夹。新增加一个cloudflare，装载路径为&#x2F;etc&#x2F;cloudflared，然后点下一步完成就好了。</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E6%97%A0%E5%85%AC%E7%BD%91IP%E6%90%AD%E5%BB%BACloudflare%E5%85%8D%E8%B4%B9%E9%9A%A7%E9%81%93%E7%A9%BF%E9%80%8F/16.png" alt="image"></p><p>然后启动docker，可以看到cloudflare已经是正常使用了，直接访问域名可以访问到内网地址。</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E6%97%A0%E5%85%AC%E7%BD%91IP%E6%90%AD%E5%BB%BACloudflare%E5%85%8D%E8%B4%B9%E9%9A%A7%E9%81%93%E7%A9%BF%E9%80%8F/17.png" alt="image"></p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E6%97%A0%E5%85%AC%E7%BD%91IP%E6%90%AD%E5%BB%BACloudflare%E5%85%8D%E8%B4%B9%E9%9A%A7%E9%81%93%E7%A9%BF%E9%80%8F/18.png" alt="image"></p><h2 id="五、多隧道创建"><a href="#五、多隧道创建" class="headerlink" title="五、多隧道创建"></a>五、多隧道创建</h2><p>如果我想穿透不止一个端口那怎么办，其实特别简单，只需要再加一条隧道穿透规则，修改我们已有域名前面的子域名即可，操作如下 打开我们的隧道穿透Cloudflare Zero Trust</p><p>选择Access下的Tunnels 点击Configure今日我们已经创建好的穿透隧道，然后点击创建就好了</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E6%97%A0%E5%85%AC%E7%BD%91IP%E6%90%AD%E5%BB%BACloudflare%E5%85%8D%E8%B4%B9%E9%9A%A7%E9%81%93%E7%A9%BF%E9%80%8F/19.png" alt="image"></p><p>参考链接：<a href="https://zhuanlan.zhihu.com/p/591320825zhihu.com/p/591320825">https://zhuanlan.zhihu.com/p/591320825zhihu.com/p/591320825</a></p>]]></content>
+      
+      
       <categories>
-        <category>群晖nas</category>
+          
+          <category> 群晖nas </category>
+          
       </categories>
-      <tags>
-        <tag>Cloudflare</tag>
-        <tag>内网穿透</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>群晖系列：自建Vaultwarden (Bitwarden)</title>
-    <url>/blog/8140/</url>
-    <content><![CDATA[<p>当Bitwarden在快速发展的过程中，自建版本发生了开发分支。2022年5月左右，docker image由原来的bitwardenrs&#x2F;server官宣转为<a href="https://hub.docker.com/r/vaultwarden/server">vaultwarden&#x2F;server</a>。名称也由Bitwarden变为了Vaultwarden。Vaultwarden兼容所有Bitwarden的app，也就是说不论是浏览器的插件、桌面的应用程序，还是安卓、iOS的app，都能够通过Vaultwarden来自建密码管理平台，从而最大限度的保护自己的密码池。</p>
-<h1 id="一、Vaultwarden-是什么"><a href="#一、Vaultwarden-是什么" class="headerlink" title="一、Vaultwarden 是什么"></a>一、Vaultwarden 是什么</h1><p>Vaultwarden 是一个用于本地搭建 Bitwarden 服务器的第三方 Docker 项目。仅在部署的时候使用 Vaultwarden 镜像，桌面端、移动端、浏览器扩展等客户端均使用官方 Bitwarden 客户端。</p>
-<p>Vaultwarden 很轻量，对于不希望使用官方的占用大量资源的自托管部署而言，它是理想的选择。</p>
-<h1 id="二、Vaultwarden-与-Bitwarden-的区别"><a href="#二、Vaultwarden-与-Bitwarden-的区别" class="headerlink" title="二、Vaultwarden 与 Bitwarden 的区别"></a>二、Vaultwarden 与 Bitwarden 的区别</h1><p>除不支持官方企业版的部分功能（如目录同步、SSO、群组、自定义角色以及基于企业组织层面的 Duo Security 两步登录）外，其他大部分功能均免费支持。并跟随官方版本保持及时更新。</p>
-<p>Vaultwarden 比官方版更轻量。官方版使用 .Net 开发，使用 MSSQL 数据库，要求至少 2GB 内存；Vaultwarden 使用 Rust 编写，改用 SQLite 数据库（现在也支持 MySQL 和 PostgreSQL），运行时只需要 10M 内存，可以说对硬件基本没有要求。</p>
-<h1 id="三、搭建Vaultwarden"><a href="#三、搭建Vaultwarden" class="headerlink" title="三、搭建Vaultwarden"></a>三、搭建Vaultwarden</h1><p>在docker搜索vaultwarden，并下载</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%87%AA%E5%BB%BAVaultwarden%20%28Bitwarden%29/1.png" alt="image-1"></p>
-<p>  配置好容器存储路径，其他的默认就好了</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%87%AA%E5%BB%BAVaultwarden%20%28Bitwarden%29/2.png" alt="image-2"></p>
-<p>然后运行后点详细，记住这里的端口号</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%87%AA%E5%BB%BAVaultwarden%20%28Bitwarden%29/3.png" alt="image-3"></p>
-<p>套件中心安装花生壳</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%87%AA%E5%BB%BAVaultwarden%20%28Bitwarden%29/4.png" alt="image-4"></p>
-<p>然后配置花生壳，设置内网nas的ip还有Vaultwarden的端口号</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%87%AA%E5%BB%BAVaultwarden%20%28Bitwarden%29/5.png" alt="image-5"></p>
-<p>然后访问外网地址，创建账号密码登录。搞定</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%87%AA%E5%BB%BAVaultwarden%20%28Bitwarden%29/6.png" alt="image-6"></p>
-<p>配合无公网 IP 搭建 Cloudflare 免费隧道穿透：<a href="https://9ouu.github.io/blog/45195/">群晖系列：无公网IP搭建Cloudflare免费隧道穿透</a></p>
-]]></content>
+      
+      
+        <tags>
+            
+            <tag> Cloudflare </tag>
+            
+            <tag> 内网穿透 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>群晖系列：自建Easyimage图床</title>
+      <link href="/blog/3482/"/>
+      <url>/blog/3482/</url>
+      
+        <content type="html"><![CDATA[<h2 id="一、EasyImages介绍"><a href="#一、EasyImages介绍" class="headerlink" title="一、EasyImages介绍"></a>一、EasyImages介绍</h2><p>Easyimage是一个开源的、支持多文件上传、简单无数据库,返回图片url,markdown,bbscode,html的一款图床程序。</p><ul><li><h3 id="easyimage特点："><a href="#easyimage特点：" class="headerlink" title="easyimage特点："></a>easyimage特点：</h3></li></ul><p>支持API、支持仅登录后上传、支持设置图片质量、支持压缩图片大小、支持文字&#x2F;图片水印、支持设置图片指定宽&#x2F;高、支持上传图片转换为指定格式、支持限制最低宽度&#x2F;高度上传、支持上传其他文件格式、在线管理图片、支持网站统计、支持设置广告、支持图片鉴黄、支持自定义代码、支持上传IP黑白名单、支持上传日志IP定位、支持限制日上传次数、支持创建仅上传用户、对于安装环境要求极低、对于服务器性能要求极低、理论上支持所有常见格式、等等···</p><ul><li><h3 id="GitHub："><a href="#GitHub：" class="headerlink" title="GitHub："></a>GitHub：</h3></li></ul><p><a href="https://github.com/icret/EasyImages2.0">https://github.com/icret/EasyImages2.0</a></p><h2 id="二、EasyImages搭建"><a href="#二、EasyImages搭建" class="headerlink" title="二、EasyImages搭建"></a>二、EasyImages搭建</h2><p>在注册表搜索easyimage进行下载</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BAEasyimage%E5%9B%BE%E5%BA%8A/1.png" alt="image"></p><p>默认下一步之后填写本地访问的端口</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BAEasyimage%E5%9B%BE%E5%BA%8A/2.png" alt="image"></p><p>填写文件夹后完成即可</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BAEasyimage%E5%9B%BE%E5%BA%8A/3.png" alt="image"></p><p>然后开启容器访问<a href="http://ip:port">http://ip:port</a>, 配置管理后台账号密码然后就可以了</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BAEasyimage%E5%9B%BE%E5%BA%8A/4.png" alt="image"></p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BAEasyimage%E5%9B%BE%E5%BA%8A/5.png" alt="image"></p><h2 id="三、EasyImages安全设置"><a href="#三、EasyImages安全设置" class="headerlink" title="三、EasyImages安全设置"></a>三、EasyImages安全设置</h2><p>如果只是自己用 ，记得去掉这些勾选</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BAEasyimage%E5%9B%BE%E5%BA%8A/6.png" alt="image"></p><p>上传设置选择WEBP，WebP 的优势体现在它具有更优的图像数据压缩算法，能带来更小的图片体积，而且拥有肉眼识别无差异的图像质量；同时具备了无损和有损的压缩模式、 Alpha 透明以及动画的特性，在 JPEG 和 PNG 上的转化效果都相当优秀、稳定和统一。</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BAEasyimage%E5%9B%BE%E5%BA%8A/7.png" alt="image"></p><p>这里根据个人需求勾选</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BAEasyimage%E5%9B%BE%E5%BA%8A/8.png" alt="image"></p><p>配合无公网 IP 搭建 Cloudflare 免费隧道穿透：<a href="https://9ouu.github.io/blog/45195/">群晖系列：无公网IP搭建Cloudflare免费隧道穿透</a></p><p>ub.io&#x2F;blog&#x2F;45195&#x2F;)</p>]]></content>
+      
+      
       <categories>
-        <category>群晖nas</category>
+          
+          <category> 群晖nas </category>
+          
       </categories>
-      <tags>
-        <tag>Vaultwarden</tag>
-        <tag>Bitwarden</tag>
-      </tags>
-  </entry>
+      
+      
+        <tags>
+            
+            <tag> Easyimage </tag>
+            
+            <tag> 图床 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>群晖系列：自建Joplin-server</title>
+      <link href="/blog/45195/"/>
+      <url>/blog/45195/</url>
+      
+        <content type="html"><![CDATA[<h2 id="一、Joplin介绍"><a href="#一、Joplin介绍" class="headerlink" title="一、Joplin介绍"></a>一、Joplin介绍</h2><ul><li><p><a href="https://joplinapp.org/">Joplin</a> 是一个开源的笔记工具，拥有 Windows&#x2F;macOS&#x2F;Linux&#x2F;iOS&#x2F;Android&#x2F;等版本的客户端，支持多端同步（重要），而且是免费的。</p></li><li><p>Joplin目前有很多种同步方式，可以选择一些网盘作为同步端，也可以用WebDAV服务，可以自建Joplin Server，也可以用官方收费版的Joplin Cloud。</p></li><li><p>一般个人有NAS的话，Joplin可以考虑使用WebDAV或者Joplin Server方式。这里是搭建Joplin Server，网上有很多WebDAV的教程就不在这记录了</p></li></ul><h2 id="二、安装配置Joplin-Serve"><a href="#二、安装配置Joplin-Serve" class="headerlink" title="二、安装配置Joplin Serve"></a>二、安装配置Joplin Serve</h2><h3 id="1、安装docker"><a href="#1、安装docker" class="headerlink" title="1、安装docker"></a>1、安装docker</h3><p>在群晖的套件中心安装docker</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BA%20Joplin-server/1.png" alt="image"></p><h3 id="2、安装容器"><a href="#2、安装容器" class="headerlink" title="2、安装容器"></a>2、安装容器</h3><p>首先配置一下docker源，默认会使用国外的镜像文件，下载可能会比较慢。如图所示，在启动注册表镜像的位置添加源</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">镜像源地址：</span><br><span class="line">https://docker.mirrors.ustc.edu.cn</span><br><span class="line">http://hub-mirror.c.163.com</span><br></pre></td></tr></table></figure><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BA%20Joplin-server/2.png" alt="image"></p><p>分别搜索Joplin，PostgreSQL进行下载，默认选择latest会下载最新版本。</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BA%20Joplin-server/3.png" alt="image"></p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BA%20Joplin-server/4.png" alt="image"></p><h4 id="配置PostgreSQL"><a href="#配置PostgreSQL" class="headerlink" title="配置PostgreSQL"></a>配置PostgreSQL</h4><p>下载后，准备启动先启动PostgreSQL进行配置，这里默认选择下一步</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BA%20Joplin-server/5.png" alt="image"></p><p>点击高级设置</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BA%20Joplin-server/6.png" alt="image"></p><p>新增加如下配置,这里配置的PostgreSQL密码需要记住！后面会用到。</p><table><thead><tr><th>变量</th><th>值</th></tr></thead><tbody><tr><td>POSTGRES_DB</td><td>joplin</td></tr><tr><td>POSTGRES_PASSWORD</td><td>自己设置密码</td></tr><tr><td>POSTGRES_USER</td><td>pgadmin</td></tr></tbody></table><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BA%20Joplin-server/7.png" alt="image"></p><p>配置端口映射，根据实际情况映射，我这里本地端口选择5433，因为5433被某个应用占用了，容器端口默认5432不需要修改。如果这个PostgreSQL只是给Joplin Server使用，这里应该可以不配置端口，因为我们后面用链接容器的方式连接到这个数据库，本地端口已经不重要了。</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BA%20Joplin-server/8.png" alt="image"></p><p>配置本地存储，映射到PostgreSQL的数据目录&#x2F;var&#x2F;lib&#x2F;postgresql&#x2F;data，这样重启后存储数据不会丢失。</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BA%20Joplin-server/9.png" alt="image"></p><p>勾选向导完成后运行此容器，然后点击完成，就可以放一边不用管它了。</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BA%20Joplin-server/10.png" alt="image"></p><h4 id="配置Joplin-server"><a href="#配置Joplin-server" class="headerlink" title="配置Joplin server"></a>配置Joplin server</h4><p>网络选择默认，然后下一步点高级设置。根据下表进行配置。</p><table><thead><tr><th>变量</th><th>值</th><th>说明</th></tr></thead><tbody><tr><td>APP_BASE_URL</td><td><a href="http://nas_ip:22300/">http://nas_ip:22300</a></td><td>根据自己nas的ip和自定义端口或域名进行配置</td></tr><tr><td>POSTGRES_PASSWORD</td><td>22300</td><td>默认22300，可以自定义配置映射端口</td></tr><tr><td>DB_CLIENT</td><td>pg</td><td>配置成PostgreSQL模式</td></tr><tr><td>POSTGRES_HOST</td><td>local_postgresql</td><td>链接到PostgreSQL容器</td></tr><tr><td>POSTGRES_DATABASE</td><td>joplin</td><td>数据库名</td></tr><tr><td>POSTGRES_USER</td><td>pgadmin</td><td>数据库用户名</td></tr><tr><td>POSTGRES_PORT</td><td>5432</td><td>默认是5432（直连容器端口，不是本地端口）</td></tr><tr><td>POSTGRES_PASSWORD</td><td>xxx</td><td>PostgreSQL密码</td></tr></tbody></table><p>配置链接，方便直接链接到PostgreSQL容器，这里使用别名：local_postgresql，到时候可以用作Joplin Server的POSTGRES_HOST配置：</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BA%20Joplin-server/11.png" alt="image"></p><p>点击保存后新增端口22300</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BA%20Joplin-server/12.png" alt="image"></p><p>配置存储空间</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BA%20Joplin-server/13.png" alt="image"></p><p>勾选向导完成后运行此容器，然后点击完成。</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BA%20Joplin-server/14.png" alt="image"></p><p>点击容器可以看到PostgreSQL跟Joplin server正常运行着。</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BA%20Joplin-server/15.png" alt="image"></p><p>打开浏览器访问<a href="http://ip:port,可以看到访问正常。">http://ip:port,可以看到访问正常。</a></p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BA%20Joplin-server/16.png" alt="image"></p><p>输入默认账号密码进入后台，然后可以到图片所指的地方对用户名密码进行更改。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">用户名：admin@localhost</span><br><span class="line">密码：admin</span><br></pre></td></tr></table></figure><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BA%20Joplin-server/17.png" alt="image"></p><h2 id="三、连接Joplin-Server"><a href="#三、连接Joplin-Server" class="headerlink" title="三、连接Joplin Server"></a>三、连接Joplin Server</h2><p>配置好链接，账号密码，就可以进行同步了。</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BA%20Joplin-server/18.png" alt="image"></p><p>配合无公网 IP 搭建 Cloudflare 免费隧道穿透：<a href="https://9ouu.github.io/blog/45195/">群晖系列：无公网IP搭建Cloudflare免费隧道穿透</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 群晖nas </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Joplin </tag>
+            
+            <tag> 笔记软件 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
 </search>
