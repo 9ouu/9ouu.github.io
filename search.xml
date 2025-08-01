@@ -1,6 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>n8n本地部署问题</title>
+    <url>/blog/62000/</url>
+    <content><![CDATA[<h2 id="一、部署中的问题"><a href="#一、部署中的问题" class="headerlink" title="一、部署中的问题"></a>一、部署中的问题</h2><p>1、在 <code>environment</code> 环境变量中，我增加了2个Proxy的变量，主要是为了解决容器内链接各式各样国外服务。<br>2、配置 <code>N8N_SECURE_COOKIE</code> 解决下面图片的问题</p>
+<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/n8n%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2%E9%97%AE%E9%A2%98/1.png" alt="image.png"></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">services:</span><br><span class="line">  n8n:</span><br><span class="line">    container_name: n8n</span><br><span class="line">    ports:</span><br><span class="line">      # 根据自己的要求修改左侧端口</span><br><span class="line">      - 35678:5678</span><br><span class="line">    volumes:</span><br><span class="line">      # 必须使用docker volume，否则有权限问题</span><br><span class="line">      - n8n_data:/home/node/.n8n</span><br><span class="line">    environment:</span><br><span class="line">      # 该变量解决http访问，否则需要代理https地址</span><br><span class="line">      - N8N_SECURE_COOKIE=false</span><br><span class="line">      - GENERIC_TIMEZONE=Asia/Shanghai</span><br><span class="line">      # 下面两个是你自己的代理地址</span><br><span class="line">      - HTTP_PROXY=http://192.168.0.1:7890</span><br><span class="line">      - HTTPS_PROXY=http://192.168.0.1:7890</span><br><span class="line">    image: docker.n8n.io/n8nio/n8n</span><br><span class="line">volumes:</span><br><span class="line">    n8n_data:</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="二、中文设置"><a href="#二、中文设置" class="headerlink" title="二、中文设置"></a>二、中文设置</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://github.com/other-blowsnow/n8n-i18n-chinese</span><br></pre></td></tr></table></figure>
+
+<p>修改文件 docker-compose. yml </p>
+<p>前面的为项目下载到本地的路径。后面的固定</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">volumes:</span><br><span class="line">      - /root/n8n/dist:/usr/local/lib/node_modules/n8n/node_modules/n8n-editor-ui/dist</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker volume create n8n_data</span><br><span class="line"></span><br><span class="line">docker run -it --rm \</span><br><span class="line"> --name n8n \</span><br><span class="line"> -p 5678:5678 \</span><br><span class="line"> -e DB_TYPE=postgresdb \</span><br><span class="line"> -e DB_POSTGRESDB_DATABASE=&lt;POSTGRES_DATABASE&gt; \</span><br><span class="line"> -e DB_POSTGRESDB_HOST=postgres \</span><br><span class="line"> -e DB_POSTGRESDB_PORT=5432 \</span><br><span class="line"> -e DB_POSTGRESDB_USER=&lt;POSTGRES_USER&gt; \</span><br><span class="line"> -e DB_POSTGRESDB_SCHEMA=&lt;POSTGRES_SCHEMA&gt; \</span><br><span class="line"> -e DB_POSTGRESDB_PASSWORD=&lt;POSTGRES_PASSWORD&gt; \</span><br><span class="line"> -e N8N_SECURE_COOKIE=false \</span><br><span class="line"> -e GENERIC_TIMEZONE=Asia/Shanghai \</span><br><span class="line"> -v n8n_data:/home/node/.n8n \</span><br><span class="line"> docker.n8n.io/n8nio/n8n</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> docker compose up -d</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="三、参考"><a href="#三、参考" class="headerlink" title="三、参考"></a>三、参考</h2><p><a href="https://github.com/n8n-io/n8n-hosting/tree/main/docker-compose/withPostgres">https://github.com/n8n-io/n8n-hosting/tree/main/docker-compose/withPostgres</a></p>
+<p><a href="https://hub.docker.com/r/n8nio/n8n">https://hub.docker.com/r/n8nio/n8n</a></p>
+]]></content>
+      <categories>
+        <category>AI</category>
+      </categories>
+      <tags>
+        <tag>Ai</tag>
+        <tag>n8n</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>实践｜病毒情报自动化闭环运营</title>
     <url>/blog/11928/</url>
     <content><![CDATA[<h1 id="一、什么是病毒情报"><a href="#一、什么是病毒情报" class="headerlink" title="一、什么是病毒情报"></a>一、什么是病毒情报</h1><p>病毒情报（Virus Intelligence）指的是关于计算机病毒和恶意软件的信息和情报数据。它是针对恶意软件的研究、分析和监测的结果，用于了解和对抗不断变化和演化的威胁。</p>
@@ -69,44 +98,6 @@
       <tags>
         <tag>威胁情报</tag>
         <tag>病毒情报</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>群晖系列：自建Easyimage图床</title>
-    <url>/blog/3482/</url>
-    <content><![CDATA[<h2 id="一、EasyImages介绍"><a href="#一、EasyImages介绍" class="headerlink" title="一、EasyImages介绍"></a>一、EasyImages介绍</h2><p>Easyimage是一个开源的、支持多文件上传、简单无数据库,返回图片url,markdown,bbscode,html的一款图床程序。</p>
-<ul>
-<li><h3 id="easyimage特点："><a href="#easyimage特点：" class="headerlink" title="easyimage特点："></a>easyimage特点：</h3></li>
-</ul>
-<p>支持API、支持仅登录后上传、支持设置图片质量、支持压缩图片大小、支持文字&#x2F;图片水印、支持设置图片指定宽&#x2F;高、支持上传图片转换为指定格式、支持限制最低宽度&#x2F;高度上传、支持上传其他文件格式、在线管理图片、支持网站统计、支持设置广告、支持图片鉴黄、支持自定义代码、支持上传IP黑白名单、支持上传日志IP定位、支持限制日上传次数、支持创建仅上传用户、对于安装环境要求极低、对于服务器性能要求极低、理论上支持所有常见格式、等等···</p>
-<ul>
-<li><h3 id="GitHub："><a href="#GitHub：" class="headerlink" title="GitHub："></a>GitHub：</h3></li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://github.com/icret/EasyImages2.0</span><br></pre></td></tr></table></figure>
-
-<h2 id="二、EasyImages搭建"><a href="#二、EasyImages搭建" class="headerlink" title="二、EasyImages搭建"></a>二、EasyImages搭建</h2><p>在注册表搜索easyimage进行下载</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BAEasyimage%E5%9B%BE%E5%BA%8A/1.png" alt="image"></p>
-<p>默认下一步之后填写本地访问的端口</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BAEasyimage%E5%9B%BE%E5%BA%8A/2.png" alt="image"></p>
-<p>填写文件夹后完成即可</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BAEasyimage%E5%9B%BE%E5%BA%8A/3.png" alt="image"></p>
-<p>然后开启容器访问<a href="http://ip:port">http://ip:port</a>, 配置管理后台账号密码然后就可以了</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BAEasyimage%E5%9B%BE%E5%BA%8A/4.png" alt="image"></p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BAEasyimage%E5%9B%BE%E5%BA%8A/5.png" alt="image"></p>
-<h2 id="三、EasyImages安全设置"><a href="#三、EasyImages安全设置" class="headerlink" title="三、EasyImages安全设置"></a>三、EasyImages安全设置</h2><p>如果只是自己用 ，记得去掉这些勾选</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BAEasyimage%E5%9B%BE%E5%BA%8A/6.png" alt="image"></p>
-<p>上传设置选择WEBP，WebP 的优势体现在它具有更优的图像数据压缩算法，能带来更小的图片体积，而且拥有肉眼识别无差异的图像质量；同时具备了无损和有损的压缩模式、 Alpha 透明以及动画的特性，在 JPEG 和 PNG 上的转化效果都相当优秀、稳定和统一。</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BAEasyimage%E5%9B%BE%E5%BA%8A/7.png" alt="image"></p>
-<p>这里根据个人需求勾选</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BAEasyimage%E5%9B%BE%E5%BA%8A/8.png" alt="image"></p>
-<p>配合无公网 IP 搭建 Cloudflare 免费隧道穿透：<a href="https://9ouu.github.io/blog/45195/">群晖系列：无公网IP搭建Cloudflare免费隧道穿透</a></p>
-]]></content>
-      <categories>
-        <category>群晖nas</category>
-      </categories>
-      <tags>
-        <tag>Easyimage</tag>
-        <tag>图床</tag>
       </tags>
   </entry>
   <entry>
@@ -325,6 +316,44 @@
       </tags>
   </entry>
   <entry>
+    <title>群晖系列：自建Easyimage图床</title>
+    <url>/blog/3482/</url>
+    <content><![CDATA[<h2 id="一、EasyImages介绍"><a href="#一、EasyImages介绍" class="headerlink" title="一、EasyImages介绍"></a>一、EasyImages介绍</h2><p>Easyimage是一个开源的、支持多文件上传、简单无数据库,返回图片url,markdown,bbscode,html的一款图床程序。</p>
+<ul>
+<li><h3 id="easyimage特点："><a href="#easyimage特点：" class="headerlink" title="easyimage特点："></a>easyimage特点：</h3></li>
+</ul>
+<p>支持API、支持仅登录后上传、支持设置图片质量、支持压缩图片大小、支持文字&#x2F;图片水印、支持设置图片指定宽&#x2F;高、支持上传图片转换为指定格式、支持限制最低宽度&#x2F;高度上传、支持上传其他文件格式、在线管理图片、支持网站统计、支持设置广告、支持图片鉴黄、支持自定义代码、支持上传IP黑白名单、支持上传日志IP定位、支持限制日上传次数、支持创建仅上传用户、对于安装环境要求极低、对于服务器性能要求极低、理论上支持所有常见格式、等等···</p>
+<ul>
+<li><h3 id="GitHub："><a href="#GitHub：" class="headerlink" title="GitHub："></a>GitHub：</h3></li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://github.com/icret/EasyImages2.0</span><br></pre></td></tr></table></figure>
+
+<h2 id="二、EasyImages搭建"><a href="#二、EasyImages搭建" class="headerlink" title="二、EasyImages搭建"></a>二、EasyImages搭建</h2><p>在注册表搜索easyimage进行下载</p>
+<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BAEasyimage%E5%9B%BE%E5%BA%8A/1.png" alt="image"></p>
+<p>默认下一步之后填写本地访问的端口</p>
+<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BAEasyimage%E5%9B%BE%E5%BA%8A/2.png" alt="image"></p>
+<p>填写文件夹后完成即可</p>
+<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BAEasyimage%E5%9B%BE%E5%BA%8A/3.png" alt="image"></p>
+<p>然后开启容器访问<a href="http://ip:port">http://ip:port</a>, 配置管理后台账号密码然后就可以了</p>
+<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BAEasyimage%E5%9B%BE%E5%BA%8A/4.png" alt="image"></p>
+<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BAEasyimage%E5%9B%BE%E5%BA%8A/5.png" alt="image"></p>
+<h2 id="三、EasyImages安全设置"><a href="#三、EasyImages安全设置" class="headerlink" title="三、EasyImages安全设置"></a>三、EasyImages安全设置</h2><p>如果只是自己用 ，记得去掉这些勾选</p>
+<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BAEasyimage%E5%9B%BE%E5%BA%8A/6.png" alt="image"></p>
+<p>上传设置选择WEBP，WebP 的优势体现在它具有更优的图像数据压缩算法，能带来更小的图片体积，而且拥有肉眼识别无差异的图像质量；同时具备了无损和有损的压缩模式、 Alpha 透明以及动画的特性，在 JPEG 和 PNG 上的转化效果都相当优秀、稳定和统一。</p>
+<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BAEasyimage%E5%9B%BE%E5%BA%8A/7.png" alt="image"></p>
+<p>这里根据个人需求勾选</p>
+<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BAEasyimage%E5%9B%BE%E5%BA%8A/8.png" alt="image"></p>
+<p>配合无公网 IP 搭建 Cloudflare 免费隧道穿透：<a href="https://9ouu.github.io/blog/45195/">群晖系列：无公网IP搭建Cloudflare免费隧道穿透</a></p>
+]]></content>
+      <categories>
+        <category>群晖nas</category>
+      </categories>
+      <tags>
+        <tag>Easyimage</tag>
+        <tag>图床</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>记一次代码泄漏处置过程</title>
     <url>/blog/32792/</url>
     <content><![CDATA[<h2 id="一、背景"><a href="#一、背景" class="headerlink" title="一、背景"></a>一、背景</h2><p>上班的时候，同事发现一则告警，是关于公司的代码泄漏，我看了一下，是个 dome 代码，但是一直放在公网上好像也不太好，它会一直告警，而且之后要是告警了领导看到也会问，干脆把它干掉算了。于是我让他找买了服务的厂家协助处置一下这个项目。</p>
@@ -345,7 +374,7 @@
 <p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%AE%B0%E4%B8%80%E6%AC%A1%E4%BB%A3%E7%A0%81%E6%B3%84%E6%BC%8F%E5%A4%84%E7%BD%AE%E8%BF%87%E7%A8%8B/8.png" alt="image"></p>
 <h2 id="四、隐藏邮箱的方法"><a href="#四、隐藏邮箱的方法" class="headerlink" title="四、隐藏邮箱的方法"></a>四、隐藏邮箱的方法</h2><h4 id="1、不使用自己的邮箱注册"><a href="#1、不使用自己的邮箱注册" class="headerlink" title="1、不使用自己的邮箱注册"></a>1、不使用自己的邮箱注册</h4><h4 id="2、使用-GitHub-专用的替代邮箱"><a href="#2、使用-GitHub-专用的替代邮箱" class="headerlink" title="2、使用 GitHub 专用的替代邮箱"></a>2、使用 GitHub 专用的替代邮箱</h4><p>访问 <a href="https://github.com/settings/emails">https://github.com/settings/emails</a> ，在 Primary email address 一栏，我们能看到 GitHub 为我们提供了一个专用的用于在 git 中配置的邮箱地址，直接勾选上。<br>谷歌的翻译是这样的：</p>
 <ul>
-<li><p>在将我的电子邮件地址保密：<br>我们将删除您的公开个人资料电子邮件，并在执行基于 Web 的 Git 操作（例如编辑和合并）时使用 <a href="mailto:&#120;&#120;&#x78;&#120;&#x78;&#x40;&#117;&#115;&#x65;&#x72;&#x73;&#x2e;&#110;&#x6f;&#114;&#101;&#x70;&#108;&#121;&#46;&#x67;&#x69;&#x74;&#104;&#x75;&#x62;&#x2e;&#99;&#111;&#109;">&#120;&#120;&#x78;&#120;&#x78;&#x40;&#117;&#115;&#x65;&#x72;&#x73;&#x2e;&#110;&#x6f;&#114;&#101;&#x70;&#108;&#121;&#46;&#x67;&#x69;&#x74;&#104;&#x75;&#x62;&#x2e;&#99;&#111;&#109;</a> ，以及代表您发送电子邮件。如果您希望命令行 Git 操作使用您的私人电子邮件，则必须在 Git 中设置您的电子邮件。<br>使用此电子邮件推送到 GitHub 的提交仍将与您的帐户相关联。</p>
+<li><p>在将我的电子邮件地址保密：<br>我们将删除您的公开个人资料电子邮件，并在执行基于 Web 的 Git 操作（例如编辑和合并）时使用 <a href="mailto:&#x78;&#120;&#120;&#x78;&#x78;&#64;&#x75;&#x73;&#101;&#114;&#x73;&#x2e;&#x6e;&#x6f;&#x72;&#x65;&#112;&#108;&#x79;&#46;&#x67;&#105;&#116;&#x68;&#x75;&#98;&#46;&#x63;&#x6f;&#109;">&#x78;&#120;&#120;&#x78;&#x78;&#64;&#x75;&#x73;&#101;&#114;&#x73;&#x2e;&#x6e;&#x6f;&#x72;&#x65;&#112;&#108;&#x79;&#46;&#x67;&#105;&#116;&#x68;&#x75;&#98;&#46;&#x63;&#x6f;&#109;</a> ，以及代表您发送电子邮件。如果您希望命令行 Git 操作使用您的私人电子邮件，则必须在 Git 中设置您的电子邮件。<br>使用此电子邮件推送到 GitHub 的提交仍将与您的帐户相关联。</p>
 </li>
 <li><p>阻止暴露我的电子邮件的命令行推送：<br>当您推送到 GitHub 时，我们将检查最近的提交。如果该提交的作者电子邮件是您 GitHub 帐户上的私人电子邮件，我们将阻止推送并警告您暴露您的私人电子邮件。address 一栏，我们能看到 GitHub 为我们提供了一个专用的用于在 git 中配置的邮箱地址。</p>
 </li>
