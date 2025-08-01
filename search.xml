@@ -56,36 +56,6 @@
       </tags>
   </entry>
   <entry>
-    <title>群晖系列：自建Vaultwarden (Bitwarden)</title>
-    <url>/blog/8140/</url>
-    <content><![CDATA[<p>当Bitwarden在快速发展的过程中，自建版本发生了开发分支。2022年5月左右，docker image由原来的bitwardenrs&#x2F;server官宣转为<a href="https://hub.docker.com/r/vaultwarden/server">vaultwarden&#x2F;server</a>。名称也由Bitwarden变为了Vaultwarden。Vaultwarden兼容所有Bitwarden的app，也就是说不论是浏览器的插件、桌面的应用程序，还是安卓、iOS的app，都能够通过Vaultwarden来自建密码管理平台，从而最大限度的保护自己的密码池。</p>
-<h1 id="一、Vaultwarden-是什么"><a href="#一、Vaultwarden-是什么" class="headerlink" title="一、Vaultwarden 是什么"></a>一、Vaultwarden 是什么</h1><p>Vaultwarden 是一个用于本地搭建 Bitwarden 服务器的第三方 Docker 项目。仅在部署的时候使用 Vaultwarden 镜像，桌面端、移动端、浏览器扩展等客户端均使用官方 Bitwarden 客户端。</p>
-<p>Vaultwarden 很轻量，对于不希望使用官方的占用大量资源的自托管部署而言，它是理想的选择。</p>
-<h1 id="二、Vaultwarden-与-Bitwarden-的区别"><a href="#二、Vaultwarden-与-Bitwarden-的区别" class="headerlink" title="二、Vaultwarden 与 Bitwarden 的区别"></a>二、Vaultwarden 与 Bitwarden 的区别</h1><p>除不支持官方企业版的部分功能（如目录同步、SSO、群组、自定义角色以及基于企业组织层面的 Duo Security 两步登录）外，其他大部分功能均免费支持。并跟随官方版本保持及时更新。</p>
-<p>Vaultwarden 比官方版更轻量。官方版使用 .Net 开发，使用 MSSQL 数据库，要求至少 2GB 内存；Vaultwarden 使用 Rust 编写，改用 SQLite 数据库（现在也支持 MySQL 和 PostgreSQL），运行时只需要 10M 内存，可以说对硬件基本没有要求。</p>
-<h1 id="三、搭建Vaultwarden"><a href="#三、搭建Vaultwarden" class="headerlink" title="三、搭建Vaultwarden"></a>三、搭建Vaultwarden</h1><p>在docker搜索vaultwarden，并下载</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%87%AA%E5%BB%BAVaultwarden%20%28Bitwarden%29/1.png" alt="image-1"></p>
-<p>  配置好容器存储路径，其他的默认就好了</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%87%AA%E5%BB%BAVaultwarden%20%28Bitwarden%29/2.png" alt="image-2"></p>
-<p>然后运行后点详细，记住这里的端口号</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%87%AA%E5%BB%BAVaultwarden%20%28Bitwarden%29/3.png" alt="image-3"></p>
-<p>套件中心安装花生壳</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%87%AA%E5%BB%BAVaultwarden%20%28Bitwarden%29/4.png" alt="image-4"></p>
-<p>然后配置花生壳，设置内网nas的ip还有Vaultwarden的端口号</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%87%AA%E5%BB%BAVaultwarden%20%28Bitwarden%29/5.png" alt="image-5"></p>
-<p>然后访问外网地址，创建账号密码登录。搞定</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%87%AA%E5%BB%BAVaultwarden%20%28Bitwarden%29/6.png" alt="image-6"></p>
-<p>配合无公网 IP 搭建 Cloudflare 免费隧道穿透：<a href="https://9ouu.github.io/blog/45195/">群晖系列：无公网IP搭建Cloudflare免费隧道穿透</a></p>
-]]></content>
-      <categories>
-        <category>群晖nas</category>
-      </categories>
-      <tags>
-        <tag>Vaultwarden</tag>
-        <tag>Bitwarden</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>群晖系列：自建Easyimage图床</title>
     <url>/blog/3482/</url>
     <content><![CDATA[<h2 id="一、EasyImages介绍"><a href="#一、EasyImages介绍" class="headerlink" title="一、EasyImages介绍"></a>一、EasyImages介绍</h2><p>Easyimage是一个开源的、支持多文件上传、简单无数据库,返回图片url,markdown,bbscode,html的一款图床程序。</p>
@@ -254,6 +224,36 @@
       </tags>
   </entry>
   <entry>
+    <title>群晖系列：自建Vaultwarden (Bitwarden)</title>
+    <url>/blog/8140/</url>
+    <content><![CDATA[<p>当Bitwarden在快速发展的过程中，自建版本发生了开发分支。2022年5月左右，docker image由原来的bitwardenrs&#x2F;server官宣转为<a href="https://hub.docker.com/r/vaultwarden/server">vaultwarden&#x2F;server</a>。名称也由Bitwarden变为了Vaultwarden。Vaultwarden兼容所有Bitwarden的app，也就是说不论是浏览器的插件、桌面的应用程序，还是安卓、iOS的app，都能够通过Vaultwarden来自建密码管理平台，从而最大限度的保护自己的密码池。</p>
+<h1 id="一、Vaultwarden-是什么"><a href="#一、Vaultwarden-是什么" class="headerlink" title="一、Vaultwarden 是什么"></a>一、Vaultwarden 是什么</h1><p>Vaultwarden 是一个用于本地搭建 Bitwarden 服务器的第三方 Docker 项目。仅在部署的时候使用 Vaultwarden 镜像，桌面端、移动端、浏览器扩展等客户端均使用官方 Bitwarden 客户端。</p>
+<p>Vaultwarden 很轻量，对于不希望使用官方的占用大量资源的自托管部署而言，它是理想的选择。</p>
+<h1 id="二、Vaultwarden-与-Bitwarden-的区别"><a href="#二、Vaultwarden-与-Bitwarden-的区别" class="headerlink" title="二、Vaultwarden 与 Bitwarden 的区别"></a>二、Vaultwarden 与 Bitwarden 的区别</h1><p>除不支持官方企业版的部分功能（如目录同步、SSO、群组、自定义角色以及基于企业组织层面的 Duo Security 两步登录）外，其他大部分功能均免费支持。并跟随官方版本保持及时更新。</p>
+<p>Vaultwarden 比官方版更轻量。官方版使用 .Net 开发，使用 MSSQL 数据库，要求至少 2GB 内存；Vaultwarden 使用 Rust 编写，改用 SQLite 数据库（现在也支持 MySQL 和 PostgreSQL），运行时只需要 10M 内存，可以说对硬件基本没有要求。</p>
+<h1 id="三、搭建Vaultwarden"><a href="#三、搭建Vaultwarden" class="headerlink" title="三、搭建Vaultwarden"></a>三、搭建Vaultwarden</h1><p>在docker搜索vaultwarden，并下载</p>
+<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%87%AA%E5%BB%BAVaultwarden%20%28Bitwarden%29/1.png" alt="image-1"></p>
+<p>  配置好容器存储路径，其他的默认就好了</p>
+<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%87%AA%E5%BB%BAVaultwarden%20%28Bitwarden%29/2.png" alt="image-2"></p>
+<p>然后运行后点详细，记住这里的端口号</p>
+<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%87%AA%E5%BB%BAVaultwarden%20%28Bitwarden%29/3.png" alt="image-3"></p>
+<p>套件中心安装花生壳</p>
+<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%87%AA%E5%BB%BAVaultwarden%20%28Bitwarden%29/4.png" alt="image-4"></p>
+<p>然后配置花生壳，设置内网nas的ip还有Vaultwarden的端口号</p>
+<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%87%AA%E5%BB%BAVaultwarden%20%28Bitwarden%29/5.png" alt="image-5"></p>
+<p>然后访问外网地址，创建账号密码登录。搞定</p>
+<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%87%AA%E5%BB%BAVaultwarden%20%28Bitwarden%29/6.png" alt="image-6"></p>
+<p>配合无公网 IP 搭建 Cloudflare 免费隧道穿透：<a href="https://9ouu.github.io/blog/45195/">群晖系列：无公网IP搭建Cloudflare免费隧道穿透</a></p>
+]]></content>
+      <categories>
+        <category>群晖nas</category>
+      </categories>
+      <tags>
+        <tag>Vaultwarden</tag>
+        <tag>Bitwarden</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>记一次代码泄漏处置过程</title>
     <url>/blog/32792/</url>
     <content><![CDATA[<h2 id="一、背景"><a href="#一、背景" class="headerlink" title="一、背景"></a>一、背景</h2><p>上班的时候，同事发现一则告警，是关于公司的代码泄漏，我看了一下，是个 dome 代码，但是一直放在公网上好像也不太好，它会一直告警，而且之后要是告警了领导看到也会问，干脆把它干掉算了。于是我让他找买了服务的厂家协助处置一下这个项目。</p>
@@ -274,7 +274,7 @@
 <p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%AE%B0%E4%B8%80%E6%AC%A1%E4%BB%A3%E7%A0%81%E6%B3%84%E6%BC%8F%E5%A4%84%E7%BD%AE%E8%BF%87%E7%A8%8B/8.png" alt="image"></p>
 <h2 id="四、隐藏邮箱的方法"><a href="#四、隐藏邮箱的方法" class="headerlink" title="四、隐藏邮箱的方法"></a>四、隐藏邮箱的方法</h2><h4 id="1、不使用自己的邮箱注册"><a href="#1、不使用自己的邮箱注册" class="headerlink" title="1、不使用自己的邮箱注册"></a>1、不使用自己的邮箱注册</h4><h4 id="2、使用-GitHub-专用的替代邮箱"><a href="#2、使用-GitHub-专用的替代邮箱" class="headerlink" title="2、使用 GitHub 专用的替代邮箱"></a>2、使用 GitHub 专用的替代邮箱</h4><p>访问 <a href="https://github.com/settings/emails">https://github.com/settings/emails</a> ，在 Primary email address 一栏，我们能看到 GitHub 为我们提供了一个专用的用于在 git 中配置的邮箱地址，直接勾选上。<br>谷歌的翻译是这样的：</p>
 <ul>
-<li><p>在将我的电子邮件地址保密：<br>我们将删除您的公开个人资料电子邮件，并在执行基于 Web 的 Git 操作（例如编辑和合并）时使用 <a href="mailto:&#x78;&#120;&#120;&#x78;&#120;&#64;&#x75;&#x73;&#x65;&#114;&#x73;&#x2e;&#x6e;&#111;&#x72;&#101;&#112;&#x6c;&#x79;&#x2e;&#103;&#105;&#116;&#x68;&#x75;&#x62;&#46;&#x63;&#x6f;&#109;">&#x78;&#120;&#120;&#x78;&#120;&#64;&#x75;&#x73;&#x65;&#114;&#x73;&#x2e;&#x6e;&#111;&#x72;&#101;&#112;&#x6c;&#x79;&#x2e;&#103;&#105;&#116;&#x68;&#x75;&#x62;&#46;&#x63;&#x6f;&#109;</a> ，以及代表您发送电子邮件。如果您希望命令行 Git 操作使用您的私人电子邮件，则必须在 Git 中设置您的电子邮件。<br>使用此电子邮件推送到 GitHub 的提交仍将与您的帐户相关联。</p>
+<li><p>在将我的电子邮件地址保密：<br>我们将删除您的公开个人资料电子邮件，并在执行基于 Web 的 Git 操作（例如编辑和合并）时使用 <a href="mailto:&#120;&#120;&#x78;&#120;&#x78;&#64;&#x75;&#115;&#101;&#x72;&#x73;&#46;&#x6e;&#x6f;&#114;&#101;&#x70;&#x6c;&#x79;&#46;&#x67;&#105;&#116;&#104;&#x75;&#98;&#x2e;&#99;&#111;&#109;">&#120;&#120;&#x78;&#120;&#x78;&#64;&#x75;&#115;&#101;&#x72;&#x73;&#46;&#x6e;&#x6f;&#114;&#101;&#x70;&#x6c;&#x79;&#46;&#x67;&#105;&#116;&#104;&#x75;&#98;&#x2e;&#99;&#111;&#109;</a> ，以及代表您发送电子邮件。如果您希望命令行 Git 操作使用您的私人电子邮件，则必须在 Git 中设置您的电子邮件。<br>使用此电子邮件推送到 GitHub 的提交仍将与您的帐户相关联。</p>
 </li>
 <li><p>阻止暴露我的电子邮件的命令行推送：<br>当您推送到 GitHub 时，我们将检查最近的提交。如果该提交的作者电子邮件是您 GitHub 帐户上的私人电子邮件，我们将阻止推送并警告您暴露您的私人电子邮件。address 一栏，我们能看到 GitHub 为我们提供了一个专用的用于在 git 中配置的邮箱地址。</p>
 </li>
@@ -291,6 +291,38 @@
         <tag>代码泄漏</tag>
         <tag>溯源</tag>
         <tag>Github</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>记一次银狐病毒应急响应</title>
+    <url>/blog/10221/</url>
+    <content><![CDATA[<h1 id="记一次银狐病毒应急响应"><a href="#记一次银狐病毒应急响应" class="headerlink" title="记一次银狐病毒应急响应"></a>记一次银狐病毒应急响应</h1><h2 id="一、背景"><a href="#一、背景" class="headerlink" title="一、背景"></a>一、背景</h2><p>事情的起因是，在上班的时候同事突然联系我说无法登陆企业微信，然后丢了 2 张图片过来<br><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%AE%B0%E4%B8%80%E6%AC%A1%E9%93%B6%E7%8B%90%E7%97%85%E6%AF%92%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/1.png" alt="image.png"></p>
+<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%AE%B0%E4%B8%80%E6%AC%A1%E9%93%B6%E7%8B%90%E7%97%85%E6%AF%92%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/2.png" alt="image.png"></p>
+<h2 id="二、处理过程"><a href="#二、处理过程" class="headerlink" title="二、处理过程"></a>二、处理过程</h2><p>看了发来的图片，这很明显了，是感染病毒木马了，于是我就问了一下是不是安装了什么软件，询问得知是跟我说是自己安装了个谷歌浏览器，我看了天塌了，仿冒的谷歌浏览器官网。</p>
+<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%AE%B0%E4%B8%80%E6%AC%A1%E9%93%B6%E7%8B%90%E7%97%85%E6%AF%92%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/3.png" alt="image.png"></p>
+<p>由于公司没有防病毒，这个也是个新电脑，没有什么数据，所以也就慢慢搞了。把木马样本发去云沙箱分析。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://s.threatbook.com/report/file/0b61678a01f34ffe1a44b40d3e10d57b3f0d246be9cd50fdcdd33d3cf5d92526</span><br></pre></td></tr></table></figure>
+
+<p>根据分析情况大概知道会有什么操作。</p>
+<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%AE%B0%E4%B8%80%E6%AC%A1%E9%93%B6%E7%8B%90%E7%97%85%E6%AF%92%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/4.png" alt="image.png"></p>
+<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%AE%B0%E4%B8%80%E6%AC%A1%E9%93%B6%E7%8B%90%E7%97%85%E6%AF%92%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/5.png" alt="image.png"></p>
+<p>根据云沙箱的信息，把样本拿到我的虚拟机里跑一下再，再用工具进行分析。</p>
+<p>先定位恶意文件，可以看到恶意文件在 <code>C:\Users\bigba\AppData\Roaming\TrustAsia\intel.dll</code></p>
+<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%AE%B0%E4%B8%80%E6%AC%A1%E9%93%B6%E7%8B%90%E7%97%85%E6%AF%92%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/6.png" alt="image.png"></p>
+<p>这里可以看到还有两条注册表。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">\Microsoft\Windows\AppID\.NET Framework NGEN v6.0.8745			c:\users\bigba\appdata\local\chrmstp.exe	2018/7/24 14:42	</span><br><span class="line">-----------------------------------------------------------------------------------------</span><br><span class="line">\Microsoft\Windows\AppID\.NET Framework NGEN v6.0.USANW	Update	(Not verified) TODO: &lt;公司名&gt;	c:\users\bigba\appdata\roaming\trustasia\intel.dll	2025/7/22 0:09	</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%AE%B0%E4%B8%80%E6%AC%A1%E9%93%B6%E7%8B%90%E7%97%85%E6%AF%92%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/7.png" alt="image.png"></p>
+<p>然后把恶意文件进程、恶意文件和注册表都清理了，重启一下电脑再用专杀工具扫描一下，发现木马可以被完全清理。</p>
+<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%AE%B0%E4%B8%80%E6%AC%A1%E9%93%B6%E7%8B%90%E7%97%85%E6%AF%92%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/8.png" alt="image.png"></p>
+<p>%E5%BA%94&#x2F;8.png)</p>
+]]></content>
+      <categories>
+        <category>应急响应</category>
+      </categories>
+      <tags>
+        <tag>银狐病毒</tag>
+        <tag>应急响应</tag>
       </tags>
   </entry>
 </search>
