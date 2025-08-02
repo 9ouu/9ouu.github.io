@@ -1,475 +1,254 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search>
-  <entry>
-    <title>MacOS deb编译记录</title>
-    <url>/blog/29292/</url>
-    <content><![CDATA[<h2 id="一、背景"><a href="#一、背景" class="headerlink" title="一、背景"></a>一、背景</h2><p>因为需要修改一些 ios 的插件，所以了解了一下 macbook 下的 deb 编译。</p>
-<h2 id="二、环境安装"><a href="#二、环境安装" class="headerlink" title="二、环境安装"></a>二、环境安装</h2><h3 id="1-、安装Theos"><a href="#1-、安装Theos" class="headerlink" title="1 、安装Theos"></a>1 、安装Theos</h3><p>Theos 需要 <code>ldid</code> 来为二进制文件签名，以及 <code>xz</code> 用于压缩。在终端里运行</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">brew install ldid xz</span><br></pre></td></tr></table></figure>
-
-<p>如果您还没有安装 Homebrew，请打开“终端” (Terminal) app，然后粘贴并运行以下命令：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;</span><br></pre></td></tr></table></figure>
-
-<p>我们将 Theos 安装在 <code>/opt/theos</code> 目录下</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo mkdir -p /opt/theos </span><br><span class="line">sudo chown $(whoami) /opt/theos</span><br></pre></td></tr></table></figure>
-
-<p>接着，使用 git 将 Theos 克隆到这个目录：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git clone --recursive https://github.com/theos/theos.git /opt/theos</span><br></pre></td></tr></table></figure>
-
-<p>配置环境变量</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">vim ~/.zshrc</span><br></pre></td></tr></table></figure>
-
-<p>添加以下两行：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">export THEOS=/opt/theos</span><br><span class="line">export PATH=$THEOS/bin:$PATH</span><br></pre></td></tr></table></figure>
-
-<p>重启终端</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">source ~/.zshrc</span><br></pre></td></tr></table></figure>
-
-<p>下载 iOS&#x2F;macOS SDK，下载地址如下</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://github.com/theos/sdks</span><br></pre></td></tr></table></figure>
-
-<p>我下载的是 16.5</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mv ~/Downloads/iPhoneOS16.5.sdk $THEOS/sdks/</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="2-、安装-Xcode-Command-Line-Tools"><a href="#2-、安装-Xcode-Command-Line-Tools" class="headerlink" title="2 、安装 Xcode Command Line Tools"></a>2 、安装 Xcode Command Line Tools</h3><p>Theos 需要 Xcode 的命令行工具。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">xcode-select --install</span><br></pre></td></tr></table></figure>
-
-<p>执行此命令后，会弹出一个窗口，请点击“安装”并同意许可协议。</p>
-<h2 id="三、编译"><a href="#三、编译" class="headerlink" title="三、编译"></a>三、编译</h2><p>命令如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">make package</span><br></pre></td></tr></table></figure>]]></content>
+<search> 
+  
+  
+    
+    <entry>
+      <title>MacOS deb编译记录</title>
+      <link href="/blog/29292/"/>
+      <url>/blog/29292/</url>
+      
+        <content type="html"><![CDATA[<h2 id="一、背景"><a href="#一、背景" class="headerlink" title="一、背景"></a>一、背景</h2><p>因为需要修改一些 ios 的插件，所以了解了一下 macbook 下的 deb 编译。</p><h2 id="二、环境安装"><a href="#二、环境安装" class="headerlink" title="二、环境安装"></a>二、环境安装</h2><h3 id="1-、安装Theos"><a href="#1-、安装Theos" class="headerlink" title="1 、安装Theos"></a>1 、安装Theos</h3><p>Theos 需要 <code>ldid</code> 来为二进制文件签名，以及 <code>xz</code> 用于压缩。在终端里运行</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install ldid xz</span><br></pre></td></tr></table></figure><p>如果您还没有安装 Homebrew，请打开“终端” (Terminal) app，然后粘贴并运行以下命令：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;</span><br></pre></td></tr></table></figure><p>我们将 Theos 安装在 <code>/opt/theos</code> 目录下</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo mkdir -p /opt/theos </span><br><span class="line">sudo chown $(whoami) /opt/theos</span><br></pre></td></tr></table></figure><p>接着，使用 git 将 Theos 克隆到这个目录：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone --recursive https://github.com/theos/theos.git /opt/theos</span><br></pre></td></tr></table></figure><p>配置环境变量</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim ~/.zshrc</span><br></pre></td></tr></table></figure><p>添加以下两行：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">export THEOS=/opt/theos</span><br><span class="line">export PATH=$THEOS/bin:$PATH</span><br></pre></td></tr></table></figure><p>重启终端</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source ~/.zshrc</span><br></pre></td></tr></table></figure><p>下载 iOS&#x2F;macOS SDK，下载地址如下</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/theos/sdks</span><br></pre></td></tr></table></figure><p>我下载的是 16.5</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv ~/Downloads/iPhoneOS16.5.sdk $THEOS/sdks/</span><br></pre></td></tr></table></figure><h3 id="2-、安装-Xcode-Command-Line-Tools"><a href="#2-、安装-Xcode-Command-Line-Tools" class="headerlink" title="2 、安装 Xcode Command Line Tools"></a>2 、安装 Xcode Command Line Tools</h3><p>Theos 需要 Xcode 的命令行工具。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xcode-select --install</span><br></pre></td></tr></table></figure><p>执行此命令后，会弹出一个窗口，请点击“安装”并同意许可协议。</p><h2 id="三、编译"><a href="#三、编译" class="headerlink" title="三、编译"></a>三、编译</h2><p>命令如下：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make package</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
       <categories>
-        <category>编译</category>
+          
+          <category> 编译 </category>
+          
       </categories>
-      <tags>
-        <tag>MacOS</tag>
-        <tag>deb</tag>
-        <tag>编译</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>n8n本地部署问题</title>
-    <url>/blog/62000/</url>
-    <content><![CDATA[<h2 id="一、部署中的问题"><a href="#一、部署中的问题" class="headerlink" title="一、部署中的问题"></a>一、部署中的问题</h2><p>1、在 <code>environment</code> 环境变量中，我增加了2个Proxy的变量，主要是为了解决容器内链接各式各样国外服务。<br>2、配置 <code>N8N_SECURE_COOKIE</code> 解决下面图片的问题</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/n8n%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2%E9%97%AE%E9%A2%98/1.png" alt="image.png"></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">services:</span><br><span class="line">  n8n:</span><br><span class="line">    container_name: n8n</span><br><span class="line">    ports:</span><br><span class="line">      # 根据自己的要求修改左侧端口</span><br><span class="line">      - 35678:5678</span><br><span class="line">    volumes:</span><br><span class="line">      # 必须使用docker volume，否则有权限问题</span><br><span class="line">      - n8n_data:/home/node/.n8n</span><br><span class="line">    environment:</span><br><span class="line">      # 该变量解决http访问，否则需要代理https地址</span><br><span class="line">      - N8N_SECURE_COOKIE=false</span><br><span class="line">      - GENERIC_TIMEZONE=Asia/Shanghai</span><br><span class="line">      # 下面两个是你自己的代理地址</span><br><span class="line">      - HTTP_PROXY=http://192.168.0.1:7890</span><br><span class="line">      - HTTPS_PROXY=http://192.168.0.1:7890</span><br><span class="line">    image: docker.n8n.io/n8nio/n8n</span><br><span class="line">volumes:</span><br><span class="line">    n8n_data:</span><br></pre></td></tr></table></figure>
-
-
-<h2 id="二、中文设置"><a href="#二、中文设置" class="headerlink" title="二、中文设置"></a>二、中文设置</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://github.com/other-blowsnow/n8n-i18n-chinese</span><br></pre></td></tr></table></figure>
-
-<p>修改文件 docker-compose. yml </p>
-<p>前面的为项目下载到本地的路径。后面的固定</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">volumes:</span><br><span class="line">      - /root/n8n/dist:/usr/local/lib/node_modules/n8n/node_modules/n8n-editor-ui/dist</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker volume create n8n_data</span><br><span class="line"></span><br><span class="line">docker run -it --rm \</span><br><span class="line"> --name n8n \</span><br><span class="line"> -p 5678:5678 \</span><br><span class="line"> -e DB_TYPE=postgresdb \</span><br><span class="line"> -e DB_POSTGRESDB_DATABASE=&lt;POSTGRES_DATABASE&gt; \</span><br><span class="line"> -e DB_POSTGRESDB_HOST=postgres \</span><br><span class="line"> -e DB_POSTGRESDB_PORT=5432 \</span><br><span class="line"> -e DB_POSTGRESDB_USER=&lt;POSTGRES_USER&gt; \</span><br><span class="line"> -e DB_POSTGRESDB_SCHEMA=&lt;POSTGRES_SCHEMA&gt; \</span><br><span class="line"> -e DB_POSTGRESDB_PASSWORD=&lt;POSTGRES_PASSWORD&gt; \</span><br><span class="line"> -e N8N_SECURE_COOKIE=false \</span><br><span class="line"> -e GENERIC_TIMEZONE=Asia/Shanghai \</span><br><span class="line"> -v n8n_data:/home/node/.n8n \</span><br><span class="line"> docker.n8n.io/n8nio/n8n</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> docker compose up -d</span><br></pre></td></tr></table></figure>
-
-
-<h2 id="三、参考"><a href="#三、参考" class="headerlink" title="三、参考"></a>三、参考</h2><p><a href="https://github.com/n8n-io/n8n-hosting/tree/main/docker-compose/withPostgres">https://github.com/n8n-io/n8n-hosting/tree/main/docker-compose/withPostgres</a></p>
-<p><a href="https://hub.docker.com/r/n8nio/n8n">https://hub.docker.com/r/n8nio/n8n</a></p>
-]]></content>
+      
+      
+        <tags>
+            
+            <tag> MacOS </tag>
+            
+            <tag> deb </tag>
+            
+            <tag> 编译 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>记一次银狐病毒应急响应</title>
+      <link href="/blog/10221/"/>
+      <url>/blog/10221/</url>
+      
+        <content type="html"><![CDATA[<h1 id="记一次银狐病毒应急响应"><a href="#记一次银狐病毒应急响应" class="headerlink" title="记一次银狐病毒应急响应"></a>记一次银狐病毒应急响应</h1><h2 id="一、背景"><a href="#一、背景" class="headerlink" title="一、背景"></a>一、背景</h2><p>事情的起因是，在上班的时候同事突然联系我说无法登陆企业微信，然后丢了 2 张图片过来<br><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%AE%B0%E4%B8%80%E6%AC%A1%E9%93%B6%E7%8B%90%E7%97%85%E6%AF%92%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/1.png" alt="image.png"></p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%AE%B0%E4%B8%80%E6%AC%A1%E9%93%B6%E7%8B%90%E7%97%85%E6%AF%92%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/2.png" alt="image.png"></p><h2 id="二、处理过程"><a href="#二、处理过程" class="headerlink" title="二、处理过程"></a>二、处理过程</h2><p>看了发来的图片，这很明显了，是感染病毒木马了，于是我就问了一下是不是安装了什么软件，询问得知是跟我说是自己安装了个谷歌浏览器，我看了天塌了，仿冒的谷歌浏览器官网。</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%AE%B0%E4%B8%80%E6%AC%A1%E9%93%B6%E7%8B%90%E7%97%85%E6%AF%92%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/3.png" alt="image.png"></p><p>由于公司没有防病毒，这个也是个新电脑，没有什么数据，所以也就慢慢搞了。把木马样本发去云沙箱分析。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://s.threatbook.com/report/file/0b61678a01f34ffe1a44b40d3e10d57b3f0d246be9cd50fdcdd33d3cf5d92526</span><br></pre></td></tr></table></figure><p>根据分析情况大概知道会有什么操作。</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%AE%B0%E4%B8%80%E6%AC%A1%E9%93%B6%E7%8B%90%E7%97%85%E6%AF%92%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/4.png" alt="image.png"></p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%AE%B0%E4%B8%80%E6%AC%A1%E9%93%B6%E7%8B%90%E7%97%85%E6%AF%92%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/5.png" alt="image.png"></p><p>根据云沙箱的信息，把样本拿到我的虚拟机里跑一下再，再用工具进行分析。</p><p>先定位恶意文件，可以看到恶意文件在 <code>C:\Users\bigba\AppData\Roaming\TrustAsia\intel.dll</code></p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%AE%B0%E4%B8%80%E6%AC%A1%E9%93%B6%E7%8B%90%E7%97%85%E6%AF%92%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/6.png" alt="image.png"></p><p>这里可以看到还有两条注册表。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">\Microsoft\Windows\AppID\.NET Framework NGEN v6.0.8745c:\users\bigba\appdata\local\chrmstp.exe2018/7/24 14:42</span><br><span class="line">-----------------------------------------------------------------------------------------</span><br><span class="line">\Microsoft\Windows\AppID\.NET Framework NGEN v6.0.USANWUpdate(Not verified) TODO: &lt;公司名&gt;c:\users\bigba\appdata\roaming\trustasia\intel.dll2025/7/22 0:09</span><br></pre></td></tr></table></figure><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%AE%B0%E4%B8%80%E6%AC%A1%E9%93%B6%E7%8B%90%E7%97%85%E6%AF%92%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/7.png" alt="image.png"></p><p>然后把恶意文件进程、恶意文件和注册表都清理了，重启一下电脑再用专杀工具扫描一下，发现木马可以被完全清理。</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%AE%B0%E4%B8%80%E6%AC%A1%E9%93%B6%E7%8B%90%E7%97%85%E6%AF%92%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/8.png" alt="image.png"></p><p>%E5%BA%94&#x2F;8.png)</p>]]></content>
+      
+      
       <categories>
-        <category>AI</category>
+          
+          <category> 应急响应 </category>
+          
       </categories>
-      <tags>
-        <tag>Ai</tag>
-        <tag>n8n</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>群晖系列：无公网IP搭建Cloudflare免费隧道穿透</title>
-    <url>/blog/45195/</url>
-    <content><![CDATA[<h2 id="一、域名注册"><a href="#一、域名注册" class="headerlink" title="一、域名注册"></a>一、域名注册</h2><p>首先我们先注册一个域名，Freenom可以注册免费域名，但是好像最近不太稳定，官网点这里：<a href="https://link.zhihu.com/?target=https://www.freenom.com/">A Name for Everyone</a></p>
-<p>而且国内出了新政，2022年3月起所有域名都要实名认证，不然有可能会频繁掉线，所以这里我推荐大家上阿里云实名注册一个域名：<a href="https://www.aliyun.com/">https://www.aliyun.com/</a></p>
-<h2 id="二、cloudflare托管域名"><a href="#二、cloudflare托管域名" class="headerlink" title="二、cloudflare托管域名"></a>二、cloudflare托管域名</h2><p>点击这里添加域名</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E6%97%A0%E5%85%AC%E7%BD%91IP%E6%90%AD%E5%BB%BACloudflare%E5%85%8D%E8%B4%B9%E9%9A%A7%E9%81%93%E7%A9%BF%E9%80%8F/1.png" alt="image">)</p>
-<p>然后选择这个免费的，点击继续</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E6%97%A0%E5%85%AC%E7%BD%91IP%E6%90%AD%E5%BB%BACloudflare%E5%85%8D%E8%B4%B9%E9%9A%A7%E9%81%93%E7%A9%BF%E9%80%8F/2.png" alt="image"></p>
-<p>然后复制这里的 dns，按要求修改就行啦</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E6%97%A0%E5%85%AC%E7%BD%91IP%E6%90%AD%E5%BB%BACloudflare%E5%85%8D%E8%B4%B9%E9%9A%A7%E9%81%93%E7%A9%BF%E9%80%8F/3.png" alt="image"></p>
-<h2 id="三、配置Zero-Trust"><a href="#三、配置Zero-Trust" class="headerlink" title="三、配置Zero Trust"></a>三、配置Zero Trust</h2><p>登录到cloudflare，找到Zero Trust</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E6%97%A0%E5%85%AC%E7%BD%91IP%E6%90%AD%E5%BB%BACloudflare%E5%85%8D%E8%B4%B9%E9%9A%A7%E9%81%93%E7%A9%BF%E9%80%8F/4.png" alt="image"></p>
-<p>这里写个项目名字</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E6%97%A0%E5%85%AC%E7%BD%91IP%E6%90%AD%E5%BB%BACloudflare%E5%85%8D%E8%B4%B9%E9%9A%A7%E9%81%93%E7%A9%BF%E9%80%8F/5.png" alt="image"></p>
-<p>选择免费的项目</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E6%97%A0%E5%85%AC%E7%BD%91IP%E6%90%AD%E5%BB%BACloudflare%E5%85%8D%E8%B4%B9%E9%9A%A7%E9%81%93%E7%A9%BF%E9%80%8F/6.png" alt="image"></p>
-<p>这里需要绑定银行卡，绑定完之后进行解绑就行了。</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E6%97%A0%E5%85%AC%E7%BD%91IP%E6%90%AD%E5%BB%BACloudflare%E5%85%8D%E8%B4%B9%E9%9A%A7%E9%81%93%E7%A9%BF%E9%80%8F/7.png" alt="image"></p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E6%97%A0%E5%85%AC%E7%BD%91IP%E6%90%AD%E5%BB%BACloudflare%E5%85%8D%E8%B4%B9%E9%9A%A7%E9%81%93%E7%A9%BF%E9%80%8F/8.png" alt="image"></p>
-<p>!<img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E6%97%A0%E5%85%AC%E7%BD%91IP%E6%90%AD%E5%BB%BACloudflare%E5%85%8D%E8%B4%B9%E9%9A%A7%E9%81%93%E7%A9%BF%E9%80%8F/9.png" alt="image"></p>
-<p>然后进来点击create a tunnel 创建一个tunnel</p>
-<p>!<img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E6%97%A0%E5%85%AC%E7%BD%91IP%E6%90%AD%E5%BB%BACloudflare%E5%85%8D%E8%B4%B9%E9%9A%A7%E9%81%93%E7%A9%BF%E9%80%8F/10.png" alt="image"></p>
-<p>这里随便写一个</p>
-<p>!<img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E6%97%A0%E5%85%AC%E7%BD%91IP%E6%90%AD%E5%BB%BACloudflare%E5%85%8D%E8%B4%B9%E9%9A%A7%E9%81%93%E7%A9%BF%E9%80%8F/11.png" alt="image"></p>
-<p>选择docker，然后复制下面的命令</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker run cloudflare/cloudflared:latest tunnel --no-autoupdate run --token eyJhIjoixxxxxx</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E6%97%A0%E5%85%AC%E7%BD%91IP%E6%90%AD%E5%BB%BACloudflare%E5%85%8D%E8%B4%B9%E9%9A%A7%E9%81%93%E7%A9%BF%E9%80%8F/12.png" alt="image"></p>
-<h2 id="四、配置docker"><a href="#四、配置docker" class="headerlink" title="四、配置docker"></a>四、配置docker</h2><p>在群晖docker找到cloudflare后进行下载。</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E6%97%A0%E5%85%AC%E7%BD%91IP%E6%90%AD%E5%BB%BACloudflare%E5%85%8D%E8%B4%B9%E9%9A%A7%E9%81%93%E7%A9%BF%E9%80%8F/13.png" alt="image"></p>
-<p>然后开始配置cloudflare，选择高级设置。</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E6%97%A0%E5%85%AC%E7%BD%91IP%E6%90%AD%E5%BB%BACloudflare%E5%85%8D%E8%B4%B9%E9%9A%A7%E9%81%93%E7%A9%BF%E9%80%8F/14.png" alt="image"></p>
-<p>在执行命令的位置贴上复制下来的命令，如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">tunnel --no-autoupdate run --token eyJhIjoixxxxxx</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E6%97%A0%E5%85%AC%E7%BD%91IP%E6%90%AD%E5%BB%BACloudflare%E5%85%8D%E8%B4%B9%E9%9A%A7%E9%81%93%E7%A9%BF%E9%80%8F/15.png" alt="image"></p>
-<p>然后点保存，端口不用配置，配置文件夹。新增加一个cloudflare，装载路径为&#x2F;etc&#x2F;cloudflared，然后点下一步完成就好了。</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E6%97%A0%E5%85%AC%E7%BD%91IP%E6%90%AD%E5%BB%BACloudflare%E5%85%8D%E8%B4%B9%E9%9A%A7%E9%81%93%E7%A9%BF%E9%80%8F/16.png" alt="image"></p>
-<p>然后启动docker，可以看到cloudflare已经是正常使用了，直接访问域名可以访问到内网地址。</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E6%97%A0%E5%85%AC%E7%BD%91IP%E6%90%AD%E5%BB%BACloudflare%E5%85%8D%E8%B4%B9%E9%9A%A7%E9%81%93%E7%A9%BF%E9%80%8F/17.png" alt="image"></p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E6%97%A0%E5%85%AC%E7%BD%91IP%E6%90%AD%E5%BB%BACloudflare%E5%85%8D%E8%B4%B9%E9%9A%A7%E9%81%93%E7%A9%BF%E9%80%8F/18.png" alt="image"></p>
-<h2 id="五、多隧道创建"><a href="#五、多隧道创建" class="headerlink" title="五、多隧道创建"></a>五、多隧道创建</h2><p>如果我想穿透不止一个端口那怎么办，其实特别简单，只需要再加一条隧道穿透规则，修改我们已有域名前面的子域名即可，操作如下 打开我们的隧道穿透Cloudflare Zero Trust</p>
-<p>选择Access下的Tunnels 点击Configure今日我们已经创建好的穿透隧道，然后点击创建就好了</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E6%97%A0%E5%85%AC%E7%BD%91IP%E6%90%AD%E5%BB%BACloudflare%E5%85%8D%E8%B4%B9%E9%9A%A7%E9%81%93%E7%A9%BF%E9%80%8F/19.png" alt="image"></p>
-<p>参考链接：<a href="https://zhuanlan.zhihu.com/p/591320825zhihu.com/p/591320825">https://zhuanlan.zhihu.com/p/591320825zhihu.com/p/591320825</a></p>
-]]></content>
+      
+      
+        <tags>
+            
+            <tag> 银狐病毒 </tag>
+            
+            <tag> 应急响应 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>n8n本地部署问题</title>
+      <link href="/blog/62000/"/>
+      <url>/blog/62000/</url>
+      
+        <content type="html"><![CDATA[<h2 id="一、部署中的问题"><a href="#一、部署中的问题" class="headerlink" title="一、部署中的问题"></a>一、部署中的问题</h2><p>1、在 <code>environment</code> 环境变量中，我增加了2个Proxy的变量，主要是为了解决容器内链接各式各样国外服务。<br>2、配置 <code>N8N_SECURE_COOKIE</code> 解决下面图片的问题</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/n8n%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2%E9%97%AE%E9%A2%98/1.png" alt="image.png"></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">services:</span><br><span class="line">  n8n:</span><br><span class="line">    container_name: n8n</span><br><span class="line">    ports:</span><br><span class="line">      # 根据自己的要求修改左侧端口</span><br><span class="line">      - 35678:5678</span><br><span class="line">    volumes:</span><br><span class="line">      # 必须使用docker volume，否则有权限问题</span><br><span class="line">      - n8n_data:/home/node/.n8n</span><br><span class="line">    environment:</span><br><span class="line">      # 该变量解决http访问，否则需要代理https地址</span><br><span class="line">      - N8N_SECURE_COOKIE=false</span><br><span class="line">      - GENERIC_TIMEZONE=Asia/Shanghai</span><br><span class="line">      # 下面两个是你自己的代理地址</span><br><span class="line">      - HTTP_PROXY=http://192.168.0.1:7890</span><br><span class="line">      - HTTPS_PROXY=http://192.168.0.1:7890</span><br><span class="line">    image: docker.n8n.io/n8nio/n8n</span><br><span class="line">volumes:</span><br><span class="line">    n8n_data:</span><br></pre></td></tr></table></figure><h2 id="二、中文设置"><a href="#二、中文设置" class="headerlink" title="二、中文设置"></a>二、中文设置</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/other-blowsnow/n8n-i18n-chinese</span><br></pre></td></tr></table></figure><p>修改文件 docker-compose. yml </p><p>前面的为项目下载到本地的路径。后面的固定</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">volumes:</span><br><span class="line">      - /root/n8n/dist:/usr/local/lib/node_modules/n8n/node_modules/n8n-editor-ui/dist</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">docker volume create n8n_data</span><br><span class="line"></span><br><span class="line">docker run -it --rm \</span><br><span class="line"> --name n8n \</span><br><span class="line"> -p 5678:5678 \</span><br><span class="line"> -e DB_TYPE=postgresdb \</span><br><span class="line"> -e DB_POSTGRESDB_DATABASE=&lt;POSTGRES_DATABASE&gt; \</span><br><span class="line"> -e DB_POSTGRESDB_HOST=postgres \</span><br><span class="line"> -e DB_POSTGRESDB_PORT=5432 \</span><br><span class="line"> -e DB_POSTGRESDB_USER=&lt;POSTGRES_USER&gt; \</span><br><span class="line"> -e DB_POSTGRESDB_SCHEMA=&lt;POSTGRES_SCHEMA&gt; \</span><br><span class="line"> -e DB_POSTGRESDB_PASSWORD=&lt;POSTGRES_PASSWORD&gt; \</span><br><span class="line"> -e N8N_SECURE_COOKIE=false \</span><br><span class="line"> -e GENERIC_TIMEZONE=Asia/Shanghai \</span><br><span class="line"> -v n8n_data:/home/node/.n8n \</span><br><span class="line"> docker.n8n.io/n8nio/n8n</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> docker compose up -d</span><br></pre></td></tr></table></figure><h2 id="三、参考"><a href="#三、参考" class="headerlink" title="三、参考"></a>三、参考</h2><p><a href="https://github.com/n8n-io/n8n-hosting/tree/main/docker-compose/withPostgres">https://github.com/n8n-io/n8n-hosting/tree/main/docker-compose/withPostgres</a></p><p><a href="https://hub.docker.com/r/n8nio/n8n">https://hub.docker.com/r/n8nio/n8n</a></p>]]></content>
+      
+      
       <categories>
-        <category>群晖nas</category>
+          
+          <category> AI </category>
+          
       </categories>
-      <tags>
-        <tag>Cloudflare</tag>
-        <tag>内网穿透</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>实践｜病毒情报自动化闭环运营</title>
-    <url>/blog/11928/</url>
-    <content><![CDATA[<h1 id="一、什么是病毒情报"><a href="#一、什么是病毒情报" class="headerlink" title="一、什么是病毒情报"></a>一、什么是病毒情报</h1><p>病毒情报（Virus Intelligence）指的是关于计算机病毒和恶意软件的信息和情报数据。它是针对恶意软件的研究、分析和监测的结果，用于了解和对抗不断变化和演化的威胁。</p>
-<h1 id="二、病毒情报对企业有什么用"><a href="#二、病毒情报对企业有什么用" class="headerlink" title="二、病毒情报对企业有什么用"></a>二、病毒情报对企业有什么用</h1><p>病毒情报对企业来说是关键的安全资源，它提供了关于当前和新兴威胁的信息，帮助企业了解各种恶意软件、攻击向量和攻击手法。这使企业能够更好地了解威胁环境，并根据最新的威胁情报来改进其安全防御策略。</p>
-<h1 id="三、背景需求"><a href="#三、背景需求" class="headerlink" title="三、背景需求"></a>三、背景需求</h1><p>正常情况下，企业的病毒情报依赖于安全厂家设备自带的 ioc，然后通过月度或者季度，或者牛一点的就每天对 ioc 库进行更新。那遇到新发现的病毒情报，厂家肯定无法实时更新然后同步到企业。所以我决定自己动手。</p>
-<p>然后我的思路是这样的, 通过以下四个步骤来完成我的自动化闭环运营。</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E5%AE%9E%E8%B7%B5%EF%BD%9C%E7%97%85%E6%AF%92%E6%83%85%E6%8A%A5%E8%87%AA%E5%8A%A8%E5%8C%96%E9%97%AD%E7%8E%AF%E8%BF%90%E8%90%A5/1.png" alt="image.png"></p>
-<h1 id="四、实践"><a href="#四、实践" class="headerlink" title="四、实践"></a>四、实践</h1><p>开始动手起来。首先肯定是获取情报源，然后进行评估，再确认。</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E5%AE%9E%E8%B7%B5%EF%BD%9C%E7%97%85%E6%AF%92%E6%83%85%E6%8A%A5%E8%87%AA%E5%8A%A8%E5%8C%96%E9%97%AD%E7%8E%AF%E8%BF%90%E8%90%A5/2.png" alt="image.png"></p>
-<p>1、获取情报源。</p>
-<p>目前我使用的源是 MalwareBazaar 跟 Abuseipdb ，当然后续有新的或者更好的还会不断添加。</p>
-<p>2、为什么使用他们？</p>
-<ul>
-<li>MalwareBazaar：</li>
-</ul>
-<p>它是一个公开的恶意软件样本库和情报平台，我们可以访问大量的恶意软件样本，并与其他专业人士共享他们的分析结果和发现，这种协作和知识共享的方式有助于更好地了解恶意软件的行为。它不仅提供了恶意软件样本的下载，还包含了样本的元数据、文件哈希值、IOC 等信息。最重要的是，支持 API。</p>
-<ul>
-<li>抽样评估：</li>
-</ul>
-<p>从 MalwareBazaar 抽取其中一个 ioc，时间：2023-02-07 01:45:50<br><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E5%AE%9E%E8%B7%B5%EF%BD%9C%E7%97%85%E6%AF%92%E6%83%85%E6%8A%A5%E8%87%AA%E5%8A%A8%E5%8C%96%E9%97%AD%E7%8E%AF%E8%BF%90%E8%90%A5/3.png" alt="image.png"></p>
-<p>某步云在线结果：没有新样本更新</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E5%AE%9E%E8%B7%B5%EF%BD%9C%E7%97%85%E6%AF%92%E6%83%85%E6%8A%A5%E8%87%AA%E5%8A%A8%E5%8C%96%E9%97%AD%E7%8E%AF%E8%BF%90%E8%90%A5/4.png" alt="image.png"></p>
-<p>某60沙箱：时间：2023-02-07 09:48:52。稍微慢了 8 h 左右</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E5%AE%9E%E8%B7%B5%EF%BD%9C%E7%97%85%E6%AF%92%E6%83%85%E6%8A%A5%E8%87%AA%E5%8A%A8%E5%8C%96%E9%97%AD%E7%8E%AF%E8%BF%90%E8%90%A5/5.png" alt="image.png"></p>
-<p>某信沙箱：时间：2023-02-08 07:41:41。稍微慢了 30 h 左右</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E5%AE%9E%E8%B7%B5%EF%BD%9C%E7%97%85%E6%AF%92%E6%83%85%E6%8A%A5%E8%87%AA%E5%8A%A8%E5%8C%96%E9%97%AD%E7%8E%AF%E8%BF%90%E8%90%A5/6.png" alt="image.png"></p>
-<p>vt 沙箱：时间：2023-02-08 13:40:23 。稍微慢了 36 h 左右</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E5%AE%9E%E8%B7%B5%EF%BD%9C%E7%97%85%E6%AF%92%E6%83%85%E6%8A%A5%E8%87%AA%E5%8A%A8%E5%8C%96%E9%97%AD%E7%8E%AF%E8%BF%90%E8%90%A5/7.png" alt="image.png"></p>
-<p>很明显，这些的时间都慢 MalwareBazaar</p>
-<ul>
-<li><p>Abuseipdb<br>它是一个专注于帮助打击网络上的黑客、垃圾邮件和滥用行为的项目。它提供了一个中央黑名单，供网站管理员、系统管理员和其他感兴趣的人员报告和查询涉嫌恶意活动的 IP 地址。同样 AbuseIPDB 也支持API。</p>
-</li>
-<li><p>对新报告恶意 IP 地址进行抽样评估</p>
-</li>
-</ul>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E5%AE%9E%E8%B7%B5%EF%BD%9C%E7%97%85%E6%AF%92%E6%83%85%E6%8A%A5%E8%87%AA%E5%8A%A8%E5%8C%96%E9%97%AD%E7%8E%AF%E8%BF%90%E8%90%A5/8.png" alt="image.png"></p>
-<p>某步：</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E5%AE%9E%E8%B7%B5%EF%BD%9C%E7%97%85%E6%AF%92%E6%83%85%E6%8A%A5%E8%87%AA%E5%8A%A8%E5%8C%96%E9%97%AD%E7%8E%AF%E8%BF%90%E8%90%A5/9.png" alt="image.png"></p>
-<p>某60</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E5%AE%9E%E8%B7%B5%EF%BD%9C%E7%97%85%E6%AF%92%E6%83%85%E6%8A%A5%E8%87%AA%E5%8A%A8%E5%8C%96%E9%97%AD%E7%8E%AF%E8%BF%90%E8%90%A5/10.png"></p>
-<p>某信</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E5%AE%9E%E8%B7%B5%EF%BD%9C%E7%97%85%E6%AF%92%E6%83%85%E6%8A%A5%E8%87%AA%E5%8A%A8%E5%8C%96%E9%97%AD%E7%8E%AF%E8%BF%90%E8%90%A5/11.png" alt="image.png"></p>
-<p>2、提取 ioc</p>
-<p>这一步的操作路线是这样的</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E5%AE%9E%E8%B7%B5%EF%BD%9C%E7%97%85%E6%AF%92%E6%83%85%E6%8A%A5%E8%87%AA%E5%8A%A8%E5%8C%96%E9%97%AD%E7%8E%AF%E8%BF%90%E8%90%A5/12.png" alt="image.png"></p>
-<p>提取 ioc，我这里用的是通过 python 调用 API  来实现的，这里的存储需要好好想一下。因为想要做到全自动化，我们必须把 ioc 存储到其他提取 ioc 的设备能够访问到的地方，再加上要考虑度量，每个月每个季度能获取多少 ioc，然后这里选择用了 jira。</p>
-<p>MalwareBazaar 部分代码如下</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">response = requests.post(&#x27;https://mb-api.abuse.ch/api/v1/&#x27;, data=data, timeout=30, headers=headers,proxies=proxies)</span><br><span class="line">json_response = response.json()</span><br><span class="line"></span><br><span class="line">if(args.field):</span><br><span class="line">    query = &quot;.data[].&quot; + args.field</span><br><span class="line">    json_response = jq(query).transform(text=json_response, text_output=True)</span><br><span class="line"></span><br><span class="line">today = datetime.today()</span><br><span class="line">yesterday_9 = (today - timedelta(days=1)).replace(hour=9, minute=0, second=0, microsecond=0)</span><br><span class="line">today_9 = today.replace(hour=9, minute=0, second=0, microsecond=0)</span><br><span class="line"></span><br><span class="line">results = []</span><br><span class="line"></span><br><span class="line">for i in range(len(json_response[&#x27;data&#x27;])):</span><br><span class="line">    data_time = datetime.strptime(json_response[&#x27;data&#x27;][i][&#x27;first_seen&#x27;], &#x27;%Y-%m-%d %H:%M:%S&#x27;)</span><br><span class="line"></span><br><span class="line">    if yesterday_9 &lt;= data_time &lt; today_9:</span><br><span class="line">        first_seen = &quot;first_seen: &quot; + json_response[&#x27;data&#x27;][i][&#x27;first_seen&#x27;]       </span><br><span class="line">        sha256_hash = &quot;sha256_hash: &quot; + json_response[&#x27;data&#x27;][i][&#x27;sha256_hash&#x27;]   </span><br><span class="line">        sha1_hash = &quot;sha1_hash: &quot; + json_response[&#x27;data&#x27;][i][&#x27;sha1_hash&#x27;]</span><br><span class="line">        md5_hash = &quot;md5_hash: &quot; + json_response[&#x27;data&#x27;][i][&#x27;md5_hash&#x27;]</span><br><span class="line">        file_type = &quot;file_type: &quot; + json_response[&#x27;data&#x27;][i][&#x27;file_type&#x27;]</span><br><span class="line">        testttt = first_seen + &quot;\n&quot; + sha256_hash + &quot;\n&quot; + sha1_hash + &quot;\n&quot; + md5_hash + &quot;\n&quot; + file_type + &quot;\n&quot;</span><br><span class="line">        results.extend(testttt.splitlines())</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>取了每天 9 点到第二天 9 点的，因为默认设置 9 点自动化运行，然后再将获取到的 ioc 贴到 jira 就完事了，大致效果如下。</p>
-<p><img src="https://jvuudqqahqn2.236934.xyz:9001/obsidian-image/20250318153027586.png" alt="image.png"></p>
-<p>Abuseipdb 部分代码如下</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">url = &quot;https://www.abuseipdb.com/statistics&quot;</span><br><span class="line">re= requests.get(url)</span><br><span class="line">re.encoding=&quot;utf-8&quot;#改为utf-8格式，不然可能读取到的是乱码</span><br><span class="line">selector=etree.HTML(re.text)#解析网站，变成HTML格式</span><br><span class="line"></span><br><span class="line">xPath1 = &quot;/html/body/div[3]/div/div/div/div/div[4]//text()&quot;</span><br><span class="line">xPath2 = &quot;/html/body/div[3]/div/div/div/div/div[5]//text()&quot;</span><br><span class="line">xPath3 = &quot;/html/body/div[3]/div/div/div/div/div[6]//text()&quot;</span><br><span class="line">xPath4 = &quot;/html/body/div[3]/div/div/div/div/div[7]//text()&quot;</span><br><span class="line">xPath5 = &quot;/html/body/div[3]/div/div/div/div/div[8]//text()&quot;	</span><br><span class="line">		</span><br><span class="line">widelyIP=selector.xpath(&quot;/html/body/div[3]/div/div/div/div/aside[1]//text()&quot;)</span><br><span class="line">recentlyIP=selector.xpath(xPath1)+selector.xpath(xPath2)+selector.xpath(xPath3)+selector.xpath(xPath4)+selector.xpath(xPath5)</span><br></pre></td></tr></table></figure>
-
-<p>效果如下<br><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E5%AE%9E%E8%B7%B5%EF%BD%9C%E7%97%85%E6%AF%92%E6%83%85%E6%8A%A5%E8%87%AA%E5%8A%A8%E5%8C%96%E9%97%AD%E7%8E%AF%E8%BF%90%E8%90%A5/13.png" alt="image.png"></p>
-<p>接下来就交给 SOAR 了，让它提取工单 ioc 对设备进行赋能，然后抽验检验 ioc 对 jira 工单进行闭环，soar 的流程图如下</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E5%AE%9E%E8%B7%B5%EF%BD%9C%E7%97%85%E6%AF%92%E6%83%85%E6%8A%A5%E8%87%AA%E5%8A%A8%E5%8C%96%E9%97%AD%E7%8E%AF%E8%BF%90%E8%90%A5/14.png" alt="image.png"></p>
-<h1 id="五、自动化运营"><a href="#五、自动化运营" class="headerlink" title="五、自动化运营"></a>五、自动化运营</h1><p>通过上面的自动化操作，我完成了病毒情报的自动化闭环运营。</p>
-<p>1、每天定时自动化获取 IOC<br>2、存储 jira 工单便于度量<br>3、SOAR 自动化提取赋能安全设备<br>4、SOAR 自动化验证闭环 JIRA 工单。</p>
-<p>最终效果流程如下：</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E5%AE%9E%E8%B7%B5%EF%BD%9C%E7%97%85%E6%AF%92%E6%83%85%E6%8A%A5%E8%87%AA%E5%8A%A8%E5%8C%96%E9%97%AD%E7%8E%AF%E8%BF%90%E8%90%A5/15.png" alt="image.png"></p>
-]]></content>
+      
+      
+        <tags>
+            
+            <tag> Ai </tag>
+            
+            <tag> n8n </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>实践｜病毒情报自动化闭环运营</title>
+      <link href="/blog/11928/"/>
+      <url>/blog/11928/</url>
+      
+        <content type="html"><![CDATA[<h1 id="一、什么是病毒情报"><a href="#一、什么是病毒情报" class="headerlink" title="一、什么是病毒情报"></a>一、什么是病毒情报</h1><p>病毒情报（Virus Intelligence）指的是关于计算机病毒和恶意软件的信息和情报数据。它是针对恶意软件的研究、分析和监测的结果，用于了解和对抗不断变化和演化的威胁。</p><h1 id="二、病毒情报对企业有什么用"><a href="#二、病毒情报对企业有什么用" class="headerlink" title="二、病毒情报对企业有什么用"></a>二、病毒情报对企业有什么用</h1><p>病毒情报对企业来说是关键的安全资源，它提供了关于当前和新兴威胁的信息，帮助企业了解各种恶意软件、攻击向量和攻击手法。这使企业能够更好地了解威胁环境，并根据最新的威胁情报来改进其安全防御策略。</p><h1 id="三、背景需求"><a href="#三、背景需求" class="headerlink" title="三、背景需求"></a>三、背景需求</h1><p>正常情况下，企业的病毒情报依赖于安全厂家设备自带的 ioc，然后通过月度或者季度，或者牛一点的就每天对 ioc 库进行更新。那遇到新发现的病毒情报，厂家肯定无法实时更新然后同步到企业。所以我决定自己动手。</p><p>然后我的思路是这样的, 通过以下四个步骤来完成我的自动化闭环运营。</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E5%AE%9E%E8%B7%B5%EF%BD%9C%E7%97%85%E6%AF%92%E6%83%85%E6%8A%A5%E8%87%AA%E5%8A%A8%E5%8C%96%E9%97%AD%E7%8E%AF%E8%BF%90%E8%90%A5/1.png" alt="image.png"></p><h1 id="四、实践"><a href="#四、实践" class="headerlink" title="四、实践"></a>四、实践</h1><p>开始动手起来。首先肯定是获取情报源，然后进行评估，再确认。</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E5%AE%9E%E8%B7%B5%EF%BD%9C%E7%97%85%E6%AF%92%E6%83%85%E6%8A%A5%E8%87%AA%E5%8A%A8%E5%8C%96%E9%97%AD%E7%8E%AF%E8%BF%90%E8%90%A5/2.png" alt="image.png"></p><p>1、获取情报源。</p><p>目前我使用的源是 MalwareBazaar 跟 Abuseipdb ，当然后续有新的或者更好的还会不断添加。</p><p>2、为什么使用他们？</p><ul><li>MalwareBazaar：</li></ul><p>它是一个公开的恶意软件样本库和情报平台，我们可以访问大量的恶意软件样本，并与其他专业人士共享他们的分析结果和发现，这种协作和知识共享的方式有助于更好地了解恶意软件的行为。它不仅提供了恶意软件样本的下载，还包含了样本的元数据、文件哈希值、IOC 等信息。最重要的是，支持 API。</p><ul><li>抽样评估：</li></ul><p>从 MalwareBazaar 抽取其中一个 ioc，时间：2023-02-07 01:45:50<br><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E5%AE%9E%E8%B7%B5%EF%BD%9C%E7%97%85%E6%AF%92%E6%83%85%E6%8A%A5%E8%87%AA%E5%8A%A8%E5%8C%96%E9%97%AD%E7%8E%AF%E8%BF%90%E8%90%A5/3.png" alt="image.png"></p><p>某步云在线结果：没有新样本更新</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E5%AE%9E%E8%B7%B5%EF%BD%9C%E7%97%85%E6%AF%92%E6%83%85%E6%8A%A5%E8%87%AA%E5%8A%A8%E5%8C%96%E9%97%AD%E7%8E%AF%E8%BF%90%E8%90%A5/4.png" alt="image.png"></p><p>某60沙箱：时间：2023-02-07 09:48:52。稍微慢了 8 h 左右</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E5%AE%9E%E8%B7%B5%EF%BD%9C%E7%97%85%E6%AF%92%E6%83%85%E6%8A%A5%E8%87%AA%E5%8A%A8%E5%8C%96%E9%97%AD%E7%8E%AF%E8%BF%90%E8%90%A5/5.png" alt="image.png"></p><p>某信沙箱：时间：2023-02-08 07:41:41。稍微慢了 30 h 左右</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E5%AE%9E%E8%B7%B5%EF%BD%9C%E7%97%85%E6%AF%92%E6%83%85%E6%8A%A5%E8%87%AA%E5%8A%A8%E5%8C%96%E9%97%AD%E7%8E%AF%E8%BF%90%E8%90%A5/6.png" alt="image.png"></p><p>vt 沙箱：时间：2023-02-08 13:40:23 。稍微慢了 36 h 左右</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E5%AE%9E%E8%B7%B5%EF%BD%9C%E7%97%85%E6%AF%92%E6%83%85%E6%8A%A5%E8%87%AA%E5%8A%A8%E5%8C%96%E9%97%AD%E7%8E%AF%E8%BF%90%E8%90%A5/7.png" alt="image.png"></p><p>很明显，这些的时间都慢 MalwareBazaar</p><ul><li><p>Abuseipdb<br>它是一个专注于帮助打击网络上的黑客、垃圾邮件和滥用行为的项目。它提供了一个中央黑名单，供网站管理员、系统管理员和其他感兴趣的人员报告和查询涉嫌恶意活动的 IP 地址。同样 AbuseIPDB 也支持API。</p></li><li><p>对新报告恶意 IP 地址进行抽样评估</p></li></ul><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E5%AE%9E%E8%B7%B5%EF%BD%9C%E7%97%85%E6%AF%92%E6%83%85%E6%8A%A5%E8%87%AA%E5%8A%A8%E5%8C%96%E9%97%AD%E7%8E%AF%E8%BF%90%E8%90%A5/8.png" alt="image.png"></p><p>某步：</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E5%AE%9E%E8%B7%B5%EF%BD%9C%E7%97%85%E6%AF%92%E6%83%85%E6%8A%A5%E8%87%AA%E5%8A%A8%E5%8C%96%E9%97%AD%E7%8E%AF%E8%BF%90%E8%90%A5/9.png" alt="image.png"></p><p>某60</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E5%AE%9E%E8%B7%B5%EF%BD%9C%E7%97%85%E6%AF%92%E6%83%85%E6%8A%A5%E8%87%AA%E5%8A%A8%E5%8C%96%E9%97%AD%E7%8E%AF%E8%BF%90%E8%90%A5/10.png"></p><p>某信</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E5%AE%9E%E8%B7%B5%EF%BD%9C%E7%97%85%E6%AF%92%E6%83%85%E6%8A%A5%E8%87%AA%E5%8A%A8%E5%8C%96%E9%97%AD%E7%8E%AF%E8%BF%90%E8%90%A5/11.png" alt="image.png"></p><p>2、提取 ioc</p><p>这一步的操作路线是这样的</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E5%AE%9E%E8%B7%B5%EF%BD%9C%E7%97%85%E6%AF%92%E6%83%85%E6%8A%A5%E8%87%AA%E5%8A%A8%E5%8C%96%E9%97%AD%E7%8E%AF%E8%BF%90%E8%90%A5/12.png" alt="image.png"></p><p>提取 ioc，我这里用的是通过 python 调用 API  来实现的，这里的存储需要好好想一下。因为想要做到全自动化，我们必须把 ioc 存储到其他提取 ioc 的设备能够访问到的地方，再加上要考虑度量，每个月每个季度能获取多少 ioc，然后这里选择用了 jira。</p><p>MalwareBazaar 部分代码如下</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">response = requests.post(&#x27;https://mb-api.abuse.ch/api/v1/&#x27;, data=data, timeout=30, headers=headers,proxies=proxies)</span><br><span class="line">json_response = response.json()</span><br><span class="line"></span><br><span class="line">if(args.field):</span><br><span class="line">    query = &quot;.data[].&quot; + args.field</span><br><span class="line">    json_response = jq(query).transform(text=json_response, text_output=True)</span><br><span class="line"></span><br><span class="line">today = datetime.today()</span><br><span class="line">yesterday_9 = (today - timedelta(days=1)).replace(hour=9, minute=0, second=0, microsecond=0)</span><br><span class="line">today_9 = today.replace(hour=9, minute=0, second=0, microsecond=0)</span><br><span class="line"></span><br><span class="line">results = []</span><br><span class="line"></span><br><span class="line">for i in range(len(json_response[&#x27;data&#x27;])):</span><br><span class="line">    data_time = datetime.strptime(json_response[&#x27;data&#x27;][i][&#x27;first_seen&#x27;], &#x27;%Y-%m-%d %H:%M:%S&#x27;)</span><br><span class="line"></span><br><span class="line">    if yesterday_9 &lt;= data_time &lt; today_9:</span><br><span class="line">        first_seen = &quot;first_seen: &quot; + json_response[&#x27;data&#x27;][i][&#x27;first_seen&#x27;]       </span><br><span class="line">        sha256_hash = &quot;sha256_hash: &quot; + json_response[&#x27;data&#x27;][i][&#x27;sha256_hash&#x27;]   </span><br><span class="line">        sha1_hash = &quot;sha1_hash: &quot; + json_response[&#x27;data&#x27;][i][&#x27;sha1_hash&#x27;]</span><br><span class="line">        md5_hash = &quot;md5_hash: &quot; + json_response[&#x27;data&#x27;][i][&#x27;md5_hash&#x27;]</span><br><span class="line">        file_type = &quot;file_type: &quot; + json_response[&#x27;data&#x27;][i][&#x27;file_type&#x27;]</span><br><span class="line">        testttt = first_seen + &quot;\n&quot; + sha256_hash + &quot;\n&quot; + sha1_hash + &quot;\n&quot; + md5_hash + &quot;\n&quot; + file_type + &quot;\n&quot;</span><br><span class="line">        results.extend(testttt.splitlines())</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>取了每天 9 点到第二天 9 点的，因为默认设置 9 点自动化运行，然后再将获取到的 ioc 贴到 jira 就完事了，大致效果如下。</p><p><img src="https://jvuudqqahqn2.236934.xyz:9001/obsidian-image/20250318153027586.png" alt="image.png"></p><p>Abuseipdb 部分代码如下</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">url = &quot;https://www.abuseipdb.com/statistics&quot;</span><br><span class="line">re= requests.get(url)</span><br><span class="line">re.encoding=&quot;utf-8&quot;#改为utf-8格式，不然可能读取到的是乱码</span><br><span class="line">selector=etree.HTML(re.text)#解析网站，变成HTML格式</span><br><span class="line"></span><br><span class="line">xPath1 = &quot;/html/body/div[3]/div/div/div/div/div[4]//text()&quot;</span><br><span class="line">xPath2 = &quot;/html/body/div[3]/div/div/div/div/div[5]//text()&quot;</span><br><span class="line">xPath3 = &quot;/html/body/div[3]/div/div/div/div/div[6]//text()&quot;</span><br><span class="line">xPath4 = &quot;/html/body/div[3]/div/div/div/div/div[7]//text()&quot;</span><br><span class="line">xPath5 = &quot;/html/body/div[3]/div/div/div/div/div[8]//text()&quot;</span><br><span class="line"></span><br><span class="line">widelyIP=selector.xpath(&quot;/html/body/div[3]/div/div/div/div/aside[1]//text()&quot;)</span><br><span class="line">recentlyIP=selector.xpath(xPath1)+selector.xpath(xPath2)+selector.xpath(xPath3)+selector.xpath(xPath4)+selector.xpath(xPath5)</span><br></pre></td></tr></table></figure><p>效果如下<br><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E5%AE%9E%E8%B7%B5%EF%BD%9C%E7%97%85%E6%AF%92%E6%83%85%E6%8A%A5%E8%87%AA%E5%8A%A8%E5%8C%96%E9%97%AD%E7%8E%AF%E8%BF%90%E8%90%A5/13.png" alt="image.png"></p><p>接下来就交给 SOAR 了，让它提取工单 ioc 对设备进行赋能，然后抽验检验 ioc 对 jira 工单进行闭环，soar 的流程图如下</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E5%AE%9E%E8%B7%B5%EF%BD%9C%E7%97%85%E6%AF%92%E6%83%85%E6%8A%A5%E8%87%AA%E5%8A%A8%E5%8C%96%E9%97%AD%E7%8E%AF%E8%BF%90%E8%90%A5/14.png" alt="image.png"></p><h1 id="五、自动化运营"><a href="#五、自动化运营" class="headerlink" title="五、自动化运营"></a>五、自动化运营</h1><p>通过上面的自动化操作，我完成了病毒情报的自动化闭环运营。</p><p>1、每天定时自动化获取 IOC<br>2、存储 jira 工单便于度量<br>3、SOAR 自动化提取赋能安全设备<br>4、SOAR 自动化验证闭环 JIRA 工单。</p><p>最终效果流程如下：</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E5%AE%9E%E8%B7%B5%EF%BD%9C%E7%97%85%E6%AF%92%E6%83%85%E6%8A%A5%E8%87%AA%E5%8A%A8%E5%8C%96%E9%97%AD%E7%8E%AF%E8%BF%90%E8%90%A5/15.png" alt="image.png"></p>]]></content>
+      
+      
       <categories>
-        <category>甲方安全运营</category>
+          
+          <category> 甲方安全运营 </category>
+          
       </categories>
-      <tags>
-        <tag>威胁情报</tag>
-        <tag>病毒情报</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>群晖系列：自建Easyimage图床</title>
-    <url>/blog/3482/</url>
-    <content><![CDATA[<h2 id="一、EasyImages介绍"><a href="#一、EasyImages介绍" class="headerlink" title="一、EasyImages介绍"></a>一、EasyImages介绍</h2><p>Easyimage是一个开源的、支持多文件上传、简单无数据库,返回图片url,markdown,bbscode,html的一款图床程序。</p>
-<ul>
-<li><h3 id="easyimage特点："><a href="#easyimage特点：" class="headerlink" title="easyimage特点："></a>easyimage特点：</h3></li>
-</ul>
-<p>支持API、支持仅登录后上传、支持设置图片质量、支持压缩图片大小、支持文字&#x2F;图片水印、支持设置图片指定宽&#x2F;高、支持上传图片转换为指定格式、支持限制最低宽度&#x2F;高度上传、支持上传其他文件格式、在线管理图片、支持网站统计、支持设置广告、支持图片鉴黄、支持自定义代码、支持上传IP黑白名单、支持上传日志IP定位、支持限制日上传次数、支持创建仅上传用户、对于安装环境要求极低、对于服务器性能要求极低、理论上支持所有常见格式、等等···</p>
-<ul>
-<li><h3 id="GitHub："><a href="#GitHub：" class="headerlink" title="GitHub："></a>GitHub：</h3></li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://github.com/icret/EasyImages2.0</span><br></pre></td></tr></table></figure>
-
-<h2 id="二、EasyImages搭建"><a href="#二、EasyImages搭建" class="headerlink" title="二、EasyImages搭建"></a>二、EasyImages搭建</h2><p>在注册表搜索easyimage进行下载</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BAEasyimage%E5%9B%BE%E5%BA%8A/1.png" alt="image"></p>
-<p>默认下一步之后填写本地访问的端口</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BAEasyimage%E5%9B%BE%E5%BA%8A/2.png" alt="image"></p>
-<p>填写文件夹后完成即可</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BAEasyimage%E5%9B%BE%E5%BA%8A/3.png" alt="image"></p>
-<p>然后开启容器访问<a href="http://ip:port">http://ip:port</a>, 配置管理后台账号密码然后就可以了</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BAEasyimage%E5%9B%BE%E5%BA%8A/4.png" alt="image"></p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BAEasyimage%E5%9B%BE%E5%BA%8A/5.png" alt="image"></p>
-<h2 id="三、EasyImages安全设置"><a href="#三、EasyImages安全设置" class="headerlink" title="三、EasyImages安全设置"></a>三、EasyImages安全设置</h2><p>如果只是自己用 ，记得去掉这些勾选</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BAEasyimage%E5%9B%BE%E5%BA%8A/6.png" alt="image"></p>
-<p>上传设置选择WEBP，WebP 的优势体现在它具有更优的图像数据压缩算法，能带来更小的图片体积，而且拥有肉眼识别无差异的图像质量；同时具备了无损和有损的压缩模式、 Alpha 透明以及动画的特性，在 JPEG 和 PNG 上的转化效果都相当优秀、稳定和统一。</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BAEasyimage%E5%9B%BE%E5%BA%8A/7.png" alt="image"></p>
-<p>这里根据个人需求勾选</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BAEasyimage%E5%9B%BE%E5%BA%8A/8.png" alt="image"></p>
-<p>配合无公网 IP 搭建 Cloudflare 免费隧道穿透：<a href="https://9ouu.github.io/blog/45195/">群晖系列：无公网IP搭建Cloudflare免费隧道穿透</a></p>
-]]></content>
+      
+      
+        <tags>
+            
+            <tag> 威胁情报 </tag>
+            
+            <tag> 病毒情报 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>群晖系列：自建Vaultwarden (Bitwarden)</title>
+      <link href="/blog/8140/"/>
+      <url>/blog/8140/</url>
+      
+        <content type="html"><![CDATA[<p>当Bitwarden在快速发展的过程中，自建版本发生了开发分支。2022年5月左右，docker image由原来的bitwardenrs&#x2F;server官宣转为<a href="https://hub.docker.com/r/vaultwarden/server">vaultwarden&#x2F;server</a>。名称也由Bitwarden变为了Vaultwarden。Vaultwarden兼容所有Bitwarden的app，也就是说不论是浏览器的插件、桌面的应用程序，还是安卓、iOS的app，都能够通过Vaultwarden来自建密码管理平台，从而最大限度的保护自己的密码池。</p><h1 id="一、Vaultwarden-是什么"><a href="#一、Vaultwarden-是什么" class="headerlink" title="一、Vaultwarden 是什么"></a>一、Vaultwarden 是什么</h1><p>Vaultwarden 是一个用于本地搭建 Bitwarden 服务器的第三方 Docker 项目。仅在部署的时候使用 Vaultwarden 镜像，桌面端、移动端、浏览器扩展等客户端均使用官方 Bitwarden 客户端。</p><p>Vaultwarden 很轻量，对于不希望使用官方的占用大量资源的自托管部署而言，它是理想的选择。</p><h1 id="二、Vaultwarden-与-Bitwarden-的区别"><a href="#二、Vaultwarden-与-Bitwarden-的区别" class="headerlink" title="二、Vaultwarden 与 Bitwarden 的区别"></a>二、Vaultwarden 与 Bitwarden 的区别</h1><p>除不支持官方企业版的部分功能（如目录同步、SSO、群组、自定义角色以及基于企业组织层面的 Duo Security 两步登录）外，其他大部分功能均免费支持。并跟随官方版本保持及时更新。</p><p>Vaultwarden 比官方版更轻量。官方版使用 .Net 开发，使用 MSSQL 数据库，要求至少 2GB 内存；Vaultwarden 使用 Rust 编写，改用 SQLite 数据库（现在也支持 MySQL 和 PostgreSQL），运行时只需要 10M 内存，可以说对硬件基本没有要求。</p><h1 id="三、搭建Vaultwarden"><a href="#三、搭建Vaultwarden" class="headerlink" title="三、搭建Vaultwarden"></a>三、搭建Vaultwarden</h1><p>在docker搜索vaultwarden，并下载</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%87%AA%E5%BB%BAVaultwarden%20%28Bitwarden%29/1.png" alt="image-1"></p><p>  配置好容器存储路径，其他的默认就好了</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%87%AA%E5%BB%BAVaultwarden%20%28Bitwarden%29/2.png" alt="image-2"></p><p>然后运行后点详细，记住这里的端口号</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%87%AA%E5%BB%BAVaultwarden%20%28Bitwarden%29/3.png" alt="image-3"></p><p>套件中心安装花生壳</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%87%AA%E5%BB%BAVaultwarden%20%28Bitwarden%29/4.png" alt="image-4"></p><p>然后配置花生壳，设置内网nas的ip还有Vaultwarden的端口号</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%87%AA%E5%BB%BAVaultwarden%20%28Bitwarden%29/5.png" alt="image-5"></p><p>然后访问外网地址，创建账号密码登录。搞定</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%87%AA%E5%BB%BAVaultwarden%20%28Bitwarden%29/6.png" alt="image-6"></p><p>配合无公网 IP 搭建 Cloudflare 免费隧道穿透：<a href="https://9ouu.github.io/blog/45195/">群晖系列：无公网IP搭建Cloudflare免费隧道穿透</a></p>]]></content>
+      
+      
       <categories>
-        <category>群晖nas</category>
+          
+          <category> 群晖nas </category>
+          
       </categories>
-      <tags>
-        <tag>Easyimage</tag>
-        <tag>图床</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>群晖系列：自建Joplin-server</title>
-    <url>/blog/6935/</url>
-    <content><![CDATA[<h2 id="一、Joplin介绍"><a href="#一、Joplin介绍" class="headerlink" title="一、Joplin介绍"></a>一、Joplin介绍</h2><ul>
-<li><p><a href="https://joplinapp.org/">Joplin</a> 是一个开源的笔记工具，拥有 Windows&#x2F;macOS&#x2F;Linux&#x2F;iOS&#x2F;Android&#x2F;等版本的客户端，支持多端同步（重要），而且是免费的。</p>
-</li>
-<li><p>Joplin目前有很多种同步方式，可以选择一些网盘作为同步端，也可以用WebDAV服务，可以自建Joplin Server，也可以用官方收费版的Joplin Cloud。</p>
-</li>
-<li><p>一般个人有NAS的话，Joplin可以考虑使用WebDAV或者Joplin Server方式。这里是搭建Joplin Server，网上有很多WebDAV的教程就不在这记录了</p>
-</li>
-</ul>
-<h2 id="二、安装配置Joplin-Serve"><a href="#二、安装配置Joplin-Serve" class="headerlink" title="二、安装配置Joplin Serve"></a>二、安装配置Joplin Serve</h2><h3 id="1、安装docker"><a href="#1、安装docker" class="headerlink" title="1、安装docker"></a>1、安装docker</h3><p>在群晖的套件中心安装docker</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BA%20Joplin-server/1.png" alt="image"></p>
-<h3 id="2、安装容器"><a href="#2、安装容器" class="headerlink" title="2、安装容器"></a>2、安装容器</h3><p>首先配置一下docker源，默认会使用国外的镜像文件，下载可能会比较慢。如图所示，在启动注册表镜像的位置添加源</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">镜像源地址：</span><br><span class="line">https://docker.mirrors.ustc.edu.cn</span><br><span class="line">http://hub-mirror.c.163.com</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BA%20Joplin-server/2.png" alt="image"></p>
-<p>分别搜索Joplin，PostgreSQL进行下载，默认选择latest会下载最新版本。</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BA%20Joplin-server/3.png" alt="image"></p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BA%20Joplin-server/4.png" alt="image"></p>
-<h4 id="配置PostgreSQL"><a href="#配置PostgreSQL" class="headerlink" title="配置PostgreSQL"></a>配置PostgreSQL</h4><p>下载后，准备启动先启动PostgreSQL进行配置，这里默认选择下一步</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BA%20Joplin-server/5.png" alt="image"></p>
-<p>点击高级设置</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BA%20Joplin-server/6.png" alt="image"></p>
-<p>新增加如下配置,这里配置的PostgreSQL密码需要记住！后面会用到。</p>
-<table>
-<thead>
-<tr>
-<th>变量</th>
-<th>值</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>POSTGRES_DB</td>
-<td>joplin</td>
-</tr>
-<tr>
-<td>POSTGRES_PASSWORD</td>
-<td>自己设置密码</td>
-</tr>
-<tr>
-<td>POSTGRES_USER</td>
-<td>pgadmin</td>
-</tr>
-</tbody></table>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BA%20Joplin-server/7.png" alt="image"></p>
-<p>配置端口映射，根据实际情况映射，我这里本地端口选择5433，因为5433被某个应用占用了，容器端口默认5432不需要修改。如果这个PostgreSQL只是给Joplin Server使用，这里应该可以不配置端口，因为我们后面用链接容器的方式连接到这个数据库，本地端口已经不重要了。</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BA%20Joplin-server/8.png" alt="image"></p>
-<p>配置本地存储，映射到PostgreSQL的数据目录&#x2F;var&#x2F;lib&#x2F;postgresql&#x2F;data，这样重启后存储数据不会丢失。</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BA%20Joplin-server/9.png" alt="image"></p>
-<p>勾选向导完成后运行此容器，然后点击完成，就可以放一边不用管它了。</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BA%20Joplin-server/10.png" alt="image"></p>
-<h4 id="配置Joplin-server"><a href="#配置Joplin-server" class="headerlink" title="配置Joplin server"></a>配置Joplin server</h4><p>网络选择默认，然后下一步点高级设置。根据下表进行配置。</p>
-<table>
-<thead>
-<tr>
-<th>变量</th>
-<th>值</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>APP_BASE_URL</td>
-<td><a href="http://nas_ip:22300/">http://nas_ip:22300</a></td>
-<td>根据自己nas的ip和自定义端口或域名进行配置</td>
-</tr>
-<tr>
-<td>POSTGRES_PASSWORD</td>
-<td>22300</td>
-<td>默认22300，可以自定义配置映射端口</td>
-</tr>
-<tr>
-<td>DB_CLIENT</td>
-<td>pg</td>
-<td>配置成PostgreSQL模式</td>
-</tr>
-<tr>
-<td>POSTGRES_HOST</td>
-<td>local_postgresql</td>
-<td>链接到PostgreSQL容器</td>
-</tr>
-<tr>
-<td>POSTGRES_DATABASE</td>
-<td>joplin</td>
-<td>数据库名</td>
-</tr>
-<tr>
-<td>POSTGRES_USER</td>
-<td>pgadmin</td>
-<td>数据库用户名</td>
-</tr>
-<tr>
-<td>POSTGRES_PORT</td>
-<td>5432</td>
-<td>默认是5432（直连容器端口，不是本地端口）</td>
-</tr>
-<tr>
-<td>POSTGRES_PASSWORD</td>
-<td>xxx</td>
-<td>PostgreSQL密码</td>
-</tr>
-</tbody></table>
-<p>配置链接，方便直接链接到PostgreSQL容器，这里使用别名：local_postgresql，到时候可以用作Joplin Server的POSTGRES_HOST配置：</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BA%20Joplin-server/11.png" alt="image"></p>
-<p>点击保存后新增端口22300</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BA%20Joplin-server/12.png" alt="image"></p>
-<p>配置存储空间</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BA%20Joplin-server/13.png" alt="image"></p>
-<p>勾选向导完成后运行此容器，然后点击完成。</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BA%20Joplin-server/14.png" alt="image"></p>
-<p>点击容器可以看到PostgreSQL跟Joplin server正常运行着。</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BA%20Joplin-server/15.png" alt="image"></p>
-<p>打开浏览器访问<a href="http://ip:port,可以看到访问正常。">http://ip:port,可以看到访问正常。</a></p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BA%20Joplin-server/16.png" alt="image"></p>
-<p>输入默认账号密码进入后台，然后可以到图片所指的地方对用户名密码进行更改。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">用户名：admin@localhost</span><br><span class="line">密码：admin</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BA%20Joplin-server/17.png" alt="image"></p>
-<h2 id="三、连接Joplin-Server"><a href="#三、连接Joplin-Server" class="headerlink" title="三、连接Joplin Server"></a>三、连接Joplin Server</h2><p>配置好链接，账号密码，就可以进行同步了。</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BA%20Joplin-server/18.png" alt="image"></p>
-<p>配合无公网 IP 搭建 Cloudflare 免费隧道穿透：<a href="https://9ouu.github.io/blog/45195/">群晖系列：无公网IP搭建Cloudflare免费隧道穿透</a>io&#x2F;blog&#x2F;45195&#x2F;)</p>
-]]></content>
+      
+      
+        <tags>
+            
+            <tag> Vaultwarden </tag>
+            
+            <tag> Bitwarden </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>记一次代码泄漏处置过程</title>
+      <link href="/blog/32792/"/>
+      <url>/blog/32792/</url>
+      
+        <content type="html"><![CDATA[<h2 id="一、背景"><a href="#一、背景" class="headerlink" title="一、背景"></a>一、背景</h2><p>上班的时候，同事发现一则告警，是关于公司的代码泄漏，我看了一下，是个 dome 代码，但是一直放在公网上好像也不太好，它会一直告警，而且之后要是告警了领导看到也会问，干脆把它干掉算了。于是我让他找买了服务的厂家协助处置一下这个项目。</p><h2 id="二、厂家处置过程"><a href="#二、厂家处置过程" class="headerlink" title="二、厂家处置过程"></a>二、厂家处置过程</h2><p>跟厂家反馈完之后，哔哩吧啦一大堆，他居然跟我同事说只能处理有关的页面，而且叫我们提供一份处置文件，要证明风险，还要盖章…  wogiao 了，前几天才给完，搞了一个好久的盖章流程，起码 1 个多月。以我的理解不应该是整个项目连带处理掉吗？居然要一个文件一个文件处理，而且每个文件都要有一份文件说明且盖章，好家伙。我直接好家伙。</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%AE%B0%E4%B8%80%E6%AC%A1%E4%BB%A3%E7%A0%81%E6%B3%84%E6%BC%8F%E5%A4%84%E7%BD%AE%E8%BF%87%E7%A8%8B/1.jpg" alt="image"></p><h2 id="三、个人处理过程"><a href="#三、个人处理过程" class="headerlink" title="三、个人处理过程"></a>三、个人处理过程</h2><p>同事反馈完之后，我直接去群里问情况。</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%AE%B0%E4%B8%80%E6%AC%A1%E4%BB%A3%E7%A0%81%E6%B3%84%E6%BC%8F%E5%A4%84%E7%BD%AE%E8%BF%87%E7%A8%8B/2.png" alt="image"></p><p>得到了一个 “我确认一下” 的回复。算了还是自己动手吧，靠他们可能一个月都搞不定。<br>我想起了当年某位大佬分享的姿势，是可以通过 GitHub 找到项目负责人的邮箱（文章找不到了，不然我肯定贴个来源）。<br>然后我就开始尝试了起来，首先是访问项目，然后点击一下这里。</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%AE%B0%E4%B8%80%E6%AC%A1%E4%BB%A3%E7%A0%81%E6%B3%84%E6%BC%8F%E5%A4%84%E7%BD%AE%E8%BF%87%E7%A8%8B/3.png" alt="image"></p><p>然后当你在地址的最后面加上 .patch 之后，就有可能会显示出作者的注册邮箱，果然，我这里也出现了<br><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%AE%B0%E4%B8%80%E6%AC%A1%E4%BB%A3%E7%A0%81%E6%B3%84%E6%BC%8F%E5%A4%84%E7%BD%AE%E8%BF%87%E7%A8%8B/4.png" alt="image"></p><p>虽然吧，这个 qq 号也可以找到 wx，但是还是社工 ku 反查一下吧。嘿嘿，果然查到了。</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%AE%B0%E4%B8%80%E6%AC%A1%E4%BB%A3%E7%A0%81%E6%B3%84%E6%BC%8F%E5%A4%84%E7%BD%AE%E8%BF%87%E7%A8%8B/5.png" alt="image"></p><p>然后我通过 qq 还有手机号分别找到了 2 个 wx。不管了都加一遍再说。过了半小时，没想到手机号的 wx 通过了。我还想要是不通过的话我都要直接打电话的了。不管了，开始沟通。</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%AE%B0%E4%B8%80%E6%AC%A1%E4%BB%A3%E7%A0%81%E6%B3%84%E6%BC%8F%E5%A4%84%E7%BD%AE%E8%BF%87%E7%A8%8B/6.png" alt="image"></p><p>然后没过多久，就搞定了。</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%AE%B0%E4%B8%80%E6%AC%A1%E4%BB%A3%E7%A0%81%E6%B3%84%E6%BC%8F%E5%A4%84%E7%BD%AE%E8%BF%87%E7%A8%8B/7.png" alt="image"></p><p>最后我直接给厂家甩了一句话。这个方法确实当你只有一个人的时候，可以进行尝试，说不定会行的通。</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%AE%B0%E4%B8%80%E6%AC%A1%E4%BB%A3%E7%A0%81%E6%B3%84%E6%BC%8F%E5%A4%84%E7%BD%AE%E8%BF%87%E7%A8%8B/8.png" alt="image"></p><h2 id="四、隐藏邮箱的方法"><a href="#四、隐藏邮箱的方法" class="headerlink" title="四、隐藏邮箱的方法"></a>四、隐藏邮箱的方法</h2><h4 id="1、不使用自己的邮箱注册"><a href="#1、不使用自己的邮箱注册" class="headerlink" title="1、不使用自己的邮箱注册"></a>1、不使用自己的邮箱注册</h4><h4 id="2、使用-GitHub-专用的替代邮箱"><a href="#2、使用-GitHub-专用的替代邮箱" class="headerlink" title="2、使用 GitHub 专用的替代邮箱"></a>2、使用 GitHub 专用的替代邮箱</h4><p>访问 <a href="https://github.com/settings/emails">https://github.com/settings/emails</a> ，在 Primary email address 一栏，我们能看到 GitHub 为我们提供了一个专用的用于在 git 中配置的邮箱地址，直接勾选上。<br>谷歌的翻译是这样的：</p><ul><li><p>在将我的电子邮件地址保密：<br>我们将删除您的公开个人资料电子邮件，并在执行基于 Web 的 Git 操作（例如编辑和合并）时使用 <a href="mailto:&#120;&#x78;&#x78;&#120;&#x78;&#x40;&#117;&#x73;&#x65;&#x72;&#115;&#46;&#110;&#x6f;&#114;&#x65;&#x70;&#108;&#121;&#46;&#103;&#105;&#116;&#x68;&#x75;&#98;&#46;&#99;&#x6f;&#109;">&#120;&#x78;&#x78;&#120;&#x78;&#x40;&#117;&#x73;&#x65;&#x72;&#115;&#46;&#110;&#x6f;&#114;&#x65;&#x70;&#108;&#121;&#46;&#103;&#105;&#116;&#x68;&#x75;&#98;&#46;&#99;&#x6f;&#109;</a> ，以及代表您发送电子邮件。如果您希望命令行 Git 操作使用您的私人电子邮件，则必须在 Git 中设置您的电子邮件。<br>使用此电子邮件推送到 GitHub 的提交仍将与您的帐户相关联。</p></li><li><p>阻止暴露我的电子邮件的命令行推送：<br>当您推送到 GitHub 时，我们将检查最近的提交。如果该提交的作者电子邮件是您 GitHub 帐户上的私人电子邮件，我们将阻止推送并警告您暴露您的私人电子邮件。address 一栏，我们能看到 GitHub 为我们提供了一个专用的用于在 git 中配置的邮箱地址。</p></li></ul><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%AE%B0%E4%B8%80%E6%AC%A1%E4%BB%A3%E7%A0%81%E6%B3%84%E6%BC%8F%E5%A4%84%E7%BD%AE%E8%BF%87%E7%A8%8B/9.png" alt="image"></p><p>然后再次查看的时候就看不到了。</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%AE%B0%E4%B8%80%E6%AC%A1%E4%BB%A3%E7%A0%81%E6%B3%84%E6%BC%8F%E5%A4%84%E7%BD%AE%E8%BF%87%E7%A8%8B/10.png" alt="image"></p><h2 id="五、最后"><a href="#五、最后" class="headerlink" title="五、最后"></a>五、最后</h2><p>我发现每次处理一个单都会衍生出好多事情，其实我不理解买服务是来解决我们问题的还是来增加我们工作量的。加我们工作量的。</p>]]></content>
+      
+      
       <categories>
-        <category>群晖nas</category>
+          
+          <category> 甲方安全运营 </category>
+          
       </categories>
-      <tags>
-        <tag>Joplin</tag>
-        <tag>笔记软件</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>群晖系列：自建Vaultwarden (Bitwarden)</title>
-    <url>/blog/8140/</url>
-    <content><![CDATA[<p>当Bitwarden在快速发展的过程中，自建版本发生了开发分支。2022年5月左右，docker image由原来的bitwardenrs&#x2F;server官宣转为<a href="https://hub.docker.com/r/vaultwarden/server">vaultwarden&#x2F;server</a>。名称也由Bitwarden变为了Vaultwarden。Vaultwarden兼容所有Bitwarden的app，也就是说不论是浏览器的插件、桌面的应用程序，还是安卓、iOS的app，都能够通过Vaultwarden来自建密码管理平台，从而最大限度的保护自己的密码池。</p>
-<h1 id="一、Vaultwarden-是什么"><a href="#一、Vaultwarden-是什么" class="headerlink" title="一、Vaultwarden 是什么"></a>一、Vaultwarden 是什么</h1><p>Vaultwarden 是一个用于本地搭建 Bitwarden 服务器的第三方 Docker 项目。仅在部署的时候使用 Vaultwarden 镜像，桌面端、移动端、浏览器扩展等客户端均使用官方 Bitwarden 客户端。</p>
-<p>Vaultwarden 很轻量，对于不希望使用官方的占用大量资源的自托管部署而言，它是理想的选择。</p>
-<h1 id="二、Vaultwarden-与-Bitwarden-的区别"><a href="#二、Vaultwarden-与-Bitwarden-的区别" class="headerlink" title="二、Vaultwarden 与 Bitwarden 的区别"></a>二、Vaultwarden 与 Bitwarden 的区别</h1><p>除不支持官方企业版的部分功能（如目录同步、SSO、群组、自定义角色以及基于企业组织层面的 Duo Security 两步登录）外，其他大部分功能均免费支持。并跟随官方版本保持及时更新。</p>
-<p>Vaultwarden 比官方版更轻量。官方版使用 .Net 开发，使用 MSSQL 数据库，要求至少 2GB 内存；Vaultwarden 使用 Rust 编写，改用 SQLite 数据库（现在也支持 MySQL 和 PostgreSQL），运行时只需要 10M 内存，可以说对硬件基本没有要求。</p>
-<h1 id="三、搭建Vaultwarden"><a href="#三、搭建Vaultwarden" class="headerlink" title="三、搭建Vaultwarden"></a>三、搭建Vaultwarden</h1><p>在docker搜索vaultwarden，并下载</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%87%AA%E5%BB%BAVaultwarden%20%28Bitwarden%29/1.png" alt="image-1"></p>
-<p>  配置好容器存储路径，其他的默认就好了</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%87%AA%E5%BB%BAVaultwarden%20%28Bitwarden%29/2.png" alt="image-2"></p>
-<p>然后运行后点详细，记住这里的端口号</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%87%AA%E5%BB%BAVaultwarden%20%28Bitwarden%29/3.png" alt="image-3"></p>
-<p>套件中心安装花生壳</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%87%AA%E5%BB%BAVaultwarden%20%28Bitwarden%29/4.png" alt="image-4"></p>
-<p>然后配置花生壳，设置内网nas的ip还有Vaultwarden的端口号</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%87%AA%E5%BB%BAVaultwarden%20%28Bitwarden%29/5.png" alt="image-5"></p>
-<p>然后访问外网地址，创建账号密码登录。搞定</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%87%AA%E5%BB%BAVaultwarden%20%28Bitwarden%29/6.png" alt="image-6"></p>
-<p>配合无公网 IP 搭建 Cloudflare 免费隧道穿透：<a href="https://9ouu.github.io/blog/45195/">群晖系列：无公网IP搭建Cloudflare免费隧道穿透</a></p>
-]]></content>
+      
+      
+        <tags>
+            
+            <tag> 代码泄漏 </tag>
+            
+            <tag> 溯源 </tag>
+            
+            <tag> Github </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>群晖系列：无公网IP搭建Cloudflare免费隧道穿透</title>
+      <link href="/blog/45195/"/>
+      <url>/blog/45195/</url>
+      
+        <content type="html"><![CDATA[<h2 id="一、域名注册"><a href="#一、域名注册" class="headerlink" title="一、域名注册"></a>一、域名注册</h2><p>首先我们先注册一个域名，Freenom可以注册免费域名，但是好像最近不太稳定，官网点这里：<a href="https://link.zhihu.com/?target=https://www.freenom.com/">A Name for Everyone</a></p><p>而且国内出了新政，2022年3月起所有域名都要实名认证，不然有可能会频繁掉线，所以这里我推荐大家上阿里云实名注册一个域名：<a href="https://www.aliyun.com/">https://www.aliyun.com/</a></p><h2 id="二、cloudflare托管域名"><a href="#二、cloudflare托管域名" class="headerlink" title="二、cloudflare托管域名"></a>二、cloudflare托管域名</h2><p>点击这里添加域名</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E6%97%A0%E5%85%AC%E7%BD%91IP%E6%90%AD%E5%BB%BACloudflare%E5%85%8D%E8%B4%B9%E9%9A%A7%E9%81%93%E7%A9%BF%E9%80%8F/1.png" alt="image">)</p><p>然后选择这个免费的，点击继续</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E6%97%A0%E5%85%AC%E7%BD%91IP%E6%90%AD%E5%BB%BACloudflare%E5%85%8D%E8%B4%B9%E9%9A%A7%E9%81%93%E7%A9%BF%E9%80%8F/2.png" alt="image"></p><p>然后复制这里的 dns，按要求修改就行啦</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E6%97%A0%E5%85%AC%E7%BD%91IP%E6%90%AD%E5%BB%BACloudflare%E5%85%8D%E8%B4%B9%E9%9A%A7%E9%81%93%E7%A9%BF%E9%80%8F/3.png" alt="image"></p><h2 id="三、配置Zero-Trust"><a href="#三、配置Zero-Trust" class="headerlink" title="三、配置Zero Trust"></a>三、配置Zero Trust</h2><p>登录到cloudflare，找到Zero Trust</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E6%97%A0%E5%85%AC%E7%BD%91IP%E6%90%AD%E5%BB%BACloudflare%E5%85%8D%E8%B4%B9%E9%9A%A7%E9%81%93%E7%A9%BF%E9%80%8F/4.png" alt="image"></p><p>这里写个项目名字</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E6%97%A0%E5%85%AC%E7%BD%91IP%E6%90%AD%E5%BB%BACloudflare%E5%85%8D%E8%B4%B9%E9%9A%A7%E9%81%93%E7%A9%BF%E9%80%8F/5.png" alt="image"></p><p>选择免费的项目</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E6%97%A0%E5%85%AC%E7%BD%91IP%E6%90%AD%E5%BB%BACloudflare%E5%85%8D%E8%B4%B9%E9%9A%A7%E9%81%93%E7%A9%BF%E9%80%8F/6.png" alt="image"></p><p>这里需要绑定银行卡，绑定完之后进行解绑就行了。</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E6%97%A0%E5%85%AC%E7%BD%91IP%E6%90%AD%E5%BB%BACloudflare%E5%85%8D%E8%B4%B9%E9%9A%A7%E9%81%93%E7%A9%BF%E9%80%8F/7.png" alt="image"></p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E6%97%A0%E5%85%AC%E7%BD%91IP%E6%90%AD%E5%BB%BACloudflare%E5%85%8D%E8%B4%B9%E9%9A%A7%E9%81%93%E7%A9%BF%E9%80%8F/8.png" alt="image"></p><p>!<img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E6%97%A0%E5%85%AC%E7%BD%91IP%E6%90%AD%E5%BB%BACloudflare%E5%85%8D%E8%B4%B9%E9%9A%A7%E9%81%93%E7%A9%BF%E9%80%8F/9.png" alt="image"></p><p>然后进来点击create a tunnel 创建一个tunnel</p><p>!<img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E6%97%A0%E5%85%AC%E7%BD%91IP%E6%90%AD%E5%BB%BACloudflare%E5%85%8D%E8%B4%B9%E9%9A%A7%E9%81%93%E7%A9%BF%E9%80%8F/10.png" alt="image"></p><p>这里随便写一个</p><p>!<img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E6%97%A0%E5%85%AC%E7%BD%91IP%E6%90%AD%E5%BB%BACloudflare%E5%85%8D%E8%B4%B9%E9%9A%A7%E9%81%93%E7%A9%BF%E9%80%8F/11.png" alt="image"></p><p>选择docker，然后复制下面的命令</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run cloudflare/cloudflared:latest tunnel --no-autoupdate run --token eyJhIjoixxxxxx</span><br></pre></td></tr></table></figure><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E6%97%A0%E5%85%AC%E7%BD%91IP%E6%90%AD%E5%BB%BACloudflare%E5%85%8D%E8%B4%B9%E9%9A%A7%E9%81%93%E7%A9%BF%E9%80%8F/12.png" alt="image"></p><h2 id="四、配置docker"><a href="#四、配置docker" class="headerlink" title="四、配置docker"></a>四、配置docker</h2><p>在群晖docker找到cloudflare后进行下载。</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E6%97%A0%E5%85%AC%E7%BD%91IP%E6%90%AD%E5%BB%BACloudflare%E5%85%8D%E8%B4%B9%E9%9A%A7%E9%81%93%E7%A9%BF%E9%80%8F/13.png" alt="image"></p><p>然后开始配置cloudflare，选择高级设置。</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E6%97%A0%E5%85%AC%E7%BD%91IP%E6%90%AD%E5%BB%BACloudflare%E5%85%8D%E8%B4%B9%E9%9A%A7%E9%81%93%E7%A9%BF%E9%80%8F/14.png" alt="image"></p><p>在执行命令的位置贴上复制下来的命令，如下：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tunnel --no-autoupdate run --token eyJhIjoixxxxxx</span><br></pre></td></tr></table></figure><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E6%97%A0%E5%85%AC%E7%BD%91IP%E6%90%AD%E5%BB%BACloudflare%E5%85%8D%E8%B4%B9%E9%9A%A7%E9%81%93%E7%A9%BF%E9%80%8F/15.png" alt="image"></p><p>然后点保存，端口不用配置，配置文件夹。新增加一个cloudflare，装载路径为&#x2F;etc&#x2F;cloudflared，然后点下一步完成就好了。</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E6%97%A0%E5%85%AC%E7%BD%91IP%E6%90%AD%E5%BB%BACloudflare%E5%85%8D%E8%B4%B9%E9%9A%A7%E9%81%93%E7%A9%BF%E9%80%8F/16.png" alt="image"></p><p>然后启动docker，可以看到cloudflare已经是正常使用了，直接访问域名可以访问到内网地址。</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E6%97%A0%E5%85%AC%E7%BD%91IP%E6%90%AD%E5%BB%BACloudflare%E5%85%8D%E8%B4%B9%E9%9A%A7%E9%81%93%E7%A9%BF%E9%80%8F/17.png" alt="image"></p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E6%97%A0%E5%85%AC%E7%BD%91IP%E6%90%AD%E5%BB%BACloudflare%E5%85%8D%E8%B4%B9%E9%9A%A7%E9%81%93%E7%A9%BF%E9%80%8F/18.png" alt="image"></p><h2 id="五、多隧道创建"><a href="#五、多隧道创建" class="headerlink" title="五、多隧道创建"></a>五、多隧道创建</h2><p>如果我想穿透不止一个端口那怎么办，其实特别简单，只需要再加一条隧道穿透规则，修改我们已有域名前面的子域名即可，操作如下 打开我们的隧道穿透Cloudflare Zero Trust</p><p>选择Access下的Tunnels 点击Configure今日我们已经创建好的穿透隧道，然后点击创建就好了</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E6%97%A0%E5%85%AC%E7%BD%91IP%E6%90%AD%E5%BB%BACloudflare%E5%85%8D%E8%B4%B9%E9%9A%A7%E9%81%93%E7%A9%BF%E9%80%8F/19.png" alt="image"></p><p>参考链接：<a href="https://zhuanlan.zhihu.com/p/591320825zhihu.com/p/591320825">https://zhuanlan.zhihu.com/p/591320825zhihu.com/p/591320825</a></p>]]></content>
+      
+      
       <categories>
-        <category>群晖nas</category>
+          
+          <category> 群晖nas </category>
+          
       </categories>
-      <tags>
-        <tag>Vaultwarden</tag>
-        <tag>Bitwarden</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>记一次代码泄漏处置过程</title>
-    <url>/blog/32792/</url>
-    <content><![CDATA[<h2 id="一、背景"><a href="#一、背景" class="headerlink" title="一、背景"></a>一、背景</h2><p>上班的时候，同事发现一则告警，是关于公司的代码泄漏，我看了一下，是个 dome 代码，但是一直放在公网上好像也不太好，它会一直告警，而且之后要是告警了领导看到也会问，干脆把它干掉算了。于是我让他找买了服务的厂家协助处置一下这个项目。</p>
-<h2 id="二、厂家处置过程"><a href="#二、厂家处置过程" class="headerlink" title="二、厂家处置过程"></a>二、厂家处置过程</h2><p>跟厂家反馈完之后，哔哩吧啦一大堆，他居然跟我同事说只能处理有关的页面，而且叫我们提供一份处置文件，要证明风险，还要盖章…  wogiao 了，前几天才给完，搞了一个好久的盖章流程，起码 1 个多月。以我的理解不应该是整个项目连带处理掉吗？居然要一个文件一个文件处理，而且每个文件都要有一份文件说明且盖章，好家伙。我直接好家伙。</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%AE%B0%E4%B8%80%E6%AC%A1%E4%BB%A3%E7%A0%81%E6%B3%84%E6%BC%8F%E5%A4%84%E7%BD%AE%E8%BF%87%E7%A8%8B/1.jpg" alt="image"></p>
-<h2 id="三、个人处理过程"><a href="#三、个人处理过程" class="headerlink" title="三、个人处理过程"></a>三、个人处理过程</h2><p>同事反馈完之后，我直接去群里问情况。</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%AE%B0%E4%B8%80%E6%AC%A1%E4%BB%A3%E7%A0%81%E6%B3%84%E6%BC%8F%E5%A4%84%E7%BD%AE%E8%BF%87%E7%A8%8B/2.png" alt="image"></p>
-<p>得到了一个 “我确认一下” 的回复。算了还是自己动手吧，靠他们可能一个月都搞不定。<br>我想起了当年某位大佬分享的姿势，是可以通过 GitHub 找到项目负责人的邮箱（文章找不到了，不然我肯定贴个来源）。<br>然后我就开始尝试了起来，首先是访问项目，然后点击一下这里。</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%AE%B0%E4%B8%80%E6%AC%A1%E4%BB%A3%E7%A0%81%E6%B3%84%E6%BC%8F%E5%A4%84%E7%BD%AE%E8%BF%87%E7%A8%8B/3.png" alt="image"></p>
-<p>然后当你在地址的最后面加上 .patch 之后，就有可能会显示出作者的注册邮箱，果然，我这里也出现了<br><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%AE%B0%E4%B8%80%E6%AC%A1%E4%BB%A3%E7%A0%81%E6%B3%84%E6%BC%8F%E5%A4%84%E7%BD%AE%E8%BF%87%E7%A8%8B/4.png" alt="image"></p>
-<p>虽然吧，这个 qq 号也可以找到 wx，但是还是社工 ku 反查一下吧。嘿嘿，果然查到了。</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%AE%B0%E4%B8%80%E6%AC%A1%E4%BB%A3%E7%A0%81%E6%B3%84%E6%BC%8F%E5%A4%84%E7%BD%AE%E8%BF%87%E7%A8%8B/5.png" alt="image"></p>
-<p>然后我通过 qq 还有手机号分别找到了 2 个 wx。不管了都加一遍再说。过了半小时，没想到手机号的 wx 通过了。我还想要是不通过的话我都要直接打电话的了。不管了，开始沟通。</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%AE%B0%E4%B8%80%E6%AC%A1%E4%BB%A3%E7%A0%81%E6%B3%84%E6%BC%8F%E5%A4%84%E7%BD%AE%E8%BF%87%E7%A8%8B/6.png" alt="image"></p>
-<p>然后没过多久，就搞定了。</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%AE%B0%E4%B8%80%E6%AC%A1%E4%BB%A3%E7%A0%81%E6%B3%84%E6%BC%8F%E5%A4%84%E7%BD%AE%E8%BF%87%E7%A8%8B/7.png" alt="image"></p>
-<p>最后我直接给厂家甩了一句话。这个方法确实当你只有一个人的时候，可以进行尝试，说不定会行的通。</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%AE%B0%E4%B8%80%E6%AC%A1%E4%BB%A3%E7%A0%81%E6%B3%84%E6%BC%8F%E5%A4%84%E7%BD%AE%E8%BF%87%E7%A8%8B/8.png" alt="image"></p>
-<h2 id="四、隐藏邮箱的方法"><a href="#四、隐藏邮箱的方法" class="headerlink" title="四、隐藏邮箱的方法"></a>四、隐藏邮箱的方法</h2><h4 id="1、不使用自己的邮箱注册"><a href="#1、不使用自己的邮箱注册" class="headerlink" title="1、不使用自己的邮箱注册"></a>1、不使用自己的邮箱注册</h4><h4 id="2、使用-GitHub-专用的替代邮箱"><a href="#2、使用-GitHub-专用的替代邮箱" class="headerlink" title="2、使用 GitHub 专用的替代邮箱"></a>2、使用 GitHub 专用的替代邮箱</h4><p>访问 <a href="https://github.com/settings/emails">https://github.com/settings/emails</a> ，在 Primary email address 一栏，我们能看到 GitHub 为我们提供了一个专用的用于在 git 中配置的邮箱地址，直接勾选上。<br>谷歌的翻译是这样的：</p>
-<ul>
-<li><p>在将我的电子邮件地址保密：<br>我们将删除您的公开个人资料电子邮件，并在执行基于 Web 的 Git 操作（例如编辑和合并）时使用 <a href="mailto:&#120;&#120;&#120;&#120;&#120;&#x40;&#117;&#x73;&#101;&#114;&#x73;&#x2e;&#x6e;&#111;&#x72;&#101;&#x70;&#108;&#121;&#x2e;&#103;&#105;&#x74;&#104;&#117;&#98;&#46;&#x63;&#111;&#x6d;">&#120;&#120;&#120;&#120;&#120;&#x40;&#117;&#x73;&#101;&#114;&#x73;&#x2e;&#x6e;&#111;&#x72;&#101;&#x70;&#108;&#121;&#x2e;&#103;&#105;&#x74;&#104;&#117;&#98;&#46;&#x63;&#111;&#x6d;</a> ，以及代表您发送电子邮件。如果您希望命令行 Git 操作使用您的私人电子邮件，则必须在 Git 中设置您的电子邮件。<br>使用此电子邮件推送到 GitHub 的提交仍将与您的帐户相关联。</p>
-</li>
-<li><p>阻止暴露我的电子邮件的命令行推送：<br>当您推送到 GitHub 时，我们将检查最近的提交。如果该提交的作者电子邮件是您 GitHub 帐户上的私人电子邮件，我们将阻止推送并警告您暴露您的私人电子邮件。address 一栏，我们能看到 GitHub 为我们提供了一个专用的用于在 git 中配置的邮箱地址。</p>
-</li>
-</ul>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%AE%B0%E4%B8%80%E6%AC%A1%E4%BB%A3%E7%A0%81%E6%B3%84%E6%BC%8F%E5%A4%84%E7%BD%AE%E8%BF%87%E7%A8%8B/9.png" alt="image"></p>
-<p>然后再次查看的时候就看不到了。</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%AE%B0%E4%B8%80%E6%AC%A1%E4%BB%A3%E7%A0%81%E6%B3%84%E6%BC%8F%E5%A4%84%E7%BD%AE%E8%BF%87%E7%A8%8B/10.png" alt="image"></p>
-<h2 id="五、最后"><a href="#五、最后" class="headerlink" title="五、最后"></a>五、最后</h2><p>我发现每次处理一个单都会衍生出好多事情，其实我不理解买服务是来解决我们问题的还是来增加我们工作量的。加我们工作量的。</p>
-]]></content>
+      
+      
+        <tags>
+            
+            <tag> Cloudflare </tag>
+            
+            <tag> 内网穿透 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>群晖系列：自建Easyimage图床</title>
+      <link href="/blog/3482/"/>
+      <url>/blog/3482/</url>
+      
+        <content type="html"><![CDATA[<h2 id="一、EasyImages介绍"><a href="#一、EasyImages介绍" class="headerlink" title="一、EasyImages介绍"></a>一、EasyImages介绍</h2><p>Easyimage是一个开源的、支持多文件上传、简单无数据库,返回图片url,markdown,bbscode,html的一款图床程序。</p><ul><li><h3 id="easyimage特点："><a href="#easyimage特点：" class="headerlink" title="easyimage特点："></a>easyimage特点：</h3></li></ul><p>支持API、支持仅登录后上传、支持设置图片质量、支持压缩图片大小、支持文字&#x2F;图片水印、支持设置图片指定宽&#x2F;高、支持上传图片转换为指定格式、支持限制最低宽度&#x2F;高度上传、支持上传其他文件格式、在线管理图片、支持网站统计、支持设置广告、支持图片鉴黄、支持自定义代码、支持上传IP黑白名单、支持上传日志IP定位、支持限制日上传次数、支持创建仅上传用户、对于安装环境要求极低、对于服务器性能要求极低、理论上支持所有常见格式、等等···</p><ul><li><h3 id="GitHub："><a href="#GitHub：" class="headerlink" title="GitHub："></a>GitHub：</h3></li></ul><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/icret/EasyImages2.0</span><br></pre></td></tr></table></figure><h2 id="二、EasyImages搭建"><a href="#二、EasyImages搭建" class="headerlink" title="二、EasyImages搭建"></a>二、EasyImages搭建</h2><p>在注册表搜索easyimage进行下载</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BAEasyimage%E5%9B%BE%E5%BA%8A/1.png" alt="image"></p><p>默认下一步之后填写本地访问的端口</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BAEasyimage%E5%9B%BE%E5%BA%8A/2.png" alt="image"></p><p>填写文件夹后完成即可</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BAEasyimage%E5%9B%BE%E5%BA%8A/3.png" alt="image"></p><p>然后开启容器访问<a href="http://ip:port">http://ip:port</a>, 配置管理后台账号密码然后就可以了</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BAEasyimage%E5%9B%BE%E5%BA%8A/4.png" alt="image"></p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BAEasyimage%E5%9B%BE%E5%BA%8A/5.png" alt="image"></p><h2 id="三、EasyImages安全设置"><a href="#三、EasyImages安全设置" class="headerlink" title="三、EasyImages安全设置"></a>三、EasyImages安全设置</h2><p>如果只是自己用 ，记得去掉这些勾选</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BAEasyimage%E5%9B%BE%E5%BA%8A/6.png" alt="image"></p><p>上传设置选择WEBP，WebP 的优势体现在它具有更优的图像数据压缩算法，能带来更小的图片体积，而且拥有肉眼识别无差异的图像质量；同时具备了无损和有损的压缩模式、 Alpha 透明以及动画的特性，在 JPEG 和 PNG 上的转化效果都相当优秀、稳定和统一。</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BAEasyimage%E5%9B%BE%E5%BA%8A/7.png" alt="image"></p><p>这里根据个人需求勾选</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BAEasyimage%E5%9B%BE%E5%BA%8A/8.png" alt="image"></p><p>配合无公网 IP 搭建 Cloudflare 免费隧道穿透：<a href="https://9ouu.github.io/blog/45195/">群晖系列：无公网IP搭建Cloudflare免费隧道穿透</a></p>]]></content>
+      
+      
       <categories>
-        <category>甲方安全运营</category>
+          
+          <category> 群晖nas </category>
+          
       </categories>
-      <tags>
-        <tag>代码泄漏</tag>
-        <tag>溯源</tag>
-        <tag>Github</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>记一次银狐病毒应急响应</title>
-    <url>/blog/10221/</url>
-    <content><![CDATA[<h1 id="记一次银狐病毒应急响应"><a href="#记一次银狐病毒应急响应" class="headerlink" title="记一次银狐病毒应急响应"></a>记一次银狐病毒应急响应</h1><h2 id="一、背景"><a href="#一、背景" class="headerlink" title="一、背景"></a>一、背景</h2><p>事情的起因是，在上班的时候同事突然联系我说无法登陆企业微信，然后丢了 2 张图片过来<br><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%AE%B0%E4%B8%80%E6%AC%A1%E9%93%B6%E7%8B%90%E7%97%85%E6%AF%92%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/1.png" alt="image.png"></p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%AE%B0%E4%B8%80%E6%AC%A1%E9%93%B6%E7%8B%90%E7%97%85%E6%AF%92%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/2.png" alt="image.png"></p>
-<h2 id="二、处理过程"><a href="#二、处理过程" class="headerlink" title="二、处理过程"></a>二、处理过程</h2><p>看了发来的图片，这很明显了，是感染病毒木马了，于是我就问了一下是不是安装了什么软件，询问得知是跟我说是自己安装了个谷歌浏览器，我看了天塌了，仿冒的谷歌浏览器官网。</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%AE%B0%E4%B8%80%E6%AC%A1%E9%93%B6%E7%8B%90%E7%97%85%E6%AF%92%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/3.png" alt="image.png"></p>
-<p>由于公司没有防病毒，这个也是个新电脑，没有什么数据，所以也就慢慢搞了。把木马样本发去云沙箱分析。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://s.threatbook.com/report/file/0b61678a01f34ffe1a44b40d3e10d57b3f0d246be9cd50fdcdd33d3cf5d92526</span><br></pre></td></tr></table></figure>
-
-<p>根据分析情况大概知道会有什么操作。</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%AE%B0%E4%B8%80%E6%AC%A1%E9%93%B6%E7%8B%90%E7%97%85%E6%AF%92%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/4.png" alt="image.png"></p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%AE%B0%E4%B8%80%E6%AC%A1%E9%93%B6%E7%8B%90%E7%97%85%E6%AF%92%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/5.png" alt="image.png"></p>
-<p>根据云沙箱的信息，把样本拿到我的虚拟机里跑一下再，再用工具进行分析。</p>
-<p>先定位恶意文件，可以看到恶意文件在 <code>C:\Users\bigba\AppData\Roaming\TrustAsia\intel.dll</code></p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%AE%B0%E4%B8%80%E6%AC%A1%E9%93%B6%E7%8B%90%E7%97%85%E6%AF%92%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/6.png" alt="image.png"></p>
-<p>这里可以看到还有两条注册表。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">\Microsoft\Windows\AppID\.NET Framework NGEN v6.0.8745			c:\users\bigba\appdata\local\chrmstp.exe	2018/7/24 14:42	</span><br><span class="line">-----------------------------------------------------------------------------------------</span><br><span class="line">\Microsoft\Windows\AppID\.NET Framework NGEN v6.0.USANW	Update	(Not verified) TODO: &lt;公司名&gt;	c:\users\bigba\appdata\roaming\trustasia\intel.dll	2025/7/22 0:09	</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%AE%B0%E4%B8%80%E6%AC%A1%E9%93%B6%E7%8B%90%E7%97%85%E6%AF%92%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/7.png" alt="image.png"></p>
-<p>然后把恶意文件进程、恶意文件和注册表都清理了，重启一下电脑再用专杀工具扫描一下，发现木马可以被完全清理。</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%AE%B0%E4%B8%80%E6%AC%A1%E9%93%B6%E7%8B%90%E7%97%85%E6%AF%92%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/8.png" alt="image.png"></p>
-<p>%E5%BA%94&#x2F;8.png)</p>
-]]></content>
+      
+      
+        <tags>
+            
+            <tag> Easyimage </tag>
+            
+            <tag> 图床 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>群晖系列：自建Joplin-server</title>
+      <link href="/blog/6935/"/>
+      <url>/blog/6935/</url>
+      
+        <content type="html"><![CDATA[<h2 id="一、Joplin介绍"><a href="#一、Joplin介绍" class="headerlink" title="一、Joplin介绍"></a>一、Joplin介绍</h2><ul><li><p><a href="https://joplinapp.org/">Joplin</a> 是一个开源的笔记工具，拥有 Windows&#x2F;macOS&#x2F;Linux&#x2F;iOS&#x2F;Android&#x2F;等版本的客户端，支持多端同步（重要），而且是免费的。</p></li><li><p>Joplin目前有很多种同步方式，可以选择一些网盘作为同步端，也可以用WebDAV服务，可以自建Joplin Server，也可以用官方收费版的Joplin Cloud。</p></li><li><p>一般个人有NAS的话，Joplin可以考虑使用WebDAV或者Joplin Server方式。这里是搭建Joplin Server，网上有很多WebDAV的教程就不在这记录了</p></li></ul><h2 id="二、安装配置Joplin-Serve"><a href="#二、安装配置Joplin-Serve" class="headerlink" title="二、安装配置Joplin Serve"></a>二、安装配置Joplin Serve</h2><h3 id="1、安装docker"><a href="#1、安装docker" class="headerlink" title="1、安装docker"></a>1、安装docker</h3><p>在群晖的套件中心安装docker</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BA%20Joplin-server/1.png" alt="image"></p><h3 id="2、安装容器"><a href="#2、安装容器" class="headerlink" title="2、安装容器"></a>2、安装容器</h3><p>首先配置一下docker源，默认会使用国外的镜像文件，下载可能会比较慢。如图所示，在启动注册表镜像的位置添加源</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">镜像源地址：</span><br><span class="line">https://docker.mirrors.ustc.edu.cn</span><br><span class="line">http://hub-mirror.c.163.com</span><br></pre></td></tr></table></figure><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BA%20Joplin-server/2.png" alt="image"></p><p>分别搜索Joplin，PostgreSQL进行下载，默认选择latest会下载最新版本。</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BA%20Joplin-server/3.png" alt="image"></p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BA%20Joplin-server/4.png" alt="image"></p><h4 id="配置PostgreSQL"><a href="#配置PostgreSQL" class="headerlink" title="配置PostgreSQL"></a>配置PostgreSQL</h4><p>下载后，准备启动先启动PostgreSQL进行配置，这里默认选择下一步</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BA%20Joplin-server/5.png" alt="image"></p><p>点击高级设置</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BA%20Joplin-server/6.png" alt="image"></p><p>新增加如下配置,这里配置的PostgreSQL密码需要记住！后面会用到。</p><table><thead><tr><th>变量</th><th>值</th></tr></thead><tbody><tr><td>POSTGRES_DB</td><td>joplin</td></tr><tr><td>POSTGRES_PASSWORD</td><td>自己设置密码</td></tr><tr><td>POSTGRES_USER</td><td>pgadmin</td></tr></tbody></table><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BA%20Joplin-server/7.png" alt="image"></p><p>配置端口映射，根据实际情况映射，我这里本地端口选择5433，因为5433被某个应用占用了，容器端口默认5432不需要修改。如果这个PostgreSQL只是给Joplin Server使用，这里应该可以不配置端口，因为我们后面用链接容器的方式连接到这个数据库，本地端口已经不重要了。</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BA%20Joplin-server/8.png" alt="image"></p><p>配置本地存储，映射到PostgreSQL的数据目录&#x2F;var&#x2F;lib&#x2F;postgresql&#x2F;data，这样重启后存储数据不会丢失。</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BA%20Joplin-server/9.png" alt="image"></p><p>勾选向导完成后运行此容器，然后点击完成，就可以放一边不用管它了。</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BA%20Joplin-server/10.png" alt="image"></p><h4 id="配置Joplin-server"><a href="#配置Joplin-server" class="headerlink" title="配置Joplin server"></a>配置Joplin server</h4><p>网络选择默认，然后下一步点高级设置。根据下表进行配置。</p><table><thead><tr><th>变量</th><th>值</th><th>说明</th></tr></thead><tbody><tr><td>APP_BASE_URL</td><td><a href="http://nas_ip:22300/">http://nas_ip:22300</a></td><td>根据自己nas的ip和自定义端口或域名进行配置</td></tr><tr><td>POSTGRES_PASSWORD</td><td>22300</td><td>默认22300，可以自定义配置映射端口</td></tr><tr><td>DB_CLIENT</td><td>pg</td><td>配置成PostgreSQL模式</td></tr><tr><td>POSTGRES_HOST</td><td>local_postgresql</td><td>链接到PostgreSQL容器</td></tr><tr><td>POSTGRES_DATABASE</td><td>joplin</td><td>数据库名</td></tr><tr><td>POSTGRES_USER</td><td>pgadmin</td><td>数据库用户名</td></tr><tr><td>POSTGRES_PORT</td><td>5432</td><td>默认是5432（直连容器端口，不是本地端口）</td></tr><tr><td>POSTGRES_PASSWORD</td><td>xxx</td><td>PostgreSQL密码</td></tr></tbody></table><p>配置链接，方便直接链接到PostgreSQL容器，这里使用别名：local_postgresql，到时候可以用作Joplin Server的POSTGRES_HOST配置：</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BA%20Joplin-server/11.png" alt="image"></p><p>点击保存后新增端口22300</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BA%20Joplin-server/12.png" alt="image"></p><p>配置存储空间</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BA%20Joplin-server/13.png" alt="image"></p><p>勾选向导完成后运行此容器，然后点击完成。</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BA%20Joplin-server/14.png" alt="image"></p><p>点击容器可以看到PostgreSQL跟Joplin server正常运行着。</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BA%20Joplin-server/15.png" alt="image"></p><p>打开浏览器访问<a href="http://ip:port,可以看到访问正常。">http://ip:port,可以看到访问正常。</a></p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BA%20Joplin-server/16.png" alt="image"></p><p>输入默认账号密码进入后台，然后可以到图片所指的地方对用户名密码进行更改。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">用户名：admin@localhost</span><br><span class="line">密码：admin</span><br></pre></td></tr></table></figure><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BA%20Joplin-server/17.png" alt="image"></p><h2 id="三、连接Joplin-Server"><a href="#三、连接Joplin-Server" class="headerlink" title="三、连接Joplin Server"></a>三、连接Joplin Server</h2><p>配置好链接，账号密码，就可以进行同步了。</p><p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BA%20Joplin-server/18.png" alt="image"></p><p>配合无公网 IP 搭建 Cloudflare 免费隧道穿透：<a href="https://9ouu.github.io/blog/45195/">群晖系列：无公网IP搭建Cloudflare免费隧道穿透</a>io&#x2F;blog&#x2F;45195&#x2F;)</p>]]></content>
+      
+      
       <categories>
-        <category>应急响应</category>
+          
+          <category> 群晖nas </category>
+          
       </categories>
-      <tags>
-        <tag>银狐病毒</tag>
-        <tag>应急响应</tag>
-      </tags>
-  </entry>
+      
+      
+        <tags>
+            
+            <tag> Joplin </tag>
+            
+            <tag> 笔记软件 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
 </search>
