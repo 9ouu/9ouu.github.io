@@ -1,35 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>n8n本地部署问题</title>
-    <url>/blog/62000/</url>
-    <content><![CDATA[<h2 id="一、部署中的问题"><a href="#一、部署中的问题" class="headerlink" title="一、部署中的问题"></a>一、部署中的问题</h2><p>1、在 <code>environment</code> 环境变量中，我增加了2个Proxy的变量，主要是为了解决容器内链接各式各样国外服务。<br>2、配置 <code>N8N_SECURE_COOKIE</code> 解决下面图片的问题</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/n8n%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2%E9%97%AE%E9%A2%98/1.png" alt="image.png"></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">services:</span><br><span class="line">  n8n:</span><br><span class="line">    container_name: n8n</span><br><span class="line">    ports:</span><br><span class="line">      # 根据自己的要求修改左侧端口</span><br><span class="line">      - 35678:5678</span><br><span class="line">    volumes:</span><br><span class="line">      # 必须使用docker volume，否则有权限问题</span><br><span class="line">      - n8n_data:/home/node/.n8n</span><br><span class="line">    environment:</span><br><span class="line">      # 该变量解决http访问，否则需要代理https地址</span><br><span class="line">      - N8N_SECURE_COOKIE=false</span><br><span class="line">      - GENERIC_TIMEZONE=Asia/Shanghai</span><br><span class="line">      # 下面两个是你自己的代理地址</span><br><span class="line">      - HTTP_PROXY=http://192.168.0.1:7890</span><br><span class="line">      - HTTPS_PROXY=http://192.168.0.1:7890</span><br><span class="line">    image: docker.n8n.io/n8nio/n8n</span><br><span class="line">volumes:</span><br><span class="line">    n8n_data:</span><br></pre></td></tr></table></figure>
-
-
-<h2 id="二、中文设置"><a href="#二、中文设置" class="headerlink" title="二、中文设置"></a>二、中文设置</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://github.com/other-blowsnow/n8n-i18n-chinese</span><br></pre></td></tr></table></figure>
-
-<p>修改文件 docker-compose. yml </p>
-<p>前面的为项目下载到本地的路径。后面的固定</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">volumes:</span><br><span class="line">      - /root/n8n/dist:/usr/local/lib/node_modules/n8n/node_modules/n8n-editor-ui/dist</span><br></pre></td></tr></table></figure>
-
-
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker volume create n8n_data</span><br><span class="line"></span><br><span class="line">docker run -it --rm \</span><br><span class="line"> --name n8n \</span><br><span class="line"> -p 5678:5678 \</span><br><span class="line"> -e DB_TYPE=postgresdb \</span><br><span class="line"> -e DB_POSTGRESDB_DATABASE=&lt;POSTGRES_DATABASE&gt; \</span><br><span class="line"> -e DB_POSTGRESDB_HOST=postgres \</span><br><span class="line"> -e DB_POSTGRESDB_PORT=5432 \</span><br><span class="line"> -e DB_POSTGRESDB_USER=&lt;POSTGRES_USER&gt; \</span><br><span class="line"> -e DB_POSTGRESDB_SCHEMA=&lt;POSTGRES_SCHEMA&gt; \</span><br><span class="line"> -e DB_POSTGRESDB_PASSWORD=&lt;POSTGRES_PASSWORD&gt; \</span><br><span class="line"> -e N8N_SECURE_COOKIE=false \</span><br><span class="line"> -e GENERIC_TIMEZONE=Asia/Shanghai \</span><br><span class="line"> -v n8n_data:/home/node/.n8n \</span><br><span class="line"> docker.n8n.io/n8nio/n8n</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> docker compose up -d</span><br></pre></td></tr></table></figure>
-
-
-<h2 id="三、参考"><a href="#三、参考" class="headerlink" title="三、参考"></a>三、参考</h2><p><a href="https://github.com/n8n-io/n8n-hosting/tree/main/docker-compose/withPostgres">https://github.com/n8n-io/n8n-hosting/tree/main/docker-compose/withPostgres</a></p>
-<p><a href="https://hub.docker.com/r/n8nio/n8n">https://hub.docker.com/r/n8nio/n8n</a></p>
-]]></content>
-      <categories>
-        <category>AI</category>
-      </categories>
-      <tags>
-        <tag>Ai</tag>
-        <tag>n8n</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>MacOS deb编译记录</title>
     <url>/blog/29292/</url>
     <content><![CDATA[<h2 id="一、背景"><a href="#一、背景" class="headerlink" title="一、背景"></a>一、背景</h2><p>因为需要修改一些 ios 的插件，所以了解了一下 macbook 下的 deb 编译。</p>
@@ -74,6 +45,35 @@
         <tag>MacOS</tag>
         <tag>deb</tag>
         <tag>编译</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>n8n本地部署问题</title>
+    <url>/blog/62000/</url>
+    <content><![CDATA[<h2 id="一、部署中的问题"><a href="#一、部署中的问题" class="headerlink" title="一、部署中的问题"></a>一、部署中的问题</h2><p>1、在 <code>environment</code> 环境变量中，我增加了2个Proxy的变量，主要是为了解决容器内链接各式各样国外服务。<br>2、配置 <code>N8N_SECURE_COOKIE</code> 解决下面图片的问题</p>
+<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/n8n%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2%E9%97%AE%E9%A2%98/1.png" alt="image.png"></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">services:</span><br><span class="line">  n8n:</span><br><span class="line">    container_name: n8n</span><br><span class="line">    ports:</span><br><span class="line">      # 根据自己的要求修改左侧端口</span><br><span class="line">      - 35678:5678</span><br><span class="line">    volumes:</span><br><span class="line">      # 必须使用docker volume，否则有权限问题</span><br><span class="line">      - n8n_data:/home/node/.n8n</span><br><span class="line">    environment:</span><br><span class="line">      # 该变量解决http访问，否则需要代理https地址</span><br><span class="line">      - N8N_SECURE_COOKIE=false</span><br><span class="line">      - GENERIC_TIMEZONE=Asia/Shanghai</span><br><span class="line">      # 下面两个是你自己的代理地址</span><br><span class="line">      - HTTP_PROXY=http://192.168.0.1:7890</span><br><span class="line">      - HTTPS_PROXY=http://192.168.0.1:7890</span><br><span class="line">    image: docker.n8n.io/n8nio/n8n</span><br><span class="line">volumes:</span><br><span class="line">    n8n_data:</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="二、中文设置"><a href="#二、中文设置" class="headerlink" title="二、中文设置"></a>二、中文设置</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://github.com/other-blowsnow/n8n-i18n-chinese</span><br></pre></td></tr></table></figure>
+
+<p>修改文件 docker-compose. yml </p>
+<p>前面的为项目下载到本地的路径。后面的固定</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">volumes:</span><br><span class="line">      - /root/n8n/dist:/usr/local/lib/node_modules/n8n/node_modules/n8n-editor-ui/dist</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker volume create n8n_data</span><br><span class="line"></span><br><span class="line">docker run -it --rm \</span><br><span class="line"> --name n8n \</span><br><span class="line"> -p 5678:5678 \</span><br><span class="line"> -e DB_TYPE=postgresdb \</span><br><span class="line"> -e DB_POSTGRESDB_DATABASE=&lt;POSTGRES_DATABASE&gt; \</span><br><span class="line"> -e DB_POSTGRESDB_HOST=postgres \</span><br><span class="line"> -e DB_POSTGRESDB_PORT=5432 \</span><br><span class="line"> -e DB_POSTGRESDB_USER=&lt;POSTGRES_USER&gt; \</span><br><span class="line"> -e DB_POSTGRESDB_SCHEMA=&lt;POSTGRES_SCHEMA&gt; \</span><br><span class="line"> -e DB_POSTGRESDB_PASSWORD=&lt;POSTGRES_PASSWORD&gt; \</span><br><span class="line"> -e N8N_SECURE_COOKIE=false \</span><br><span class="line"> -e GENERIC_TIMEZONE=Asia/Shanghai \</span><br><span class="line"> -v n8n_data:/home/node/.n8n \</span><br><span class="line"> docker.n8n.io/n8nio/n8n</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> docker compose up -d</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="三、参考"><a href="#三、参考" class="headerlink" title="三、参考"></a>三、参考</h2><p><a href="https://github.com/n8n-io/n8n-hosting/tree/main/docker-compose/withPostgres">https://github.com/n8n-io/n8n-hosting/tree/main/docker-compose/withPostgres</a></p>
+<p><a href="https://hub.docker.com/r/n8nio/n8n">https://hub.docker.com/r/n8nio/n8n</a></p>
+]]></content>
+      <categories>
+        <category>AI</category>
+      </categories>
+      <tags>
+        <tag>Ai</tag>
+        <tag>n8n</tag>
       </tags>
   </entry>
   <entry>
@@ -421,7 +421,7 @@
 <p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%AE%B0%E4%B8%80%E6%AC%A1%E4%BB%A3%E7%A0%81%E6%B3%84%E6%BC%8F%E5%A4%84%E7%BD%AE%E8%BF%87%E7%A8%8B/8.png" alt="image"></p>
 <h2 id="四、隐藏邮箱的方法"><a href="#四、隐藏邮箱的方法" class="headerlink" title="四、隐藏邮箱的方法"></a>四、隐藏邮箱的方法</h2><h4 id="1、不使用自己的邮箱注册"><a href="#1、不使用自己的邮箱注册" class="headerlink" title="1、不使用自己的邮箱注册"></a>1、不使用自己的邮箱注册</h4><h4 id="2、使用-GitHub-专用的替代邮箱"><a href="#2、使用-GitHub-专用的替代邮箱" class="headerlink" title="2、使用 GitHub 专用的替代邮箱"></a>2、使用 GitHub 专用的替代邮箱</h4><p>访问 <a href="https://github.com/settings/emails">https://github.com/settings/emails</a> ，在 Primary email address 一栏，我们能看到 GitHub 为我们提供了一个专用的用于在 git 中配置的邮箱地址，直接勾选上。<br>谷歌的翻译是这样的：</p>
 <ul>
-<li><p>在将我的电子邮件地址保密：<br>我们将删除您的公开个人资料电子邮件，并在执行基于 Web 的 Git 操作（例如编辑和合并）时使用 <a href="mailto:&#120;&#x78;&#x78;&#120;&#x78;&#x40;&#117;&#x73;&#x65;&#x72;&#115;&#46;&#110;&#x6f;&#114;&#x65;&#x70;&#108;&#121;&#46;&#103;&#105;&#116;&#x68;&#x75;&#98;&#46;&#99;&#x6f;&#109;">&#120;&#x78;&#x78;&#120;&#x78;&#x40;&#117;&#x73;&#x65;&#x72;&#115;&#46;&#110;&#x6f;&#114;&#x65;&#x70;&#108;&#121;&#46;&#103;&#105;&#116;&#x68;&#x75;&#98;&#46;&#99;&#x6f;&#109;</a> ，以及代表您发送电子邮件。如果您希望命令行 Git 操作使用您的私人电子邮件，则必须在 Git 中设置您的电子邮件。<br>使用此电子邮件推送到 GitHub 的提交仍将与您的帐户相关联。</p>
+<li><p>在将我的电子邮件地址保密：<br>我们将删除您的公开个人资料电子邮件，并在执行基于 Web 的 Git 操作（例如编辑和合并）时使用 <a href="mailto:&#x78;&#x78;&#x78;&#120;&#x78;&#64;&#117;&#x73;&#x65;&#114;&#x73;&#x2e;&#110;&#x6f;&#x72;&#x65;&#x70;&#108;&#121;&#46;&#x67;&#x69;&#x74;&#104;&#x75;&#98;&#46;&#99;&#x6f;&#x6d;">&#x78;&#x78;&#x78;&#120;&#x78;&#64;&#117;&#x73;&#x65;&#114;&#x73;&#x2e;&#110;&#x6f;&#x72;&#x65;&#x70;&#108;&#121;&#46;&#x67;&#x69;&#x74;&#104;&#x75;&#98;&#46;&#99;&#x6f;&#x6d;</a> ，以及代表您发送电子邮件。如果您希望命令行 Git 操作使用您的私人电子邮件，则必须在 Git 中设置您的电子邮件。<br>使用此电子邮件推送到 GitHub 的提交仍将与您的帐户相关联。</p>
 </li>
 <li><p>阻止暴露我的电子邮件的命令行推送：<br>当您推送到 GitHub 时，我们将检查最近的提交。如果该提交的作者电子邮件是您 GitHub 帐户上的私人电子邮件，我们将阻止推送并警告您暴露您的私人电子邮件。address 一栏，我们能看到 GitHub 为我们提供了一个专用的用于在 git 中配置的邮箱地址。</p>
 </li>
