@@ -48,7 +48,7 @@
 <p><img src="https://github.com/9ouu/qx/raw/refs/heads/main/icon/blog/MacOS%20JAVA%E5%A4%9A%E7%8E%AF%E5%A2%83%E5%BF%AB%E9%80%9F%E5%88%87%E6%8D%A2/2.png" alt="image.png"></p>
 ]]></content>
       <categories>
-        <category>JAVA</category>
+        <category>MacOS</category>
       </categories>
       <tags>
         <tag>MacOS</tag>
@@ -203,6 +203,44 @@
       </tags>
   </entry>
   <entry>
+    <title>群晖系列：自建Easyimage图床</title>
+    <url>/blog/3482/</url>
+    <content><![CDATA[<h2 id="EasyImages介绍"><a href="#EasyImages介绍" class="headerlink" title="EasyImages介绍"></a>EasyImages介绍</h2><p>Easyimage是一个开源的、支持多文件上传、简单无数据库,返回图片url,markdown,bbscode,html的一款图床程序。</p>
+<ul>
+<li><h3 id="easyimage特点："><a href="#easyimage特点：" class="headerlink" title="easyimage特点："></a>easyimage特点：</h3></li>
+</ul>
+<p>支持API、支持仅登录后上传、支持设置图片质量、支持压缩图片大小、支持文字&#x2F;图片水印、支持设置图片指定宽&#x2F;高、支持上传图片转换为指定格式、支持限制最低宽度&#x2F;高度上传、支持上传其他文件格式、在线管理图片、支持网站统计、支持设置广告、支持图片鉴黄、支持自定义代码、支持上传IP黑白名单、支持上传日志IP定位、支持限制日上传次数、支持创建仅上传用户、对于安装环境要求极低、对于服务器性能要求极低、理论上支持所有常见格式、等等···</p>
+<ul>
+<li><h3 id="GitHub："><a href="#GitHub：" class="headerlink" title="GitHub："></a>GitHub：</h3></li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://github.com/icret/EasyImages2.0</span><br></pre></td></tr></table></figure>
+
+<h2 id="EasyImages搭建"><a href="#EasyImages搭建" class="headerlink" title="EasyImages搭建"></a>EasyImages搭建</h2><p>在注册表搜索easyimage进行下载</p>
+<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BAEasyimage%E5%9B%BE%E5%BA%8A/1.png" alt="image"></p>
+<p>默认下一步之后填写本地访问的端口</p>
+<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BAEasyimage%E5%9B%BE%E5%BA%8A/2.png" alt="image"></p>
+<p>填写文件夹后完成即可</p>
+<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BAEasyimage%E5%9B%BE%E5%BA%8A/3.png" alt="image"></p>
+<p>然后开启容器访问<a href="http://ip:port">http://ip:port</a>, 配置管理后台账号密码然后就可以了</p>
+<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BAEasyimage%E5%9B%BE%E5%BA%8A/4.png" alt="image"></p>
+<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BAEasyimage%E5%9B%BE%E5%BA%8A/5.png" alt="image"></p>
+<h2 id="EasyImages安全设置"><a href="#EasyImages安全设置" class="headerlink" title="EasyImages安全设置"></a>EasyImages安全设置</h2><p>如果只是自己用 ，记得去掉这些勾选</p>
+<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BAEasyimage%E5%9B%BE%E5%BA%8A/6.png" alt="image"></p>
+<p>上传设置选择WEBP，WebP 的优势体现在它具有更优的图像数据压缩算法，能带来更小的图片体积，而且拥有肉眼识别无差异的图像质量；同时具备了无损和有损的压缩模式、 Alpha 透明以及动画的特性，在 JPEG 和 PNG 上的转化效果都相当优秀、稳定和统一。</p>
+<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BAEasyimage%E5%9B%BE%E5%BA%8A/7.png" alt="image"></p>
+<p>这里根据个人需求勾选</p>
+<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BAEasyimage%E5%9B%BE%E5%BA%8A/8.png" alt="image"></p>
+<p>配合无公网 IP 搭建 Cloudflare 免费隧道穿透：<a href="https://9ouu.github.io/blog/45195/">群晖系列：无公网IP搭建Cloudflare免费隧道穿透</a></p>
+]]></content>
+      <categories>
+        <category>群晖nas</category>
+      </categories>
+      <tags>
+        <tag>Easyimage</tag>
+        <tag>图床</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>群晖系列：无公网IP搭建Cloudflare免费隧道穿透</title>
     <url>/blog/45195/</url>
     <content><![CDATA[<h2 id="域名注册"><a href="#域名注册" class="headerlink" title="域名注册"></a>域名注册</h2><p>首先我们先注册一个域名，Freenom可以注册免费域名，但是好像最近不太稳定，官网点这里：<a href="https://link.zhihu.com/?target=https://www.freenom.com/">A Name for Everyone</a></p>
@@ -255,44 +293,6 @@
       <tags>
         <tag>Cloudflare</tag>
         <tag>内网穿透</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>群晖系列：自建Easyimage图床</title>
-    <url>/blog/3482/</url>
-    <content><![CDATA[<h2 id="EasyImages介绍"><a href="#EasyImages介绍" class="headerlink" title="EasyImages介绍"></a>EasyImages介绍</h2><p>Easyimage是一个开源的、支持多文件上传、简单无数据库,返回图片url,markdown,bbscode,html的一款图床程序。</p>
-<ul>
-<li><h3 id="easyimage特点："><a href="#easyimage特点：" class="headerlink" title="easyimage特点："></a>easyimage特点：</h3></li>
-</ul>
-<p>支持API、支持仅登录后上传、支持设置图片质量、支持压缩图片大小、支持文字&#x2F;图片水印、支持设置图片指定宽&#x2F;高、支持上传图片转换为指定格式、支持限制最低宽度&#x2F;高度上传、支持上传其他文件格式、在线管理图片、支持网站统计、支持设置广告、支持图片鉴黄、支持自定义代码、支持上传IP黑白名单、支持上传日志IP定位、支持限制日上传次数、支持创建仅上传用户、对于安装环境要求极低、对于服务器性能要求极低、理论上支持所有常见格式、等等···</p>
-<ul>
-<li><h3 id="GitHub："><a href="#GitHub：" class="headerlink" title="GitHub："></a>GitHub：</h3></li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://github.com/icret/EasyImages2.0</span><br></pre></td></tr></table></figure>
-
-<h2 id="EasyImages搭建"><a href="#EasyImages搭建" class="headerlink" title="EasyImages搭建"></a>EasyImages搭建</h2><p>在注册表搜索easyimage进行下载</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BAEasyimage%E5%9B%BE%E5%BA%8A/1.png" alt="image"></p>
-<p>默认下一步之后填写本地访问的端口</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BAEasyimage%E5%9B%BE%E5%BA%8A/2.png" alt="image"></p>
-<p>填写文件夹后完成即可</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BAEasyimage%E5%9B%BE%E5%BA%8A/3.png" alt="image"></p>
-<p>然后开启容器访问<a href="http://ip:port">http://ip:port</a>, 配置管理后台账号密码然后就可以了</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BAEasyimage%E5%9B%BE%E5%BA%8A/4.png" alt="image"></p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BAEasyimage%E5%9B%BE%E5%BA%8A/5.png" alt="image"></p>
-<h2 id="EasyImages安全设置"><a href="#EasyImages安全设置" class="headerlink" title="EasyImages安全设置"></a>EasyImages安全设置</h2><p>如果只是自己用 ，记得去掉这些勾选</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BAEasyimage%E5%9B%BE%E5%BA%8A/6.png" alt="image"></p>
-<p>上传设置选择WEBP，WebP 的优势体现在它具有更优的图像数据压缩算法，能带来更小的图片体积，而且拥有肉眼识别无差异的图像质量；同时具备了无损和有损的压缩模式、 Alpha 透明以及动画的特性，在 JPEG 和 PNG 上的转化效果都相当优秀、稳定和统一。</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BAEasyimage%E5%9B%BE%E5%BA%8A/7.png" alt="image"></p>
-<p>这里根据个人需求勾选</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BAEasyimage%E5%9B%BE%E5%BA%8A/8.png" alt="image"></p>
-<p>配合无公网 IP 搭建 Cloudflare 免费隧道穿透：<a href="https://9ouu.github.io/blog/45195/">群晖系列：无公网IP搭建Cloudflare免费隧道穿透</a></p>
-]]></content>
-      <categories>
-        <category>群晖nas</category>
-      </categories>
-      <tags>
-        <tag>Easyimage</tag>
-        <tag>图床</tag>
       </tags>
   </entry>
   <entry>
@@ -476,7 +476,7 @@
 <p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%AE%B0%E4%B8%80%E6%AC%A1%E4%BB%A3%E7%A0%81%E6%B3%84%E6%BC%8F%E5%A4%84%E7%BD%AE%E8%BF%87%E7%A8%8B/8.png" alt="image"></p>
 <h2 id="隐藏邮箱的方法"><a href="#隐藏邮箱的方法" class="headerlink" title="隐藏邮箱的方法"></a>隐藏邮箱的方法</h2><h4 id="不使用自己的邮箱注册"><a href="#不使用自己的邮箱注册" class="headerlink" title="不使用自己的邮箱注册"></a>不使用自己的邮箱注册</h4><h4 id="使用-GitHub-专用的替代邮箱"><a href="#使用-GitHub-专用的替代邮箱" class="headerlink" title="使用 GitHub 专用的替代邮箱"></a>使用 GitHub 专用的替代邮箱</h4><p>访问 <a href="https://github.com/settings/emails">https://github.com/settings/emails</a> ，在 Primary email address 一栏，我们能看到 GitHub 为我们提供了一个专用的用于在 git 中配置的邮箱地址，直接勾选上。<br>谷歌的翻译是这样的：</p>
 <ul>
-<li><p>在将我的电子邮件地址保密：<br>我们将删除您的公开个人资料电子邮件，并在执行基于 Web 的 Git 操作（例如编辑和合并）时使用 <a href="mailto:&#x78;&#x78;&#120;&#120;&#120;&#64;&#117;&#x73;&#x65;&#x72;&#x73;&#46;&#110;&#111;&#x72;&#101;&#112;&#x6c;&#x79;&#46;&#103;&#x69;&#116;&#104;&#x75;&#x62;&#46;&#x63;&#111;&#x6d;">&#x78;&#x78;&#120;&#120;&#120;&#64;&#117;&#x73;&#x65;&#x72;&#x73;&#46;&#110;&#111;&#x72;&#101;&#112;&#x6c;&#x79;&#46;&#103;&#x69;&#116;&#104;&#x75;&#x62;&#46;&#x63;&#111;&#x6d;</a> ，以及代表您发送电子邮件。如果您希望命令行 Git 操作使用您的私人电子邮件，则必须在 Git 中设置您的电子邮件。<br>使用此电子邮件推送到 GitHub 的提交仍将与您的帐户相关联。</p>
+<li><p>在将我的电子邮件地址保密：<br>我们将删除您的公开个人资料电子邮件，并在执行基于 Web 的 Git 操作（例如编辑和合并）时使用 <a href="mailto:&#120;&#x78;&#x78;&#120;&#120;&#x40;&#117;&#115;&#101;&#114;&#115;&#46;&#x6e;&#x6f;&#114;&#x65;&#x70;&#108;&#121;&#x2e;&#x67;&#105;&#116;&#x68;&#x75;&#98;&#46;&#x63;&#x6f;&#109;">&#120;&#x78;&#x78;&#120;&#120;&#x40;&#117;&#115;&#101;&#114;&#115;&#46;&#x6e;&#x6f;&#114;&#x65;&#x70;&#108;&#121;&#x2e;&#x67;&#105;&#116;&#x68;&#x75;&#98;&#46;&#x63;&#x6f;&#109;</a> ，以及代表您发送电子邮件。如果您希望命令行 Git 操作使用您的私人电子邮件，则必须在 Git 中设置您的电子邮件。<br>使用此电子邮件推送到 GitHub 的提交仍将与您的帐户相关联。</p>
 </li>
 <li><p>阻止暴露我的电子邮件的命令行推送：<br>当您推送到 GitHub 时，我们将检查最近的提交。如果该提交的作者电子邮件是您 GitHub 帐户上的私人电子邮件，我们将阻止推送并警告您暴露您的私人电子邮件。address 一栏，我们能看到 GitHub 为我们提供了一个专用的用于在 git 中配置的邮箱地址。</p>
 </li>
