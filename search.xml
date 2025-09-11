@@ -1,108 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>MacOS JAVA多环境快速切换</title>
-    <url>/blog/8662/</url>
-    <content><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>电脑有 java 多环境的需求，所以研究了一下。</p>
-<h2 id="环境安装"><a href="#环境安装" class="headerlink" title="环境安装"></a>环境安装</h2><h3 id="使用-Homebrew-安装-Jenv"><a href="#使用-Homebrew-安装-Jenv" class="headerlink" title="使用 Homebrew 安装 Jenv"></a>使用 Homebrew 安装 Jenv</h3><p>安装 Homebrew </p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;</span><br></pre></td></tr></table></figure>
-
-<p>安装 Jenv</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">brew install jenv</span><br></pre></td></tr></table></figure>
-
-<h3 id="配置-Jenv"><a href="#配置-Jenv" class="headerlink" title="配置 Jenv"></a>配置 Jenv</h3><p>在~&#x2F;. bash_profile 或 ~&#x2F;. bashrc 或 ~&#x2F;. zshrc 添加下面代码</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">export PATH=&quot;$HOME/.jenv/bin:$PATH&quot; </span><br><span class="line">eval &quot;$(jenv init -)&quot;</span><br></pre></td></tr></table></figure>
-
-<p>然后再重新加载配置文件</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">source ~/.bash_profile &amp;&amp; source ~/. bashrc &amp;&amp; source ~/.zshrc</span><br></pre></td></tr></table></figure>
-
-<h3 id="安装-JAVA"><a href="#安装-JAVA" class="headerlink" title="安装 JAVA"></a>安装 JAVA</h3><p>使用下面命令来列出所有可用的 Java 版本，然后再使用brew install + 安装的版本名称。直接安装 java</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">brew search jdk</span><br></pre></td></tr></table></figure>
-
-<p>安装完成后，你可以使用 jenv 将这些 JDK 版本添加到 jenv 的管理中。<br>⚠️注意：以你实际目录为准</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 添加JDK 8 jenv add /usr/local/opt/openjdk@8/libexec/openjdk.jdk/Contents/Home </span><br><span class="line"># 添加JDK 11 jenv add /usr/local/opt/openjdk@11/libexec/openjdk.jdk/Contents/Home </span><br><span class="line"># 添加JDK 17 jenv add /usr/local/opt/openjdk@17/libexec/openjdk.jdk/Contents/Home</span><br></pre></td></tr></table></figure>
-
-<h3 id="命令行切换-JAVA-版本"><a href="#命令行切换-JAVA-版本" class="headerlink" title="命令行切换 JAVA 版本"></a>命令行切换 JAVA 版本</h3><p>查看已安装 JAVA 版本</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">jenv versions</span><br></pre></td></tr></table></figure>
-
-<p>全局切换 JAVA 版本</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">jenv global &lt;version&gt;</span><br></pre></td></tr></table></figure>
-
-<p>特定的shell会话中设置JDK版本</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">jenv shell &lt;version&gt;</span><br></pre></td></tr></table></figure>
-
-<p>特定项目目录中设置JDK版本</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">jenv local &lt;version&gt;</span><br></pre></td></tr></table></figure>
-
-<p>验证是否切换成功</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">java -version</span><br></pre></td></tr></table></figure>
-
-<p>启动 maven 和 export 插件</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">jenv enable-plugin maven </span><br><span class="line">jenv enable-plugin export</span><br></pre></td></tr></table></figure>
-
-<h3 id="使用Alfred-切换-JAVA-版本"><a href="#使用Alfred-切换-JAVA-版本" class="headerlink" title="使用Alfred 切换 JAVA 版本"></a>使用Alfred 切换 JAVA 版本</h3><h4 id="效果如下"><a href="#效果如下" class="headerlink" title="效果如下"></a>效果如下</h4><p><video  width="800" height="400" src="https://github.com/9ouu/qx/raw/refs/heads/main/icon/blog/MacOS%20JAVA%E5%A4%9A%E7%8E%AF%E5%A2%83%E5%BF%AB%E9%80%9F%E5%88%87%E6%8D%A2/mp4.mov" controls></video></p>
-<h4 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h4><p>下载地址：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://github.com/9ouu/env-Java-Switcher</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://github.com/9ouu/qx/raw/refs/heads/main/icon/blog/MacOS%20JAVA%E5%A4%9A%E7%8E%AF%E5%A2%83%E5%BF%AB%E9%80%9F%E5%88%87%E6%8D%A2/1.png" alt="image.png"></p>
-<p><img src="https://github.com/9ouu/qx/raw/refs/heads/main/icon/blog/MacOS%20JAVA%E5%A4%9A%E7%8E%AF%E5%A2%83%E5%BF%AB%E9%80%9F%E5%88%87%E6%8D%A2/2.png" alt="image.png"></p>
-]]></content>
-      <categories>
-        <category>MacOS</category>
-      </categories>
-      <tags>
-        <tag>MacOS</tag>
-        <tag>JAVA</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>MacOS deb编译记录</title>
-    <url>/blog/29292/</url>
-    <content><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>因为需要修改一些 ios 的插件，所以了解了一下 macbook 下的 deb 编译。</p>
-<h2 id="环境安装"><a href="#环境安装" class="headerlink" title="环境安装"></a>环境安装</h2><h3 id="安装Theos"><a href="#安装Theos" class="headerlink" title="安装Theos"></a>安装Theos</h3><p>Theos 需要 <code>ldid</code> 来为二进制文件签名，以及 <code>xz</code> 用于压缩。在终端里运行</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">brew install ldid xz</span><br></pre></td></tr></table></figure>
-
-<p>如果您还没有安装 Homebrew，请打开“终端” (Terminal) app，然后粘贴并运行以下命令：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;</span><br></pre></td></tr></table></figure>
-
-<p>我们将 Theos 安装在 <code>/opt/theos</code> 目录下</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo mkdir -p /opt/theos </span><br><span class="line">sudo chown $(whoami) /opt/theos</span><br></pre></td></tr></table></figure>
-
-<p>接着，使用 git 将 Theos 克隆到这个目录：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git clone --recursive https://github.com/theos/theos.git /opt/theos</span><br></pre></td></tr></table></figure>
-
-<p>配置环境变量</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">vim ~/.zshrc</span><br></pre></td></tr></table></figure>
-
-<p>添加以下两行：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">export THEOS=/opt/theos</span><br><span class="line">export PATH=$THEOS/bin:$PATH</span><br></pre></td></tr></table></figure>
-
-<p>重启终端</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">source ~/.zshrc</span><br></pre></td></tr></table></figure>
-
-<p>下载 iOS&#x2F;macOS SDK，下载地址如下</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://github.com/theos/sdks</span><br></pre></td></tr></table></figure>
-
-<p>我下载的是 16.5</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mv ~/Downloads/iPhoneOS16.5.sdk $THEOS/sdks/</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="安装-Xcode-Command-Line-Tools"><a href="#安装-Xcode-Command-Line-Tools" class="headerlink" title="安装 Xcode Command Line Tools"></a>安装 Xcode Command Line Tools</h3><p>Theos 需要 Xcode 的命令行工具。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">xcode-select --install</span><br></pre></td></tr></table></figure>
-
-<p>执行此命令后，会弹出一个窗口，请点击“安装”并同意许可协议。</p>
-<h2 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h2><p>命令如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">make package</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>编译</category>
-      </categories>
-      <tags>
-        <tag>MacOS</tag>
-        <tag>deb</tag>
-        <tag>编译</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>n8n本地部署问题</title>
     <url>/blog/62000/</url>
     <content><![CDATA[<h2 id="部署中的问题"><a href="#部署中的问题" class="headerlink" title="部署中的问题"></a>部署中的问题</h2><p>1、在 <code>environment</code> 环境变量中，我增加了2个Proxy的变量，主要是为了解决容器内链接各式各样国外服务。<br>2、配置 <code>N8N_SECURE_COOKIE</code> 解决下面图片的问题</p>
@@ -203,41 +101,50 @@
       </tags>
   </entry>
   <entry>
-    <title>群晖系列：自建Easyimage图床</title>
-    <url>/blog/3482/</url>
-    <content><![CDATA[<h2 id="EasyImages介绍"><a href="#EasyImages介绍" class="headerlink" title="EasyImages介绍"></a>EasyImages介绍</h2><p>Easyimage是一个开源的、支持多文件上传、简单无数据库,返回图片url,markdown,bbscode,html的一款图床程序。</p>
-<ul>
-<li><h3 id="easyimage特点："><a href="#easyimage特点：" class="headerlink" title="easyimage特点："></a>easyimage特点：</h3></li>
-</ul>
-<p>支持API、支持仅登录后上传、支持设置图片质量、支持压缩图片大小、支持文字&#x2F;图片水印、支持设置图片指定宽&#x2F;高、支持上传图片转换为指定格式、支持限制最低宽度&#x2F;高度上传、支持上传其他文件格式、在线管理图片、支持网站统计、支持设置广告、支持图片鉴黄、支持自定义代码、支持上传IP黑白名单、支持上传日志IP定位、支持限制日上传次数、支持创建仅上传用户、对于安装环境要求极低、对于服务器性能要求极低、理论上支持所有常见格式、等等···</p>
-<ul>
-<li><h3 id="GitHub："><a href="#GitHub：" class="headerlink" title="GitHub："></a>GitHub：</h3></li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://github.com/icret/EasyImages2.0</span><br></pre></td></tr></table></figure>
+    <title>MacOS deb编译记录</title>
+    <url>/blog/29292/</url>
+    <content><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>因为需要修改一些 ios 的插件，所以了解了一下 macbook 下的 deb 编译。</p>
+<h2 id="环境安装"><a href="#环境安装" class="headerlink" title="环境安装"></a>环境安装</h2><h3 id="安装Theos"><a href="#安装Theos" class="headerlink" title="安装Theos"></a>安装Theos</h3><p>Theos 需要 <code>ldid</code> 来为二进制文件签名，以及 <code>xz</code> 用于压缩。在终端里运行</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">brew install ldid xz</span><br></pre></td></tr></table></figure>
 
-<h2 id="EasyImages搭建"><a href="#EasyImages搭建" class="headerlink" title="EasyImages搭建"></a>EasyImages搭建</h2><p>在注册表搜索easyimage进行下载</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BAEasyimage%E5%9B%BE%E5%BA%8A/1.png" alt="image"></p>
-<p>默认下一步之后填写本地访问的端口</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BAEasyimage%E5%9B%BE%E5%BA%8A/2.png" alt="image"></p>
-<p>填写文件夹后完成即可</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BAEasyimage%E5%9B%BE%E5%BA%8A/3.png" alt="image"></p>
-<p>然后开启容器访问<a href="http://ip:port">http://ip:port</a>, 配置管理后台账号密码然后就可以了</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BAEasyimage%E5%9B%BE%E5%BA%8A/4.png" alt="image"></p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BAEasyimage%E5%9B%BE%E5%BA%8A/5.png" alt="image"></p>
-<h2 id="EasyImages安全设置"><a href="#EasyImages安全设置" class="headerlink" title="EasyImages安全设置"></a>EasyImages安全设置</h2><p>如果只是自己用 ，记得去掉这些勾选</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BAEasyimage%E5%9B%BE%E5%BA%8A/6.png" alt="image"></p>
-<p>上传设置选择WEBP，WebP 的优势体现在它具有更优的图像数据压缩算法，能带来更小的图片体积，而且拥有肉眼识别无差异的图像质量；同时具备了无损和有损的压缩模式、 Alpha 透明以及动画的特性，在 JPEG 和 PNG 上的转化效果都相当优秀、稳定和统一。</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BAEasyimage%E5%9B%BE%E5%BA%8A/7.png" alt="image"></p>
-<p>这里根据个人需求勾选</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BAEasyimage%E5%9B%BE%E5%BA%8A/8.png" alt="image"></p>
-<p>配合无公网 IP 搭建 Cloudflare 免费隧道穿透：<a href="https://9ouu.github.io/blog/45195/">群晖系列：无公网IP搭建Cloudflare免费隧道穿透</a></p>
-]]></content>
+<p>如果您还没有安装 Homebrew，请打开“终端” (Terminal) app，然后粘贴并运行以下命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;</span><br></pre></td></tr></table></figure>
+
+<p>我们将 Theos 安装在 <code>/opt/theos</code> 目录下</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo mkdir -p /opt/theos </span><br><span class="line">sudo chown $(whoami) /opt/theos</span><br></pre></td></tr></table></figure>
+
+<p>接着，使用 git 将 Theos 克隆到这个目录：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git clone --recursive https://github.com/theos/theos.git /opt/theos</span><br></pre></td></tr></table></figure>
+
+<p>配置环境变量</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">vim ~/.zshrc</span><br></pre></td></tr></table></figure>
+
+<p>添加以下两行：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">export THEOS=/opt/theos</span><br><span class="line">export PATH=$THEOS/bin:$PATH</span><br></pre></td></tr></table></figure>
+
+<p>重启终端</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">source ~/.zshrc</span><br></pre></td></tr></table></figure>
+
+<p>下载 iOS&#x2F;macOS SDK，下载地址如下</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://github.com/theos/sdks</span><br></pre></td></tr></table></figure>
+
+<p>我下载的是 16.5</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mv ~/Downloads/iPhoneOS16.5.sdk $THEOS/sdks/</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="安装-Xcode-Command-Line-Tools"><a href="#安装-Xcode-Command-Line-Tools" class="headerlink" title="安装 Xcode Command Line Tools"></a>安装 Xcode Command Line Tools</h3><p>Theos 需要 Xcode 的命令行工具。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">xcode-select --install</span><br></pre></td></tr></table></figure>
+
+<p>执行此命令后，会弹出一个窗口，请点击“安装”并同意许可协议。</p>
+<h2 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h2><p>命令如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">make package</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
-        <category>群晖nas</category>
+        <category>编译</category>
       </categories>
       <tags>
-        <tag>Easyimage</tag>
-        <tag>图床</tag>
+        <tag>MacOS</tag>
+        <tag>deb</tag>
+        <tag>编译</tag>
       </tags>
   </entry>
   <entry>
@@ -293,6 +200,44 @@
       <tags>
         <tag>Cloudflare</tag>
         <tag>内网穿透</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>群晖系列：自建Easyimage图床</title>
+    <url>/blog/3482/</url>
+    <content><![CDATA[<h2 id="EasyImages介绍"><a href="#EasyImages介绍" class="headerlink" title="EasyImages介绍"></a>EasyImages介绍</h2><p>Easyimage是一个开源的、支持多文件上传、简单无数据库,返回图片url,markdown,bbscode,html的一款图床程序。</p>
+<ul>
+<li><h3 id="easyimage特点："><a href="#easyimage特点：" class="headerlink" title="easyimage特点："></a>easyimage特点：</h3></li>
+</ul>
+<p>支持API、支持仅登录后上传、支持设置图片质量、支持压缩图片大小、支持文字&#x2F;图片水印、支持设置图片指定宽&#x2F;高、支持上传图片转换为指定格式、支持限制最低宽度&#x2F;高度上传、支持上传其他文件格式、在线管理图片、支持网站统计、支持设置广告、支持图片鉴黄、支持自定义代码、支持上传IP黑白名单、支持上传日志IP定位、支持限制日上传次数、支持创建仅上传用户、对于安装环境要求极低、对于服务器性能要求极低、理论上支持所有常见格式、等等···</p>
+<ul>
+<li><h3 id="GitHub："><a href="#GitHub：" class="headerlink" title="GitHub："></a>GitHub：</h3></li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://github.com/icret/EasyImages2.0</span><br></pre></td></tr></table></figure>
+
+<h2 id="EasyImages搭建"><a href="#EasyImages搭建" class="headerlink" title="EasyImages搭建"></a>EasyImages搭建</h2><p>在注册表搜索easyimage进行下载</p>
+<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BAEasyimage%E5%9B%BE%E5%BA%8A/1.png" alt="image"></p>
+<p>默认下一步之后填写本地访问的端口</p>
+<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BAEasyimage%E5%9B%BE%E5%BA%8A/2.png" alt="image"></p>
+<p>填写文件夹后完成即可</p>
+<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BAEasyimage%E5%9B%BE%E5%BA%8A/3.png" alt="image"></p>
+<p>然后开启容器访问<a href="http://ip:port">http://ip:port</a>, 配置管理后台账号密码然后就可以了</p>
+<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BAEasyimage%E5%9B%BE%E5%BA%8A/4.png" alt="image"></p>
+<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BAEasyimage%E5%9B%BE%E5%BA%8A/5.png" alt="image"></p>
+<h2 id="EasyImages安全设置"><a href="#EasyImages安全设置" class="headerlink" title="EasyImages安全设置"></a>EasyImages安全设置</h2><p>如果只是自己用 ，记得去掉这些勾选</p>
+<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BAEasyimage%E5%9B%BE%E5%BA%8A/6.png" alt="image"></p>
+<p>上传设置选择WEBP，WebP 的优势体现在它具有更优的图像数据压缩算法，能带来更小的图片体积，而且拥有肉眼识别无差异的图像质量；同时具备了无损和有损的压缩模式、 Alpha 透明以及动画的特性，在 JPEG 和 PNG 上的转化效果都相当优秀、稳定和统一。</p>
+<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BAEasyimage%E5%9B%BE%E5%BA%8A/7.png" alt="image"></p>
+<p>这里根据个人需求勾选</p>
+<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E7%BE%A4%E6%99%96%E7%B3%BB%E5%88%97%EF%BC%9A%E8%87%AA%E5%BB%BAEasyimage%E5%9B%BE%E5%BA%8A/8.png" alt="image"></p>
+<p>配合无公网 IP 搭建 Cloudflare 免费隧道穿透：<a href="https://9ouu.github.io/blog/45195/">群晖系列：无公网IP搭建Cloudflare免费隧道穿透</a></p>
+]]></content>
+      <categories>
+        <category>群晖nas</category>
+      </categories>
+      <tags>
+        <tag>Easyimage</tag>
+        <tag>图床</tag>
       </tags>
   </entry>
   <entry>
@@ -426,36 +371,6 @@
       </tags>
   </entry>
   <entry>
-    <title>群晖系列：自建Vaultwarden (Bitwarden)</title>
-    <url>/blog/8140/</url>
-    <content><![CDATA[<p>当Bitwarden在快速发展的过程中，自建版本发生了开发分支。2022年5月左右，docker image由原来的bitwardenrs&#x2F;server官宣转为<a href="https://hub.docker.com/r/vaultwarden/server">vaultwarden&#x2F;server</a>。名称也由Bitwarden变为了Vaultwarden。Vaultwarden兼容所有Bitwarden的app，也就是说不论是浏览器的插件、桌面的应用程序，还是安卓、iOS的app，都能够通过Vaultwarden来自建密码管理平台，从而最大限度的保护自己的密码池。</p>
-<h1 id="Vaultwarden-是什么"><a href="#Vaultwarden-是什么" class="headerlink" title="Vaultwarden 是什么"></a>Vaultwarden 是什么</h1><p>Vaultwarden 是一个用于本地搭建 Bitwarden 服务器的第三方 Docker 项目。仅在部署的时候使用 Vaultwarden 镜像，桌面端、移动端、浏览器扩展等客户端均使用官方 Bitwarden 客户端。</p>
-<p>Vaultwarden 很轻量，对于不希望使用官方的占用大量资源的自托管部署而言，它是理想的选择。</p>
-<h1 id="Vaultwarden-与-Bitwarden-的区别"><a href="#Vaultwarden-与-Bitwarden-的区别" class="headerlink" title="Vaultwarden 与 Bitwarden 的区别"></a>Vaultwarden 与 Bitwarden 的区别</h1><p>除不支持官方企业版的部分功能（如目录同步、SSO、群组、自定义角色以及基于企业组织层面的 Duo Security 两步登录）外，其他大部分功能均免费支持。并跟随官方版本保持及时更新。</p>
-<p>Vaultwarden 比官方版更轻量。官方版使用 .Net 开发，使用 MSSQL 数据库，要求至少 2GB 内存；Vaultwarden 使用 Rust 编写，改用 SQLite 数据库（现在也支持 MySQL 和 PostgreSQL），运行时只需要 10M 内存，可以说对硬件基本没有要求。</p>
-<h1 id="搭建Vaultwarden"><a href="#搭建Vaultwarden" class="headerlink" title="搭建Vaultwarden"></a>搭建Vaultwarden</h1><p>在docker搜索vaultwarden，并下载</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%87%AA%E5%BB%BAVaultwarden%20%28Bitwarden%29/1.png" alt="image-1"></p>
-<p>  配置好容器存储路径，其他的默认就好了</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%87%AA%E5%BB%BAVaultwarden%20%28Bitwarden%29/2.png" alt="image-2"></p>
-<p>然后运行后点详细，记住这里的端口号</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%87%AA%E5%BB%BAVaultwarden%20%28Bitwarden%29/3.png" alt="image-3"></p>
-<p>套件中心安装花生壳</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%87%AA%E5%BB%BAVaultwarden%20%28Bitwarden%29/4.png" alt="image-4"></p>
-<p>然后配置花生壳，设置内网nas的ip还有Vaultwarden的端口号</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%87%AA%E5%BB%BAVaultwarden%20%28Bitwarden%29/5.png" alt="image-5"></p>
-<p>然后访问外网地址，创建账号密码登录。搞定</p>
-<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%87%AA%E5%BB%BAVaultwarden%20%28Bitwarden%29/6.png" alt="image-6"></p>
-<p>配合无公网 IP 搭建 Cloudflare 免费隧道穿透：<a href="https://9ouu.github.io/blog/45195/">群晖系列：无公网IP搭建Cloudflare免费隧道穿透</a></p>
-]]></content>
-      <categories>
-        <category>群晖nas</category>
-      </categories>
-      <tags>
-        <tag>Vaultwarden</tag>
-        <tag>Bitwarden</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>记一次代码泄漏处置过程</title>
     <url>/blog/32792/</url>
     <content><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>上班的时候，同事发现一则告警，是关于公司的代码泄漏，我看了一下，是个 dome 代码，但是一直放在公网上好像也不太好，它会一直告警，而且之后要是告警了领导看到也会问，干脆把它干掉算了。于是我让他找买了服务的厂家协助处置一下这个项目。</p>
@@ -476,7 +391,7 @@
 <p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%AE%B0%E4%B8%80%E6%AC%A1%E4%BB%A3%E7%A0%81%E6%B3%84%E6%BC%8F%E5%A4%84%E7%BD%AE%E8%BF%87%E7%A8%8B/8.png" alt="image"></p>
 <h2 id="隐藏邮箱的方法"><a href="#隐藏邮箱的方法" class="headerlink" title="隐藏邮箱的方法"></a>隐藏邮箱的方法</h2><h4 id="不使用自己的邮箱注册"><a href="#不使用自己的邮箱注册" class="headerlink" title="不使用自己的邮箱注册"></a>不使用自己的邮箱注册</h4><h4 id="使用-GitHub-专用的替代邮箱"><a href="#使用-GitHub-专用的替代邮箱" class="headerlink" title="使用 GitHub 专用的替代邮箱"></a>使用 GitHub 专用的替代邮箱</h4><p>访问 <a href="https://github.com/settings/emails">https://github.com/settings/emails</a> ，在 Primary email address 一栏，我们能看到 GitHub 为我们提供了一个专用的用于在 git 中配置的邮箱地址，直接勾选上。<br>谷歌的翻译是这样的：</p>
 <ul>
-<li><p>在将我的电子邮件地址保密：<br>我们将删除您的公开个人资料电子邮件，并在执行基于 Web 的 Git 操作（例如编辑和合并）时使用 <a href="mailto:&#120;&#x78;&#x78;&#120;&#120;&#x40;&#117;&#115;&#101;&#114;&#115;&#46;&#x6e;&#x6f;&#114;&#x65;&#x70;&#108;&#121;&#x2e;&#x67;&#105;&#116;&#x68;&#x75;&#98;&#46;&#x63;&#x6f;&#109;">&#120;&#x78;&#x78;&#120;&#120;&#x40;&#117;&#115;&#101;&#114;&#115;&#46;&#x6e;&#x6f;&#114;&#x65;&#x70;&#108;&#121;&#x2e;&#x67;&#105;&#116;&#x68;&#x75;&#98;&#46;&#x63;&#x6f;&#109;</a> ，以及代表您发送电子邮件。如果您希望命令行 Git 操作使用您的私人电子邮件，则必须在 Git 中设置您的电子邮件。<br>使用此电子邮件推送到 GitHub 的提交仍将与您的帐户相关联。</p>
+<li><p>在将我的电子邮件地址保密：<br>我们将删除您的公开个人资料电子邮件，并在执行基于 Web 的 Git 操作（例如编辑和合并）时使用 <a href="mailto:&#120;&#120;&#x78;&#120;&#120;&#64;&#x75;&#115;&#101;&#114;&#115;&#46;&#x6e;&#111;&#114;&#101;&#x70;&#x6c;&#121;&#46;&#x67;&#105;&#x74;&#x68;&#117;&#x62;&#46;&#99;&#111;&#109;">&#120;&#120;&#x78;&#120;&#120;&#64;&#x75;&#115;&#101;&#114;&#115;&#46;&#x6e;&#111;&#114;&#101;&#x70;&#x6c;&#121;&#46;&#x67;&#105;&#x74;&#x68;&#117;&#x62;&#46;&#99;&#111;&#109;</a> ，以及代表您发送电子邮件。如果您希望命令行 Git 操作使用您的私人电子邮件，则必须在 Git 中设置您的电子邮件。<br>使用此电子邮件推送到 GitHub 的提交仍将与您的帐户相关联。</p>
 </li>
 <li><p>阻止暴露我的电子邮件的命令行推送：<br>当您推送到 GitHub 时，我们将检查最近的提交。如果该提交的作者电子邮件是您 GitHub 帐户上的私人电子邮件，我们将阻止推送并警告您暴露您的私人电子邮件。address 一栏，我们能看到 GitHub 为我们提供了一个专用的用于在 git 中配置的邮箱地址。</p>
 </li>
@@ -524,6 +439,91 @@
       <tags>
         <tag>银狐病毒</tag>
         <tag>应急响应</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>群晖系列：自建Vaultwarden (Bitwarden)</title>
+    <url>/blog/8140/</url>
+    <content><![CDATA[<p>当Bitwarden在快速发展的过程中，自建版本发生了开发分支。2022年5月左右，docker image由原来的bitwardenrs&#x2F;server官宣转为<a href="https://hub.docker.com/r/vaultwarden/server">vaultwarden&#x2F;server</a>。名称也由Bitwarden变为了Vaultwarden。Vaultwarden兼容所有Bitwarden的app，也就是说不论是浏览器的插件、桌面的应用程序，还是安卓、iOS的app，都能够通过Vaultwarden来自建密码管理平台，从而最大限度的保护自己的密码池。</p>
+<h1 id="Vaultwarden-是什么"><a href="#Vaultwarden-是什么" class="headerlink" title="Vaultwarden 是什么"></a>Vaultwarden 是什么</h1><p>Vaultwarden 是一个用于本地搭建 Bitwarden 服务器的第三方 Docker 项目。仅在部署的时候使用 Vaultwarden 镜像，桌面端、移动端、浏览器扩展等客户端均使用官方 Bitwarden 客户端。</p>
+<p>Vaultwarden 很轻量，对于不希望使用官方的占用大量资源的自托管部署而言，它是理想的选择。</p>
+<h1 id="Vaultwarden-与-Bitwarden-的区别"><a href="#Vaultwarden-与-Bitwarden-的区别" class="headerlink" title="Vaultwarden 与 Bitwarden 的区别"></a>Vaultwarden 与 Bitwarden 的区别</h1><p>除不支持官方企业版的部分功能（如目录同步、SSO、群组、自定义角色以及基于企业组织层面的 Duo Security 两步登录）外，其他大部分功能均免费支持。并跟随官方版本保持及时更新。</p>
+<p>Vaultwarden 比官方版更轻量。官方版使用 .Net 开发，使用 MSSQL 数据库，要求至少 2GB 内存；Vaultwarden 使用 Rust 编写，改用 SQLite 数据库（现在也支持 MySQL 和 PostgreSQL），运行时只需要 10M 内存，可以说对硬件基本没有要求。</p>
+<h1 id="搭建Vaultwarden"><a href="#搭建Vaultwarden" class="headerlink" title="搭建Vaultwarden"></a>搭建Vaultwarden</h1><p>在docker搜索vaultwarden，并下载</p>
+<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%87%AA%E5%BB%BAVaultwarden%20%28Bitwarden%29/1.png" alt="image-1"></p>
+<p>  配置好容器存储路径，其他的默认就好了</p>
+<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%87%AA%E5%BB%BAVaultwarden%20%28Bitwarden%29/2.png" alt="image-2"></p>
+<p>然后运行后点详细，记住这里的端口号</p>
+<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%87%AA%E5%BB%BAVaultwarden%20%28Bitwarden%29/3.png" alt="image-3"></p>
+<p>套件中心安装花生壳</p>
+<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%87%AA%E5%BB%BAVaultwarden%20%28Bitwarden%29/4.png" alt="image-4"></p>
+<p>然后配置花生壳，设置内网nas的ip还有Vaultwarden的端口号</p>
+<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%87%AA%E5%BB%BAVaultwarden%20%28Bitwarden%29/5.png" alt="image-5"></p>
+<p>然后访问外网地址，创建账号密码登录。搞定</p>
+<p><img src="https://raw.githubusercontent.com/9ouu/qx/main/icon/blog/%E8%87%AA%E5%BB%BAVaultwarden%20%28Bitwarden%29/6.png" alt="image-6"></p>
+<p>配合无公网 IP 搭建 Cloudflare 免费隧道穿透：<a href="https://9ouu.github.io/blog/45195/">群晖系列：无公网IP搭建Cloudflare免费隧道穿透</a></p>
+]]></content>
+      <categories>
+        <category>群晖nas</category>
+      </categories>
+      <tags>
+        <tag>Vaultwarden</tag>
+        <tag>Bitwarden</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MacOS JAVA多环境快速切换</title>
+    <url>/blog/8662/</url>
+    <content><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>电脑有 java 多环境的需求，所以研究了一下。</p>
+<h2 id="环境安装"><a href="#环境安装" class="headerlink" title="环境安装"></a>环境安装</h2><h3 id="使用-Homebrew-安装-Jenv"><a href="#使用-Homebrew-安装-Jenv" class="headerlink" title="使用 Homebrew 安装 Jenv"></a>使用 Homebrew 安装 Jenv</h3><p>安装 Homebrew </p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;</span><br></pre></td></tr></table></figure>
+
+<p>安装 Jenv</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">brew install jenv</span><br></pre></td></tr></table></figure>
+
+<h3 id="配置-Jenv"><a href="#配置-Jenv" class="headerlink" title="配置 Jenv"></a>配置 Jenv</h3><p>在~&#x2F;. bash_profile 或 ~&#x2F;. bashrc 或 ~&#x2F;. zshrc 添加下面代码</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">export PATH=&quot;$HOME/.jenv/bin:$PATH&quot; </span><br><span class="line">eval &quot;$(jenv init -)&quot;</span><br></pre></td></tr></table></figure>
+
+<p>然后再重新加载配置文件</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">source ~/.bash_profile &amp;&amp; source ~/. bashrc &amp;&amp; source ~/.zshrc</span><br></pre></td></tr></table></figure>
+
+<h3 id="安装-JAVA"><a href="#安装-JAVA" class="headerlink" title="安装 JAVA"></a>安装 JAVA</h3><p>使用下面命令来列出所有可用的 Java 版本，然后再使用brew install + 安装的版本名称。直接安装 java</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">brew search jdk</span><br></pre></td></tr></table></figure>
+
+<p>安装完成后，你可以使用 jenv 将这些 JDK 版本添加到 jenv 的管理中。<br>⚠️注意：以你实际目录为准</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 添加JDK 8 jenv add /usr/local/opt/openjdk@8/libexec/openjdk.jdk/Contents/Home </span><br><span class="line"># 添加JDK 11 jenv add /usr/local/opt/openjdk@11/libexec/openjdk.jdk/Contents/Home </span><br><span class="line"># 添加JDK 17 jenv add /usr/local/opt/openjdk@17/libexec/openjdk.jdk/Contents/Home</span><br></pre></td></tr></table></figure>
+
+<h3 id="命令行切换-JAVA-版本"><a href="#命令行切换-JAVA-版本" class="headerlink" title="命令行切换 JAVA 版本"></a>命令行切换 JAVA 版本</h3><p>查看已安装 JAVA 版本</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">jenv versions</span><br></pre></td></tr></table></figure>
+
+<p>全局切换 JAVA 版本</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">jenv global &lt;version&gt;</span><br></pre></td></tr></table></figure>
+
+<p>特定的shell会话中设置JDK版本</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">jenv shell &lt;version&gt;</span><br></pre></td></tr></table></figure>
+
+<p>特定项目目录中设置JDK版本</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">jenv local &lt;version&gt;</span><br></pre></td></tr></table></figure>
+
+<p>验证是否切换成功</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">java -version</span><br></pre></td></tr></table></figure>
+
+<p>启动 maven 和 export 插件</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">jenv enable-plugin maven </span><br><span class="line">jenv enable-plugin export</span><br></pre></td></tr></table></figure>
+
+<h3 id="使用Alfred-切换-JAVA-版本"><a href="#使用Alfred-切换-JAVA-版本" class="headerlink" title="使用Alfred 切换 JAVA 版本"></a>使用Alfred 切换 JAVA 版本</h3><h4 id="效果如下"><a href="#效果如下" class="headerlink" title="效果如下"></a>效果如下</h4><p><video  width="800" height="400" src="https://github.com/9ouu/qx/raw/refs/heads/main/icon/blog/MacOS%20JAVA%E5%A4%9A%E7%8E%AF%E5%A2%83%E5%BF%AB%E9%80%9F%E5%88%87%E6%8D%A2/mp4.mov" controls></video></p>
+<h4 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h4><p>下载地址：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://github.com/9ouu/env-Java-Switcher</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://github.com/9ouu/qx/raw/refs/heads/main/icon/blog/MacOS%20JAVA%E5%A4%9A%E7%8E%AF%E5%A2%83%E5%BF%AB%E9%80%9F%E5%88%87%E6%8D%A2/1.png" alt="image.png"></p>
+<p><img src="https://github.com/9ouu/qx/raw/refs/heads/main/icon/blog/MacOS%20JAVA%E5%A4%9A%E7%8E%AF%E5%A2%83%E5%BF%AB%E9%80%9F%E5%88%87%E6%8D%A2/2.png" alt="image.png"></p>
+]]></content>
+      <categories>
+        <category>MacOS</category>
+      </categories>
+      <tags>
+        <tag>MacOS</tag>
+        <tag>JAVA</tag>
       </tags>
   </entry>
 </search>
